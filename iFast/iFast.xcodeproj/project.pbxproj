@@ -14,6 +14,7 @@
 		AC235EE41E4BAA75004095C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC235EE31E4BAA75004095C2 /* Assets.xcassets */; };
 		AC235EE71E4BAA75004095C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC235EE51E4BAA75004095C2 /* LaunchScreen.storyboard */; };
 		AC235EF21E4BAA75004095C2 /* iFastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC235EF11E4BAA75004095C2 /* iFastTests.swift */; };
+		AC235F041E4BAC15004095C2 /* UIColor + FastAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC235F031E4BAC15004095C2 /* UIColor + FastAdditions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		AC235EED1E4BAA75004095C2 /* iFastTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iFastTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC235EF11E4BAA75004095C2 /* iFastTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iFastTests.swift; sourceTree = "<group>"; };
 		AC235EF31E4BAA75004095C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC235F031E4BAC15004095C2 /* UIColor + FastAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor + FastAdditions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		AC235ED81E4BAA75004095C2 /* iFast */ = {
 			isa = PBXGroup;
 			children = (
+				AC235F011E4BABF2004095C2 /* Util */,
 				AC235EFE1E4BAB18004095C2 /* SupportingFiles */,
 				AC235EDB1E4BAA75004095C2 /* ViewController.swift */,
 				AC235EFD1E4BAB0D004095C2 /* Initial_Storboards */,
@@ -137,6 +140,22 @@
 				AC235EE31E4BAA75004095C2 /* Assets.xcassets */,
 			);
 			name = Assets;
+			sourceTree = "<group>";
+		};
+		AC235F011E4BABF2004095C2 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				AC235F021E4BABF8004095C2 /* Extensions */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		AC235F021E4BABF8004095C2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AC235F031E4BAC15004095C2 /* UIColor + FastAdditions.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC235EDC1E4BAA75004095C2 /* ViewController.swift in Sources */,
+				AC235F041E4BAC15004095C2 /* UIColor + FastAdditions.swift in Sources */,
 				AC235EE21E4BAA75004095C2 /* iFast.xcdatamodeld in Sources */,
 				AC235EDA1E4BAA75004095C2 /* AppDelegate.swift in Sources */,
 			);
