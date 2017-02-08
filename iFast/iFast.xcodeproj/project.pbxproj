@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		AC235EDA1E4BAA75004095C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC235ED91E4BAA75004095C2 /* AppDelegate.swift */; };
-		AC235EDC1E4BAA75004095C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC235EDB1E4BAA75004095C2 /* ViewController.swift */; };
 		AC235EDF1E4BAA75004095C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC235EDD1E4BAA75004095C2 /* Main.storyboard */; };
 		AC235EE21E4BAA75004095C2 /* iFast.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC235EE01E4BAA75004095C2 /* iFast.xcdatamodeld */; };
 		AC235EE41E4BAA75004095C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC235EE31E4BAA75004095C2 /* Assets.xcassets */; };
 		AC235EE71E4BAA75004095C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC235EE51E4BAA75004095C2 /* LaunchScreen.storyboard */; };
 		AC235EF21E4BAA75004095C2 /* iFastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC235EF11E4BAA75004095C2 /* iFastTests.swift */; };
 		AC235F041E4BAC15004095C2 /* UIColor + FastAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC235F031E4BAC15004095C2 /* UIColor + FastAdditions.swift */; };
+		AC235F0A1E4BB3B9004095C2 /* TextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC235F091E4BB3B9004095C2 /* TextModifier.swift */; };
+		AC235F0C1E4BB651004095C2 /* UIButton + FastPrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC235F0B1E4BB651004095C2 /* UIButton + FastPrimaryButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +31,6 @@
 /* Begin PBXFileReference section */
 		AC235ED61E4BAA75004095C2 /* iFast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iFast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC235ED91E4BAA75004095C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AC235EDB1E4BAA75004095C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AC235EDE1E4BAA75004095C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC235EE11E4BAA75004095C2 /* iFast.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iFast.xcdatamodel; sourceTree = "<group>"; };
 		AC235EE31E4BAA75004095C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,6 +40,8 @@
 		AC235EF11E4BAA75004095C2 /* iFastTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iFastTests.swift; sourceTree = "<group>"; };
 		AC235EF31E4BAA75004095C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC235F031E4BAC15004095C2 /* UIColor + FastAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor + FastAdditions.swift"; sourceTree = "<group>"; };
+		AC235F091E4BB3B9004095C2 /* TextModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextModifier.swift; sourceTree = "<group>"; };
+		AC235F0B1E4BB651004095C2 /* UIButton + FastPrimaryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton + FastPrimaryButton.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +85,7 @@
 			children = (
 				AC235F011E4BABF2004095C2 /* Util */,
 				AC235EFE1E4BAB18004095C2 /* SupportingFiles */,
-				AC235EDB1E4BAA75004095C2 /* ViewController.swift */,
-				AC235EFD1E4BAB0D004095C2 /* Initial_Storboards */,
+				AC235EFD1E4BAB0D004095C2 /* Initial_Storyboards */,
 				AC235EFF1E4BAB2E004095C2 /* Resources */,
 				AC235EFC1E4BAAFE004095C2 /* CoreData_Stack */,
 			);
@@ -108,13 +109,13 @@
 			name = CoreData_Stack;
 			sourceTree = "<group>";
 		};
-		AC235EFD1E4BAB0D004095C2 /* Initial_Storboards */ = {
+		AC235EFD1E4BAB0D004095C2 /* Initial_Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				AC235EDD1E4BAA75004095C2 /* Main.storyboard */,
 				AC235EE51E4BAA75004095C2 /* LaunchScreen.storyboard */,
 			);
-			name = Initial_Storboards;
+			name = Initial_Storyboards;
 			sourceTree = "<group>";
 		};
 		AC235EFE1E4BAB18004095C2 /* SupportingFiles */ = {
@@ -145,6 +146,7 @@
 		AC235F011E4BABF2004095C2 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				AC235F071E4BB391004095C2 /* Enums */,
 				AC235F021E4BABF8004095C2 /* Extensions */,
 			);
 			name = Util;
@@ -154,8 +156,25 @@
 			isa = PBXGroup;
 			children = (
 				AC235F031E4BAC15004095C2 /* UIColor + FastAdditions.swift */,
+				AC235F0B1E4BB651004095C2 /* UIButton + FastPrimaryButton.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		AC235F071E4BB391004095C2 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				AC235F081E4BB39B004095C2 /* TextModifiers */,
+			);
+			name = Enums;
+			sourceTree = "<group>";
+		};
+		AC235F081E4BB39B004095C2 /* TextModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				AC235F091E4BB3B9004095C2 /* TextModifier.swift */,
+			);
+			name = TextModifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,8 +282,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC235EDC1E4BAA75004095C2 /* ViewController.swift in Sources */,
+				AC235F0A1E4BB3B9004095C2 /* TextModifier.swift in Sources */,
 				AC235F041E4BAC15004095C2 /* UIColor + FastAdditions.swift in Sources */,
+				AC235F0C1E4BB651004095C2 /* UIButton + FastPrimaryButton.swift in Sources */,
 				AC235EE21E4BAA75004095C2 /* iFast.xcdatamodeld in Sources */,
 				AC235EDA1E4BAA75004095C2 /* AppDelegate.swift in Sources */,
 			);
