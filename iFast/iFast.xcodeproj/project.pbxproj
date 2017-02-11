@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8AA940F11E4F8439004A2C6D /* String + FastAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA940F01E4F8439004A2C6D /* String + FastAdditions.swift */; };
+		8AA940F31E4F8FB2004A2C6D /* FastLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA940F21E4F8FB2004A2C6D /* FastLabel.swift */; };
 		AC235EDA1E4BAA75004095C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC235ED91E4BAA75004095C2 /* AppDelegate.swift */; };
 		AC235EDF1E4BAA75004095C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC235EDD1E4BAA75004095C2 /* Main.storyboard */; };
 		AC235EE21E4BAA75004095C2 /* iFast.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC235EE01E4BAA75004095C2 /* iFast.xcdatamodeld */; };
@@ -29,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8AA940F01E4F8439004A2C6D /* String + FastAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String + FastAdditions.swift"; sourceTree = "<group>"; };
+		8AA940F21E4F8FB2004A2C6D /* FastLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FastLabel.swift; sourceTree = "<group>"; };
 		AC235ED61E4BAA75004095C2 /* iFast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iFast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC235ED91E4BAA75004095C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC235EDE1E4BAA75004095C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -157,6 +161,8 @@
 			children = (
 				AC235F031E4BAC15004095C2 /* UIColor + FastAdditions.swift */,
 				AC235F0B1E4BB651004095C2 /* UIButton + FastPrimaryButton.swift */,
+				8AA940F01E4F8439004A2C6D /* String + FastAdditions.swift */,
+				8AA940F21E4F8FB2004A2C6D /* FastLabel.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -282,6 +288,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AA940F31E4F8FB2004A2C6D /* FastLabel.swift in Sources */,
+				8AA940F11E4F8439004A2C6D /* String + FastAdditions.swift in Sources */,
 				AC235F0A1E4BB3B9004095C2 /* TextModifier.swift in Sources */,
 				AC235F041E4BAC15004095C2 /* UIColor + FastAdditions.swift in Sources */,
 				AC235F0C1E4BB651004095C2 /* UIButton + FastPrimaryButton.swift in Sources */,
@@ -494,6 +502,7 @@
 				AC235EF81E4BAA75004095C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC235EF91E4BAA75004095C2 /* Build configuration list for PBXNativeTarget "iFastTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +511,7 @@
 				AC235EFB1E4BAA75004095C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -12,6 +12,7 @@ enum TextModifier: String {
   
   case regular  = "AvenirNext-Regular"
   case demiBold = "AvenirNext-DemiBold"
+  case medium		= "AvenirNext-Medium"
   
   func font(with size: CGFloat = 18) -> UIFont{
     guard let font = UIFont(name: self.rawValue, size: size) else {

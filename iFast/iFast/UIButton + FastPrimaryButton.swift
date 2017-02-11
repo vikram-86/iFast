@@ -25,7 +25,7 @@ class FastPrimaryButton: UIButton {
     layer.cornerRadius  = 10
     backgroundColor     =  UIColor.FastPaleTeal
   }
-  
+
   @IBInspectable
   var customTitle: String = "" {
     didSet{
@@ -38,6 +38,14 @@ class FastPrimaryButton: UIButton {
     let attributedTitle = NSAttributedString(string: title, attributes: fontAttributes)
     setAttributedTitle(attributedTitle, for: .normal)
   }
+
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    initialSetup()
+  }
   
-  
+  override func prepareForInterfaceBuilder() {
+    initialSetup()
+    setCustomFastTitle("")
+  }
 }
