@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="o11-Uk-lsK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tUw-Vu-LvS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Intro First" translatesAutoresizingMaskIntoConstraints="NO" id="pPk-ch-X2E">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_bg" translatesAutoresizingMaskIntoConstraints="NO" id="pPk-ch-X2E">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JTp-Hw-vxl" customClass="FastPrimaryButton" customModule="iFast" customModuleProvider="target">
@@ -33,6 +33,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="customTitle" value="Start"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="2to-Ml-OkG" kind="show" id="Plj-YB-Ufs"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iFast" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5g-Yk-zct" customClass="FastLabel" customModule="iFast" customModuleProvider="target">
                                 <rect key="frame" x="111.5" y="165" width="151" height="98.5"/>
@@ -77,13 +80,40 @@
                             <constraint firstAttribute="trailing" secondItem="pPk-ch-X2E" secondAttribute="trailing" id="wq9-Bs-epO"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="wE2-y5-tKu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JBB-Zr-SD9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="916" y="117.39130434782609"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zjb-TN-iqn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="tUw-Vu-LvS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0HY-EU-mBO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="o11-Uk-lsK" kind="relationship" relationship="rootViewController" id="k8g-oR-tED"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Iu-jK-Lm7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="-23.199999999999999" y="117.39130434782609"/>
+        </scene>
+        <!--Onboarding View Controller-->
+        <scene sceneID="ycT-JG-wVU">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="2to-Ml-OkG" customClass="OnboardingViewController" customModule="iFast" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4xt-dI-GMx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1711" y="117"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Intro First" width="375" height="667"/>
+        <image name="main_bg" width="375" height="667"/>
     </resources>
 </document>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ClH-NX-esW">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Onboarding Scene View Controller-->
+        <scene sceneID="wuv-fM-v13">
+            <objects>
+                <viewController id="ClH-NX-esW" customClass="OnboardingSceneViewController" customModule="iFast" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cbn-0A-2hr"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y8j-TZ-yCn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pat-US-Dv9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ucw-0x-D4i">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZuV-Lg-r2L" customClass="FastLabel" customModule="iFast" customModuleProvider="target">
+                                <rect key="frame" x="37" y="333.5" width="300" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="8bw-qr-RFI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Y8j-TZ-yCn" firstAttribute="top" secondItem="ucw-0x-D4i" secondAttribute="bottom" id="3eg-CM-K0D"/>
+                            <constraint firstItem="ZuV-Lg-r2L" firstAttribute="centerY" secondItem="Pat-US-Dv9" secondAttribute="centerY" id="Gmq-Zu-gGC"/>
+                            <constraint firstItem="ucw-0x-D4i" firstAttribute="leading" secondItem="Pat-US-Dv9" secondAttribute="leading" id="SnO-Bp-6Tz"/>
+                            <constraint firstAttribute="trailing" secondItem="ucw-0x-D4i" secondAttribute="trailing" id="VgW-zi-J0v"/>
+                            <constraint firstItem="ucw-0x-D4i" firstAttribute="top" secondItem="Pat-US-Dv9" secondAttribute="top" id="jmv-6c-cFd"/>
+                            <constraint firstItem="ZuV-Lg-r2L" firstAttribute="centerX" secondItem="Pat-US-Dv9" secondAttribute="centerX" id="xOn-Ch-Agb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="ucw-0x-D4i" id="yef-7g-AiP"/>
+                        <outlet property="textLabel" destination="ZuV-Lg-r2L" id="bUW-Zw-NTy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vZy-DT-BYk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100" y="135"/>
+        </scene>
+    </scenes>
+</document>
