@@ -15,9 +15,9 @@ class OnboardingViewController: UIPageViewController{
                                      text: "iFast keeps track on your intermittent fasting window, so you don’t have to worry about it.",
                                      page: 0)
     let page2 = self.createViewController(backgroundImage: #imageLiteral(resourceName: "intro_2"),
-                                     text: "You and see your progress with charts and pictures. Everytthing is locally stored.",
+                                     text: "iFast lets you see your progress with charts and pictures. Everytthing is locally stored.",
                                      page: 1)
-    let page3 = self.createViewController(backgroundImage: #imageLiteral(resourceName: "intro_3"), text: "Help iFast help you by enabling notification.\n\nBy enabling notifications, iFast will notify your one hour before your fast begins.", page: 2)
+    let page3 = self.createViewController(backgroundImage: #imageLiteral(resourceName: "intro_3"), text: "Let iFast help you by enabling notification.\n\nBy enabling notifications, iFast will notify your 1 hour before your fast begins.", page: 2)
     let page4 = self.createViewController(backgroundImage: #imageLiteral(resourceName: "intro_4"),
                                           text: "Always consult your physician before beginning any diet program. This general information is not intended to diagnose any medical condition or to replace your healthcare professional. Consult with your healthcare professional to design an appropriate diet prescription. If you experience any pain or difficulty with this program, stop and consult your healthcare provider",
                                           isLast: true, page: 3)
@@ -50,6 +50,7 @@ extension OnboardingViewController{
     viewController?.text 						= text
     viewController?.page 						= page
     viewController?.isLast 					= isLast
+    viewController?.delegate				= self
     return viewController!
   }
 
@@ -99,6 +100,18 @@ extension OnboardingViewController: UIPageViewControllerDelegate{
     if let currentViewController = pageViewController.viewControllers?[0] as? OnboardingSceneViewController{
       pageControl.currentPage = currentViewController.page
     }
+  }
+}
+
+//MARK: -OnboardinSceneViewController Delegate - 
+extension OnboardingViewController: OnboardingSceneViewControllerDelegate {
+
+  func controllerDidSkipPage(controller: OnboardingSceneViewController) {
+    print("Skipping page")
+  }
+
+  func controllerDidPressPrimaryButton(controller: OnboardingSceneViewController) {
+    print("primary button pressed")
   }
 }
 

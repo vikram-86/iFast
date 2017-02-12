@@ -9,6 +9,11 @@
 
 import UIKit
 
+protocol OnboardingSceneViewControllerDelegate {
+  func controllerDidSkipPage(controller: OnboardingSceneViewController)
+  func controllerDidPressPrimaryButton(controller: OnboardingSceneViewController)
+}
+
 protocol OnboardingSceneViewControllerInput
 {
   func presentButtonConfigurations(viewModel: OnboardingScene.OnboardingViewModel.ButtonViewModel)
@@ -22,8 +27,9 @@ protocol OnboardingSceneViewControllerOutput
 
 class OnboardingSceneViewController: UIViewController, OnboardingSceneViewControllerInput
 {
-  var output: OnboardingSceneViewControllerOutput!
-  var router: OnboardingSceneRouter!
+  var output		: OnboardingSceneViewControllerOutput!
+  var router		: OnboardingSceneRouter!
+  var delegate	: OnboardingSceneViewControllerDelegate?
 
   static var viewController: OnboardingSceneViewController? {
     let storyboard = UIStoryboard(name: String.init(describing: self), bundle: nil)
@@ -99,4 +105,11 @@ extension OnboardingSceneViewController {
 // MARK: - Event Handler - 
 extension OnboardingSceneViewController {
 
+  @IBAction func skipButtonPressed(){
+    delegate?.controllerDidSkipPage(controller: self)
+  }
+
+  @IBAction func primaryButtonPressed(){
+    delegate?.controllerDidPressPrimaryButton(controller: self)
+  }
 }

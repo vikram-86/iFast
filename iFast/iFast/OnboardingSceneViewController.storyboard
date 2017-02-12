@@ -43,6 +43,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="customTitle" value="Enable Notifications"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="primaryButtonPressed" destination="ClH-NX-esW" eventType="touchUpInside" id="oSd-2R-AaD"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDt-7G-WLA">
                                 <rect key="frame" x="172" y="590" width="30" height="32"/>
@@ -50,6 +53,9 @@
                                 <state key="normal" title="Skip">
                                     <color key="titleColor" red="0.77647058820000003" green="0.52941176469999995" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="skipButtonPressed" destination="ClH-NX-esW" eventType="touchUpInside" id="2zz-Sy-q4T"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
