@@ -11,12 +11,13 @@ import UIKit
 
 protocol OnboardingSceneViewControllerInput
 {
-  
+  func presentButtonConfigurations(viewModel: OnboardingScene.OnboardingViewModel.ButtonViewModel)
+
 }
 
 protocol OnboardingSceneViewControllerOutput
 {
-
+  func setupButtonTitle(request: OnboardingScene.OnboardingRequest.ButtonTitleRequest)
 }
 
 class OnboardingSceneViewController: UIViewController, OnboardingSceneViewControllerInput
@@ -30,13 +31,17 @@ class OnboardingSceneViewController: UIViewController, OnboardingSceneViewContro
   }
 
   //MARK: IBOutlets
-  @IBOutlet weak var textLabel: FastLabel!
-  @IBOutlet weak var backgroundImageView: UIImageView!
+  @IBOutlet weak var textLabel						: FastLabel!
+  @IBOutlet weak var backgroundImageView	: UIImageView!
+  @IBOutlet weak var primaryButton				: FastPrimaryButton!
+  @IBOutlet weak var secondaryButton			: UIButton!
 
-  var backgroundImage: UIImage?
-  var text: String = ""
-  var page = 0
-  var isLast = false
+
+  var backgroundImage	: UIImage?
+  var text						: String = ""
+
+  var page 		= 0
+  var isLast	= false
 
 
   // MARK: - Object lifecycle
@@ -57,9 +62,12 @@ class OnboardingSceneViewController: UIViewController, OnboardingSceneViewContro
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(true)
-    backgroundImageView.image = backgroundImage
-    textLabel.attributedText = createAttributedString()
+
+    backgroundImageView.image	= backgroundImage
+    textLabel.attributedText 	= createAttributedString()
+
     textLabel.sizeToFit()
+    setupButtonTitles()
   }
 }
 
@@ -75,6 +83,17 @@ extension OnboardingSceneViewController {
       , font: font)
   }
 
+  fileprivate func setupButtonTitles(){
+    let request = OnboardingScene.OnboardingRequest.ButtonTitleRequest(page: page)
+    output.setupButtonTitle(request: request)
+  }
+
+  func presentButtonConfigurations(viewModel: OnboardingScene.OnboardingViewModel.ButtonViewModel) {
+    primaryButton.customTitle	= viewModel.buttonTitle
+    primaryButton.fontSize		= 20
+    primaryButton.isHidden 		= viewModel.primaryIsHidden
+    secondaryButton.isHidden 	= viewModel.secondaryIsHidden
+  }
 }
 
 // MARK: - Event Handler - 
