@@ -10,6 +10,7 @@ import UIKit
 
 protocol PushViewDelegate{
   func view(didSelect hour: String, minutes: String, inView pushView: PushView)
+  func viewWillClose(pushView: PushView)
 }
 
 class PushView: UIView {
@@ -74,6 +75,10 @@ extension PushView {
   @IBAction func primaryButtonPressed(){
     delegate?.view(didSelect: selectedHour, minutes: selectedMinutes, inView: self)
   }
+
+  @IBAction func closeButtonPressed(){
+    delegate?.viewWillClose(pushView: self)
+  }
 }
 
 //MARK: - UIPicker - 
@@ -81,6 +86,14 @@ extension PushView: UIPickerViewDataSource, UIPickerViewDelegate{
   fileprivate func setupUIPicker(){
     pickerView.delegate = self
     pickerView.dataSource = self
+
+    let calender = Calendar.current
+    let calendarComponents = calender.dateComponents([.hour, .minute], from: Date())
+    guard let hour = calendarComponents.hour,
+      let minutes = calendarComponents.minute else { return }
+
+    pickerView.selectRow(hour, inComponent: 0, animated: true)
+    pickerView.selectRow(minutes, inComponent: 1, animated: true)
   }
 
   func numberOfComponents(in pickerView: UIPickerView) -> Int {

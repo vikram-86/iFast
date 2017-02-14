@@ -62,14 +62,38 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0uh-s8-VkP">
+                    <rect key="frame" x="331" y="20" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="Bbz-54-pyj"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="djT-7v-dKG"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="24" id="k2r-NM-inG"/>
+                        <constraint firstAttribute="width" constant="24" id="rFM-M1-AYr"/>
+                    </constraints>
+                    <state key="normal" image="Delete_2b4570_100"/>
+                    <connections>
+                        <action selector="closeButtonPressed" destination="-1" eventType="touchUpInside" id="96n-ex-pPa"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDL-aW-mhW">
+                    <rect key="frame" x="0.5" y="227.5" width="375" height="33"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                    <color key="textColor" red="0.16862745098039217" green="0.27058823529411763" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="0uh-s8-VkP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" symbolic="YES" id="0zo-Je-iKf"/>
+                <constraint firstAttribute="trailing" secondItem="0uh-s8-VkP" secondAttribute="trailing" constant="20" symbolic="YES" id="3Nu-ZL-lV0"/>
                 <constraint firstAttribute="bottom" secondItem="Bn6-Ig-rES" secondAttribute="bottom" id="4UC-MU-tqe"/>
                 <constraint firstItem="ggT-1U-GwS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="43" id="6Q5-JW-LDe"/>
                 <constraint firstItem="pMr-OY-KbI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="7Us-TZ-RzB"/>
+                <constraint firstItem="UDL-aW-mhW" firstAttribute="centerX" secondItem="pMr-OY-KbI" secondAttribute="centerX" id="De5-LU-wba"/>
                 <constraint firstItem="Bn6-Ig-rES" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="EHZ-Wc-gpU"/>
                 <constraint firstItem="Bn6-Ig-rES" firstAttribute="top" secondItem="pMr-OY-KbI" secondAttribute="bottom" id="R87-fe-LGB"/>
+                <constraint firstItem="UDL-aW-mhW" firstAttribute="width" secondItem="pMr-OY-KbI" secondAttribute="width" id="UMv-kk-okb"/>
+                <constraint firstItem="UDL-aW-mhW" firstAttribute="centerY" secondItem="pMr-OY-KbI" secondAttribute="centerY" id="Wyq-mA-lPO"/>
                 <constraint firstAttribute="trailing" secondItem="Bn6-Ig-rES" secondAttribute="trailing" id="giy-dj-rqB"/>
                 <constraint firstItem="ggT-1U-GwS" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hgy-GX-Jrc"/>
             </constraints>
@@ -78,4 +102,7 @@
             <point key="canvasLocation" x="34.5" y="54"/>
         </view>
     </objects>
+    <resources>
+        <image name="Delete_2b4570_100" width="100" height="100"/>
+    </resources>
 </document>

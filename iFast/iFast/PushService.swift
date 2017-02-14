@@ -9,11 +9,29 @@
 import UIKit
 import UserNotifications
 
+enum PushServiceStatus{
+
+  case authorized
+  case notDetermined
+  case denied
+
+  static func createStatus(settingsStatus: UNAuthorizationStatus) -> PushServiceStatus{
+    switch settingsStatus{
+    case .authorized:
+      return .authorized
+    case .notDetermined:
+      return .notDetermined
+    case .denied:
+      return .denied
+    }
+  }
+}
+
 class PushService {
 
-  class func getCurrentAuthorization(status:@escaping (UNAuthorizationStatus)->Void) {
+  class func getCurrentAuthorization(status:@escaping (PushServiceStatus)->Void) {
     UNUserNotificationCenter.current().getNotificationSettings { (settings) in
-      status(settings.authorizationStatus)
+      status(PushServiceStatus.createStatus(settingsStatus: settings.authorizationStatus))
     }
   }
 

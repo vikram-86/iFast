@@ -10,6 +10,9 @@
 		8AA152CD1E52380200D63156 /* PushService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA152CC1E52380200D63156 /* PushService.swift */; };
 		8AA152D11E52E54F00D63156 /* PushView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA152D01E52E54F00D63156 /* PushView.xib */; };
 		8AA152D31E52E79900D63156 /* PushView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA152D21E52E79900D63156 /* PushView.swift */; };
+		8AA5F1231E532619007D8CD5 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA5F1221E532619007D8CD5 /* TestViewController.swift */; };
+		8AA5F1251E5327A3007D8CD5 /* Test2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA5F1241E5327A3007D8CD5 /* Test2ViewController.swift */; };
+		8AA5F1281E533DBB007D8CD5 /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA5F1271E533DBB007D8CD5 /* AlertView.xib */; };
 		8AA940F11E4F8439004A2C6D /* String + FastAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA940F01E4F8439004A2C6D /* String + FastAdditions.swift */; };
 		8AA940F31E4F8FB2004A2C6D /* FastLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA940F21E4F8FB2004A2C6D /* FastLabel.swift */; };
 		8AA940FD1E4F9E3B004A2C6D /* OnboardingSceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA940F61E4F9E3B004A2C6D /* OnboardingSceneConfigurator.swift */; };
@@ -46,6 +49,9 @@
 		8AA152CC1E52380200D63156 /* PushService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushService.swift; sourceTree = "<group>"; };
 		8AA152D01E52E54F00D63156 /* PushView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PushView.xib; sourceTree = "<group>"; };
 		8AA152D21E52E79900D63156 /* PushView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushView.swift; sourceTree = "<group>"; };
+		8AA5F1221E532619007D8CD5 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		8AA5F1241E5327A3007D8CD5 /* Test2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test2ViewController.swift; sourceTree = "<group>"; };
+		8AA5F1271E533DBB007D8CD5 /* AlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
 		8AA940F01E4F8439004A2C6D /* String + FastAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String + FastAdditions.swift"; sourceTree = "<group>"; };
 		8AA940F21E4F8FB2004A2C6D /* FastLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FastLabel.swift; sourceTree = "<group>"; };
 		8AA940F61E4F9E3B004A2C6D /* OnboardingSceneConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingSceneConfigurator.swift; sourceTree = "<group>"; };
@@ -109,6 +115,7 @@
 		8AA152CE1E523F0000D63156 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8AA5F1261E533D61007D8CD5 /* AlertView */,
 				8AA152CF1E52E53F00D63156 /* PushView */,
 			);
 			name = Views;
@@ -121,6 +128,14 @@
 				8AA152D21E52E79900D63156 /* PushView.swift */,
 			);
 			name = PushView;
+			sourceTree = "<group>";
+		};
+		8AA5F1261E533D61007D8CD5 /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				8AA5F1271E533DBB007D8CD5 /* AlertView.xib */,
+			);
+			name = AlertView;
 			sourceTree = "<group>";
 		};
 		8AA940F41E4F9D2F004A2C6D /* Scenes */ = {
@@ -202,6 +217,8 @@
 				AC235EDD1E4BAA75004095C2 /* Main.storyboard */,
 				AC235EE51E4BAA75004095C2 /* LaunchScreen.storyboard */,
 				8AA941091E4FA218004A2C6D /* OnboardingViewController.swift */,
+				8AA5F1221E532619007D8CD5 /* TestViewController.swift */,
+				8AA5F1241E5327A3007D8CD5 /* Test2ViewController.swift */,
 			);
 			name = Initial_Storyboards;
 			sourceTree = "<group>";
@@ -355,6 +372,7 @@
 				AC235EE71E4BAA75004095C2 /* LaunchScreen.storyboard in Resources */,
 				AC235EE41E4BAA75004095C2 /* Assets.xcassets in Resources */,
 				8AA152D11E52E54F00D63156 /* PushView.xib in Resources */,
+				8AA5F1281E533DBB007D8CD5 /* AlertView.xib in Resources */,
 				AC235EDF1E4BAA75004095C2 /* Main.storyboard in Resources */,
 				8AA941081E4F9FD5004A2C6D /* OnboardingSceneViewController.storyboard in Resources */,
 			);
@@ -374,6 +392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AA5F1251E5327A3007D8CD5 /* Test2ViewController.swift in Sources */,
 				8AA941011E4F9E3B004A2C6D /* OnboardingSceneRouter.swift in Sources */,
 				8AA940FD1E4F9E3B004A2C6D /* OnboardingSceneConfigurator.swift in Sources */,
 				8AA940FE1E4F9E3B004A2C6D /* OnboardingSceneInteractor.swift in Sources */,
@@ -390,6 +409,7 @@
 				AC235EE21E4BAA75004095C2 /* iFast.xcdatamodeld in Sources */,
 				8AA152CD1E52380200D63156 /* PushService.swift in Sources */,
 				AC235EDA1E4BAA75004095C2 /* AppDelegate.swift in Sources */,
+				8AA5F1231E532619007D8CD5 /* TestViewController.swift in Sources */,
 				8AA940FF1E4F9E3B004A2C6D /* OnboardingSceneModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
