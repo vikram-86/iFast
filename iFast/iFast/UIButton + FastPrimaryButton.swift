@@ -22,8 +22,8 @@ class FastPrimaryButton: UIButton {
   }
   
   private func initialSetup(){
-    layer.cornerRadius  = 10
-    backgroundColor     =  UIColor.FastPaleTeal
+    layer.cornerRadius  = customCornerRadius
+    backgroundColor     = customBackgroundColor
   }
 
   @IBInspectable
@@ -32,9 +32,34 @@ class FastPrimaryButton: UIButton {
       setCustomFastTitle(customTitle)
     }
   }
+
+
+  @IBInspectable var customCornerRadius: CGFloat = 10 {
+    didSet{
+      layer.cornerRadius = customCornerRadius
+    }
+  }
+
+  @IBInspectable var fontSize: CGFloat = 24 {
+    didSet{
+      setCustomFastTitle(customTitle)
+    }
+  }
+
+  @IBInspectable var customBackgroundColor	: UIColor = UIColor.FastPaleTeal {
+    didSet{
+      backgroundColor = customBackgroundColor
+    }
+  }
+
+  @IBInspectable var customFontColor	: UIColor = UIColor.FastDarkSlateBlue {
+    didSet{
+      setCustomFastTitle(customTitle)
+    }
+  }
   
   func setCustomFastTitle(_ title: String){
-    let fontAttributes  = [NSForegroundColorAttributeName: UIColor.FastDarkSlateBlue.withAlphaComponent(0.6), NSFontAttributeName: TextModifier.regular.font(with: 24)]
+    let fontAttributes  = [NSForegroundColorAttributeName: customFontColor.withAlphaComponent(0.6), NSFontAttributeName: TextModifier.regular.font(with: fontSize)]
     let attributedTitle = NSAttributedString(string: title, attributes: fontAttributes)
     setAttributedTitle(attributedTitle, for: .normal)
   }
