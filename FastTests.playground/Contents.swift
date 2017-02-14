@@ -22,3 +22,5 @@ func createStrokeFonts(text: String, fontColor: UIColor, strokeColor: UIColor, s
 }
 
 let text = createStrokeFonts(text: "Hallo", fontColor: .white, strokeColor: .red, strokeWidth: -1.0)
+
+let test = String(format: "%02d",1)

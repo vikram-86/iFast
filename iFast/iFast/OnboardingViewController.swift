@@ -113,5 +113,9 @@ extension OnboardingViewController: OnboardingSceneViewControllerDelegate {
   func controllerDidPressPrimaryButton(controller: OnboardingSceneViewController) {
     print("primary button pressed")
   }
+
+  func controllerWillShowPushView(controller: OnboardingSceneViewController) {
+    pageControl.isHidden = true
+  }
 }
 

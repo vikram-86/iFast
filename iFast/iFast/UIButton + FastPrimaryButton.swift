@@ -22,14 +22,21 @@ class FastPrimaryButton: UIButton {
   }
   
   private func initialSetup(){
-    layer.cornerRadius  = 10
-    backgroundColor     =  UIColor.FastPaleTeal
+    layer.cornerRadius  = customCornerRadius
+    backgroundColor     = customBackgroundColor
   }
 
   @IBInspectable
   var customTitle: String = "" {
     didSet{
       setCustomFastTitle(customTitle)
+    }
+  }
+
+
+  @IBInspectable var customCornerRadius: CGFloat = 10 {
+    didSet{
+      layer.cornerRadius = customCornerRadius
     }
   }
 

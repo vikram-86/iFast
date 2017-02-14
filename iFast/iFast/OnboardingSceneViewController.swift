@@ -12,6 +12,7 @@ import UIKit
 protocol OnboardingSceneViewControllerDelegate {
   func controllerDidSkipPage(controller: OnboardingSceneViewController)
   func controllerDidPressPrimaryButton(controller: OnboardingSceneViewController)
+  func controllerWillShowPushView(controller: OnboardingSceneViewController)
 }
 
 protocol OnboardingSceneViewControllerInput
@@ -110,6 +111,20 @@ extension OnboardingSceneViewController {
   }
 
   @IBAction func primaryButtonPressed(){
-    delegate?.controllerDidPressPrimaryButton(controller: self)
+    //delegate?.controllerDidPressPrimaryButton(controller: self)
+    if page == 2 {
+      delegate?.controllerWillShowPushView(controller: self)
+      createPushView()
+    }else{
+      delegate?.controllerDidPressPrimaryButton(controller: self)
+    }
+  }
+
+  private func createPushView(){
+    let pushView = PushView(frame: CGRect(x: 0, y: view.frame.height, width: view.bounds.width, height: 400))
+    view.addSubview(pushView)
+    UIView.animate(withDuration: 0.3, delay: 0.3, options: .curveEaseInOut, animations: {
+      pushView.frame.origin.y -= pushView.bounds.height
+    }, completion: nil)
   }
 }
