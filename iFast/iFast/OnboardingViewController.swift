@@ -108,6 +108,9 @@ extension OnboardingViewController: OnboardingSceneViewControllerDelegate {
 
   func controllerDidSkipPage(controller: OnboardingSceneViewController) {
     print("Skipping page")
+    if controller.page == 2 {
+    	setViewControllers([orderedViewController[controller.page + 1]], direction: .forward, animated: true, completion: nil)
+    }
   }
 
   func controllerDidPressPrimaryButton(controller: OnboardingSceneViewController) {
@@ -116,6 +119,10 @@ extension OnboardingViewController: OnboardingSceneViewControllerDelegate {
 
   func controllerWillShowPushView(controller: OnboardingSceneViewController) {
     pageControl.isHidden = true
+  }
+
+  func controllerWillHidePushView(controller: OnboardingSceneViewController) {
+    pageControl.isHidden = false
   }
 }
 

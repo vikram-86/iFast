@@ -13,6 +13,7 @@ protocol OnboardingSceneViewControllerDelegate {
   func controllerDidSkipPage(controller: OnboardingSceneViewController)
   func controllerDidPressPrimaryButton(controller: OnboardingSceneViewController)
   func controllerWillShowPushView(controller: OnboardingSceneViewController)
+  func controllerWillHidePushView(controller: OnboardingSceneViewController)
 }
 
 protocol OnboardingSceneViewControllerInput
@@ -122,9 +123,27 @@ extension OnboardingSceneViewController {
 
   private func createPushView(){
     let pushView = PushView(frame: CGRect(x: 0, y: view.frame.height, width: view.bounds.width, height: 400))
+    pushView.delegate = self
     view.addSubview(pushView)
-    UIView.animate(withDuration: 0.3, delay: 0.3, options: .curveEaseInOut, animations: {
+    UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: {
       pushView.frame.origin.y -= pushView.bounds.height
     }, completion: nil)
+  }
+
+  fileprivate func removePushView(pushView: PushView){
+    UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: {
+      pushView.frame.origin.y += pushView.bounds.height
+    }) { (completed) in
+      self.delegate?.controllerWillHidePushView(controller: self)
+      pushView.removeFromSuperview()
+    }
+  }
+}
+
+//MARK: - PushView Delegate
+extension OnboardingSceneViewController: PushViewDelegate{
+  func view(didSelect hour: String, minutes: String, inView pushView: PushView) {
+    removePushView(pushView: pushView)
+
   }
 }

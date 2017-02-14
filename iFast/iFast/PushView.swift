@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol PushViewDelegate{
+  func view(didSelect hour: String, minutes: String, inView pushView: PushView)
+}
+
 class PushView: UIView {
 
   @IBOutlet weak var pickerView: UIPickerView!
@@ -28,6 +32,11 @@ class PushView: UIView {
     }
     return m
   }
+
+  var selectedHour		: String = ""
+  var selectedMinutes	: String = ""
+
+  var delegate	: PushViewDelegate?
 
   var view: UIView!
   //MARK: Initializers
@@ -63,7 +72,7 @@ class PushView: UIView {
 extension PushView {
 
   @IBAction func primaryButtonPressed(){
-
+    delegate?.view(didSelect: selectedHour, minutes: selectedMinutes, inView: self)
   }
 }
 
@@ -90,5 +99,13 @@ extension PushView: UIPickerViewDataSource, UIPickerViewDelegate{
     label.text = component == 0 ? hours[row] : minutes[row]
     label.textAlignment = .center
     return label
+  }
+
+  func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    if component == 0 {
+      selectedHour = hours[row]
+    }else{
+      selectedMinutes = minutes[row]
+    }
   }
 }
