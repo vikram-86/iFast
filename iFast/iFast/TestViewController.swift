@@ -22,14 +22,6 @@ class TestViewController: UIViewController {
     }
   @IBAction func buttonPressed(_ sender: Any) {
     print("buttonPressed")
-    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    guard let vc = storyboard.instantiateViewController(withIdentifier: "test2") as? Test2ViewController else { return }
-
-    present(vc, animated: true) {
-
-      UIView.animate(withDuration: 0.1, animations: {
-        vc.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
-      })
-    }
+    AlertService.current.createAlert(title: "This is an test for alert views", style: .error, in: self)
   }
 }
