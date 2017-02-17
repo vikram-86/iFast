@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -161,17 +160,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GnZ-Eq-ryS">
-                                <rect key="frame" x="67" y="269" width="240" height="128"/>
-                                <color key="backgroundColor" red="0.77647058820000003" green="0.52941176469999995" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GnZ-Eq-ryS" customClass="AlertView" customModule="iFast" customModuleProvider="target">
+                                <rect key="frame" x="37" y="183.5" width="300" height="299"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="299" id="C66-Xp-uvh"/>
+                                    <constraint firstAttribute="width" constant="300" id="cku-IY-T2q"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="GnZ-Eq-ryS" firstAttribute="centerX" secondItem="a0g-k1-b2Q" secondAttribute="centerX" id="75D-UE-Mdw"/>
-                            <constraint firstItem="GnZ-Eq-ryS" firstAttribute="leading" secondItem="a0g-k1-b2Q" secondAttribute="leadingMargin" constant="51" id="Sr1-BM-r0L"/>
-                            <constraint firstItem="GnZ-Eq-ryS" firstAttribute="centerY" secondItem="a0g-k1-b2Q" secondAttribute="centerY" id="WHe-Zk-Apq"/>
-                            <constraint firstItem="GnZ-Eq-ryS" firstAttribute="top" secondItem="FEa-3j-vxh" secondAttribute="bottom" constant="249" id="yxL-bh-aN3"/>
+                            <constraint firstItem="GnZ-Eq-ryS" firstAttribute="centerY" secondItem="a0g-k1-b2Q" secondAttribute="centerY" id="PdX-oT-neE"/>
+                            <constraint firstItem="GnZ-Eq-ryS" firstAttribute="centerX" secondItem="a0g-k1-b2Q" secondAttribute="centerX" id="duv-fd-gqY"/>
                         </constraints>
                     </view>
                 </viewController>
