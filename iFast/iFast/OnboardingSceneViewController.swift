@@ -142,8 +142,31 @@ extension OnboardingSceneViewController {
 
 //MARK: - PushView Delegate
 extension OnboardingSceneViewController: PushViewDelegate{
-  func view(didSelect hour: String, minutes: String, inView pushView: PushView) {
-    removePushView(pushView: pushView)
 
+  func view(didSelect hour: String, minutes: String, inView pushView: PushView) {
+		PushService.getCurrentAuthorization { (status) in
+      switch status {
+      case .notDetermined:
+        // Request Authorization
+        print("Not Determined")
+        PushService.requestNotificationAuthorization(completion: { (success, error) in
+          if !success {
+            print("Access not granted!")
+            return
+          }
+        })
+      case .denied:
+        // Inform user that User needs to set Authorization
+        print("Denied")
+      case .authorized:
+        // Everything OK.. Create Local Notifications
+        print("Authorized")
+      }
+    }
+    removePushView(pushView: pushView)
+  }
+
+  func viewWillClose(pushView: PushView) {
+    removePushView(pushView: pushView)
   }
 }
