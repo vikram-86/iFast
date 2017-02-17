@@ -151,19 +151,47 @@ extension OnboardingSceneViewController: PushViewDelegate{
         print("Not Determined")
         PushService.requestNotificationAuthorization(completion: { (success, error) in
           if !success {
-            print("Access not granted!")
-            return
+            DispatchQueue.main.async {
+              AlertService.current.createAlert(title: "Access to show alerts was not granted. Please change this on your phone's settings", style: .error, in: self)
+              return
+            }
+          }else{
+            PushService.createNotifications(hour: NSString(string: hour).integerValue, minutes: NSString(string: minutes).integerValue, completion: { (success) in
+              self.handlePush(success: success)
+            })
           }
         })
       case .denied:
         // Inform user that User needs to set Authorization
         print("Denied")
+        DispatchQueue.main.async {
+          AlertService.current.createAlert(title: "Access to show alets was not granted. Please change this on your phone's settings", style: .information, in: self)
+        }
+        
       case .authorized:
         // Everything OK.. Create Local Notifications
         print("Authorized")
+        PushService.createNotifications(hour: NSString(string:hour).integerValue, minutes: NSString(string: minutes).integerValue,completion: { (success) in
+          self.handlePush(success: success)
+        })
       }
     }
     removePushView(pushView: pushView)
+  }
+  
+  fileprivate func handlePush(success: Bool){
+    DispatchQueue.main.async {
+      let title: String
+      let style: AlertStyle
+      if success{
+        title = "Nice! iFast will notify your 1 hour before your fast begins"
+        style = AlertStyle.success
+      }else{
+        title = "Ouch! Something went wrong! Please try again"
+        style = AlertStyle.error
+      }
+      AlertService.current.createAlert(title: title, style: style, in: self)
+    }
   }
 
   func viewWillClose(pushView: PushView) {

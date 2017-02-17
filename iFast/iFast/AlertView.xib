@@ -40,7 +40,7 @@
                                 <action selector="buttonPressed" destination="-1" eventType="touchUpInside" id="rUL-Gw-aIg"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Halloen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="ljG-9E-nbC">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Halloen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="ljG-9E-nbC">
                             <rect key="frame" x="25" y="69" width="250" height="81"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="250" id="R3N-90-2fg"/>
