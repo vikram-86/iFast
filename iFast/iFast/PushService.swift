@@ -57,12 +57,7 @@ class PushService {
     content.body = notificationText
     let request = UNNotificationRequest(identifier: "fast-begins", content: content, trigger: trigger)
     UNUserNotificationCenter.current().add(request) { (error) in
-      if let error = error {
-        print(error.localizedDescription)
-        completion(false)
-      }else{
-        completion(true)
-      }
+      completion(error == nil)
     }
     
   }

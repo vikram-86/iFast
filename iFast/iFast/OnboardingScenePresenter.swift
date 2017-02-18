@@ -12,11 +12,13 @@ import UIKit
 protocol OnboardingScenePresenterInput
 {
   func setupButtonTitle(response: OnboardingScene.OnboardingResponse.ButtonTitleResponse)
+  func prepareAlert(response: OnboardingScene.OnboardingResponse.PushResponse)
 }
 
 protocol OnboardingScenePresenterOutput: class
 {
   func presentButtonConfigurations(viewModel: OnboardingScene.OnboardingViewModel.ButtonViewModel)
+  func presentAlert(viewModel: OnboardingScene.OnboardingViewModel.AlertViewModel)
 }
 
 class OnboardingScenePresenter: OnboardingScenePresenterInput
@@ -33,5 +35,9 @@ class OnboardingScenePresenter: OnboardingScenePresenterInput
 
     output.presentButtonConfigurations(viewModel: viewModel)
   }
-
+  
+  func prepareAlert(response: OnboardingScene.OnboardingResponse.PushResponse) {
+    let viewModel = OnboardingScene.OnboardingViewModel.AlertViewModel(title: response.title, style: response.alertStyle)
+    output.presentAlert(viewModel: viewModel)
+  }
 }

@@ -19,12 +19,14 @@ protocol OnboardingSceneViewControllerDelegate {
 protocol OnboardingSceneViewControllerInput
 {
   func presentButtonConfigurations(viewModel: OnboardingScene.OnboardingViewModel.ButtonViewModel)
+  func presentAlert(viewModel: OnboardingScene.OnboardingViewModel.AlertViewModel)
 
 }
 
 protocol OnboardingSceneViewControllerOutput
 {
   func setupButtonTitle(request: OnboardingScene.OnboardingRequest.ButtonTitleRequest)
+  func handlePush(request: OnboardingScene.OnboardingRequest.PushRequest)
 }
 
 class OnboardingSceneViewController: UIViewController, OnboardingSceneViewControllerInput
@@ -102,6 +104,14 @@ extension OnboardingSceneViewController {
     primaryButton.isHidden 		= viewModel.primaryIsHidden
     secondaryButton.isHidden 	= viewModel.secondaryIsHidden
   }
+  
+  func presentAlert(viewModel: OnboardingScene.OnboardingViewModel.AlertViewModel) {
+    DispatchQueue.main.async {
+      let alertService = AlertService()
+      alertService.delegate = self
+      alertService.createAlert(title: viewModel.title, style: viewModel.style, in: self)
+    }
+  }
 }
 
 // MARK: - Event Handler - 
@@ -144,57 +154,27 @@ extension OnboardingSceneViewController {
 extension OnboardingSceneViewController: PushViewDelegate{
 
   func view(didSelect hour: String, minutes: String, inView pushView: PushView) {
-		PushService.getCurrentAuthorization { (status) in
-      switch status {
-      case .notDetermined:
-        // Request Authorization
-        print("Not Determined")
-        PushService.requestNotificationAuthorization(completion: { (success, error) in
-          if !success {
-            DispatchQueue.main.async {
-              AlertService.current.createAlert(title: "Access to show alerts was not granted. Please change this on your phone's settings", style: .error, in: self)
-              return
-            }
-          }else{
-            PushService.createNotifications(hour: NSString(string: hour).integerValue, minutes: NSString(string: minutes).integerValue, completion: { (success) in
-              self.handlePush(success: success)
-            })
-          }
-        })
-      case .denied:
-        // Inform user that User needs to set Authorization
-        print("Denied")
-        DispatchQueue.main.async {
-          AlertService.current.createAlert(title: "Access to show alets was not granted. Please change this on your phone's settings", style: .information, in: self)
-        }
-        
-      case .authorized:
-        // Everything OK.. Create Local Notifications
-        print("Authorized")
-        PushService.createNotifications(hour: NSString(string:hour).integerValue, minutes: NSString(string: minutes).integerValue,completion: { (success) in
-          self.handlePush(success: success)
-        })
-      }
-    }
+    let request = OnboardingScene.OnboardingRequest.PushRequest(
+      hour: NSString(string: hour).integerValue,
+      minutes: NSString(string: minutes).integerValue
+      , pushView: pushView)
+    
+    output.handlePush(request: request)
     removePushView(pushView: pushView)
   }
   
-  fileprivate func handlePush(success: Bool){
-    DispatchQueue.main.async {
-      let title: String
-      let style: AlertStyle
-      if success{
-        title = "Nice! iFast will notify your 1 hour before your fast begins"
-        style = AlertStyle.success
-      }else{
-        title = "Ouch! Something went wrong! Please try again"
-        style = AlertStyle.error
-      }
-      AlertService.current.createAlert(title: title, style: style, in: self)
-    }
-  }
-
   func viewWillClose(pushView: PushView) {
     removePushView(pushView: pushView)
+  }
+}
+
+//MARK: - AlertView Delegate
+extension OnboardingSceneViewController: AlertServiceDelegate {
+  func alertDidGetRemoved(with style: AlertStyle) {
+    DispatchQueue.main.async {
+      if style == .success {
+        self.delegate?.controllerDidSkipPage(controller: self)
+      }
+    }
   }
 }

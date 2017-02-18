@@ -11,11 +11,13 @@ import UIKit
 protocol OnboardingSceneInteractorInput
 {
   func setupButtonTitle(request: OnboardingScene.OnboardingRequest.ButtonTitleRequest)
+  func handlePush(request: OnboardingScene.OnboardingRequest.PushRequest)
 }
 
 protocol OnboardingSceneInteractorOutput
 {
   func setupButtonTitle(response: OnboardingScene.OnboardingResponse.ButtonTitleResponse)
+  func prepareAlert(response: OnboardingScene.OnboardingResponse.PushResponse)
 }
 
 class OnboardingSceneInteractor: OnboardingSceneInteractorInput
@@ -48,6 +50,19 @@ class OnboardingSceneInteractor: OnboardingSceneInteractorInput
                                                                           shouldEnablePrimaryButton: shouldEnablePrimary,
                                                                           shouldEnableSecondaryButton: shouldEnableSecondary)
     output.setupButtonTitle(response: response)
-    
+  }
+  
+  func handlePush(request: OnboardingScene.OnboardingRequest.PushRequest) {
+    worker = OnboardingSceneWorker()
+    worker.delegate = self
+    worker.handlePush(request: request)
+  }
+}
+
+extension OnboardingSceneInteractor: OnboardingSceneWorkerDelegate{
+  func didFinishHandlingPush(title: String, style: AlertStyle) {
+    let response = OnboardingScene.OnboardingResponse.PushResponse(title: title,
+                                                                   alertStyle: style)
+    output.prepareAlert(response: response)
   }
 }
