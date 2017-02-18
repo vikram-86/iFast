@@ -22,6 +22,6 @@ class TestViewController: UIViewController {
     }
   @IBAction func buttonPressed(_ sender: Any) {
     print("buttonPressed")
-    AlertService.current.createAlert(title: "This is an test for alert views", style: .error, in: self)
+    AlertService().createAlert(title: "This is an test for alert views", style: .error, in: self)
   }
 }

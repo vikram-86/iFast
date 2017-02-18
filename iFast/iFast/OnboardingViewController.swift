@@ -110,6 +110,7 @@ extension OnboardingViewController: OnboardingSceneViewControllerDelegate {
     print("Skipping page")
     if controller.page == 2 {
     	setViewControllers([orderedViewController[controller.page + 1]], direction: .forward, animated: true, completion: nil)
+      pageControl.currentPage = controller.page + 1
     }
   }
 

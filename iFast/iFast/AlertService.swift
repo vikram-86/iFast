@@ -32,13 +32,16 @@ enum AlertStyle {
   }
 
 }
-
+protocol AlertServiceDelegate {
+  func alertDidGetRemoved(with style: AlertStyle)
+}
 class AlertService {
-  static let current = AlertService()
+  //static let current = AlertService()
 
   fileprivate var bgView: UIView!
   fileprivate var alertView : AlertView!
-
+  var delegate: AlertServiceDelegate?
+  var currentStyle: AlertStyle!
   func createAlert(title: String, style: AlertStyle, in controller: UIViewController){
     bgView = UIView(frame: CGRect(x:0,y:0,
                                       width: controller.view.bounds.width,
@@ -56,7 +59,7 @@ class AlertService {
 		alertView.alpha = 1
     alertView.setupAlert(with: title, style: style)
     alertView.transform = CGAffineTransform(translationX: 0, y: 700)
-
+    currentStyle = style
 
 
     UIView.animate(withDuration: 0.22, delay: 0, options: [], animations: {
@@ -73,16 +76,12 @@ class AlertService {
 
 extension AlertService: AlertViewDelegate {
   func buttonPressed(view: AlertView) {
-    UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0, options: [.curveEaseInOut], animations: {
+    UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0, options: [], animations: {
       self.alertView.transform = CGAffineTransform(translationX: 0, y: 700)
       self.bgView.alpha = 0
     }) { (_) in
       self.bgView.removeFromSuperview()
-//      UIView.animate(withDuration: 0.22, delay: 0, options: [], animations: {
-//        self.bgView.alpha = 0
-//      }) { (_) in
-//        self.bgView.removeFromSuperview()
-      //      }
+      self.delegate?.alertDidGetRemoved(with: self.currentStyle)
     }
   }
 }

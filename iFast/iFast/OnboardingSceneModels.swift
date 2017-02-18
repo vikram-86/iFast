@@ -14,6 +14,12 @@ struct OnboardingScene
     struct ButtonTitleRequest {
       let page: Int
     }
+    
+    struct PushRequest {
+      let hour      : Int
+      let minutes   : Int
+      let pushView  : PushView
+    }
   }
 
   struct OnboardingResponse{
@@ -23,6 +29,11 @@ struct OnboardingScene
       let shouldEnablePrimaryButton		: Bool
       let shouldEnableSecondaryButton	: Bool
     }
+    
+    struct PushResponse {
+      let title       : String
+      let alertStyle  : AlertStyle
+    }
   }
 
   struct OnboardingViewModel{
@@ -31,6 +42,11 @@ struct OnboardingScene
       let primaryIsHidden 	: Bool
       let secondaryIsHidden	: Bool
       let buttonTitle				: String
+    }
+    
+    struct AlertViewModel{
+      let title: String
+      let style: AlertStyle
     }
   }
 }
