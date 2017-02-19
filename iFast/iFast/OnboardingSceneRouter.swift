@@ -58,7 +58,4 @@ class OnboardingSceneRouter: OnboardingSceneRouterInput
 //    // someWhereViewController.output.name = viewController.output.name
 //  }
   
-  func showMainScene(segue: UIStoryboardSegue){
-    
-  }
 }

@@ -148,6 +148,7 @@
 		8AA152CE1E523F0000D63156 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				ACB778881E5A31E6000337C8 /* SliderView */,
 				ACB778811E59D3EF000337C8 /* TimerView */,
 				8AA5F1261E533D61007D8CD5 /* AlertView */,
 				8AA152CF1E52E53F00D63156 /* PushView */,
@@ -327,6 +328,13 @@
 				ACB778841E59D486000337C8 /* TimerView.swift */,
 			);
 			name = TimerView;
+			sourceTree = "<group>";
+		};
+		ACB778881E5A31E6000337C8 /* SliderView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SliderView;
 			sourceTree = "<group>";
 		};
 		ACF16DA11E59C071008199BE /* MainScene */ = {
