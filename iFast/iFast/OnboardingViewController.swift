@@ -118,7 +118,7 @@ extension OnboardingViewController: OnboardingSceneViewControllerDelegate {
     guard let mainVC = MainSceneViewController.viewController else {return}
     present(mainVC, animated: true, completion: nil)
   }
-
+  
   func controllerWillShowPushView(controller: OnboardingSceneViewController) {
     pageControl.isHidden = true
   }

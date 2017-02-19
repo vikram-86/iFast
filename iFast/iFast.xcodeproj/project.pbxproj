@@ -35,6 +35,8 @@
 		AC235F041E4BAC15004095C2 /* UIColor + FastAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC235F031E4BAC15004095C2 /* UIColor + FastAdditions.swift */; };
 		AC235F0A1E4BB3B9004095C2 /* TextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC235F091E4BB3B9004095C2 /* TextModifier.swift */; };
 		AC235F0C1E4BB651004095C2 /* UIButton + FastPrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC235F0B1E4BB651004095C2 /* UIButton + FastPrimaryButton.swift */; };
+		ACB778831E59D407000337C8 /* TimerViewUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB778821E59D407000337C8 /* TimerViewUtil.swift */; };
+		ACB778851E59D486000337C8 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB778841E59D486000337C8 /* TimerView.swift */; };
 		ACF16DA91E59C08E008199BE /* MainSceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF16DA21E59C08E008199BE /* MainSceneConfigurator.swift */; };
 		ACF16DAA1E59C08E008199BE /* MainSceneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF16DA31E59C08E008199BE /* MainSceneInteractor.swift */; };
 		ACF16DAB1E59C08E008199BE /* MainSceneModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF16DA41E59C08E008199BE /* MainSceneModels.swift */; };
@@ -88,6 +90,8 @@
 		AC235F031E4BAC15004095C2 /* UIColor + FastAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor + FastAdditions.swift"; sourceTree = "<group>"; };
 		AC235F091E4BB3B9004095C2 /* TextModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextModifier.swift; sourceTree = "<group>"; };
 		AC235F0B1E4BB651004095C2 /* UIButton + FastPrimaryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton + FastPrimaryButton.swift"; sourceTree = "<group>"; };
+		ACB778821E59D407000337C8 /* TimerViewUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewUtil.swift; sourceTree = "<group>"; };
+		ACB778841E59D486000337C8 /* TimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		ACF16DA21E59C08E008199BE /* MainSceneConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSceneConfigurator.swift; sourceTree = "<group>"; };
 		ACF16DA31E59C08E008199BE /* MainSceneInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSceneInteractor.swift; sourceTree = "<group>"; };
 		ACF16DA41E59C08E008199BE /* MainSceneModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSceneModels.swift; sourceTree = "<group>"; };
@@ -144,6 +148,7 @@
 		8AA152CE1E523F0000D63156 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				ACB778811E59D3EF000337C8 /* TimerView */,
 				8AA5F1261E533D61007D8CD5 /* AlertView */,
 				8AA152CF1E52E53F00D63156 /* PushView */,
 			);
@@ -315,6 +320,15 @@
 			name = TextModifiers;
 			sourceTree = "<group>";
 		};
+		ACB778811E59D3EF000337C8 /* TimerView */ = {
+			isa = PBXGroup;
+			children = (
+				ACB778821E59D407000337C8 /* TimerViewUtil.swift */,
+				ACB778841E59D486000337C8 /* TimerView.swift */,
+			);
+			name = TimerView;
+			sourceTree = "<group>";
+		};
 		ACF16DA11E59C071008199BE /* MainScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -439,6 +453,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACB778851E59D486000337C8 /* TimerView.swift in Sources */,
 				ACF16DA91E59C08E008199BE /* MainSceneConfigurator.swift in Sources */,
 				8AA5F1251E5327A3007D8CD5 /* Test2ViewController.swift in Sources */,
 				8AA941011E4F9E3B004A2C6D /* OnboardingSceneRouter.swift in Sources */,
@@ -447,6 +462,7 @@
 				8AA941031E4F9E3B004A2C6D /* OnboardingSceneWorker.swift in Sources */,
 				8AA5F12A1E534316007D8CD5 /* AlertView.swift in Sources */,
 				8AA941021E4F9E3B004A2C6D /* OnboardingSceneViewController.swift in Sources */,
+				ACB778831E59D407000337C8 /* TimerViewUtil.swift in Sources */,
 				ACF16DAD1E59C08E008199BE /* MainSceneRouter.swift in Sources */,
 				8AA940F31E4F8FB2004A2C6D /* FastLabel.swift in Sources */,
 				8AA940F11E4F8439004A2C6D /* String + FastAdditions.swift in Sources */,

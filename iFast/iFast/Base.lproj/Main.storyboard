@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tUw-Vu-LvS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Fcd-j9-tZM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -119,15 +119,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WgB-mt-xgg" customClass="PushView" customModule="iFast" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="133" width="375" height="400"/>
-                                <color key="backgroundColor" red="0.70588235290000001" green="0.92941176469999998" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WgB-mt-xgg" customClass="TimerView" customModule="iFast" customModuleProvider="target">
+                                <rect key="frame" x="32.5" y="178" width="310" height="310"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="400" id="5Fk-wL-JnC"/>
+                                    <constraint firstAttribute="height" constant="310" id="Tw3-Px-c1N"/>
+                                    <constraint firstAttribute="width" constant="310" id="ibs-jN-n1E"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WgC-GC-NZt">
-                                <rect key="frame" x="164" y="580" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WgC-GC-NZt">
+                                <rect key="frame" x="164" y="535" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="Fcd-j9-tZM" eventType="touchUpInside" id="IWD-VK-pXy"/>
@@ -136,11 +138,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="WgB-mt-xgg" secondAttribute="trailing" id="6zL-Zj-iYZ"/>
-                            <constraint firstItem="WgC-GC-NZt" firstAttribute="top" secondItem="WgB-mt-xgg" secondAttribute="bottom" constant="47" id="HOH-Xx-ujV"/>
-                            <constraint firstItem="WgB-mt-xgg" firstAttribute="centerY" secondItem="hM9-e8-CUS" secondAttribute="centerY" id="O2T-0p-0rs"/>
-                            <constraint firstItem="WgB-mt-xgg" firstAttribute="leading" secondItem="hM9-e8-CUS" secondAttribute="leading" id="TTs-NL-Z7H"/>
-                            <constraint firstItem="WgC-GC-NZt" firstAttribute="centerX" secondItem="WgB-mt-xgg" secondAttribute="centerX" id="s6w-3x-87m"/>
+                            <constraint firstItem="WgB-mt-xgg" firstAttribute="centerY" secondItem="hM9-e8-CUS" secondAttribute="centerY" id="eD1-g6-Dje"/>
+                            <constraint firstItem="WgB-mt-xgg" firstAttribute="centerX" secondItem="hM9-e8-CUS" secondAttribute="centerX" id="pWw-pw-JNI"/>
                         </constraints>
                     </view>
                 </viewController>
