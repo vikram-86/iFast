@@ -10,9 +10,13 @@ import UIKit
 
 class TimerView: UIView {
 
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-      TimerViewUtil.drawCanvas(frame: rect)
+  var currentProgess: CGFloat = 0 {
+    didSet{
+      setNeedsDisplay()
     }
-
+  }
+  override func draw(_ rect: CGRect) {
+    // Drawing code
+    TimerViewUtil.drawCanvas(frame: rect, progress: currentProgess)
+  }
 }

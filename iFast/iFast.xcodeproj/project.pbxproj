@@ -35,6 +35,8 @@
 		AC235F041E4BAC15004095C2 /* UIColor + FastAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC235F031E4BAC15004095C2 /* UIColor + FastAdditions.swift */; };
 		AC235F0A1E4BB3B9004095C2 /* TextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC235F091E4BB3B9004095C2 /* TextModifier.swift */; };
 		AC235F0C1E4BB651004095C2 /* UIButton + FastPrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC235F0B1E4BB651004095C2 /* UIButton + FastPrimaryButton.swift */; };
+		ACA161F21E5B67E30080EB5F /* SwipeViewStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA161F11E5B67E30080EB5F /* SwipeViewStyleKit.swift */; };
+		ACA161F41E5B68C80080EB5F /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA161F31E5B68C80080EB5F /* SwipeView.swift */; };
 		ACB778831E59D407000337C8 /* TimerViewUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB778821E59D407000337C8 /* TimerViewUtil.swift */; };
 		ACB778851E59D486000337C8 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB778841E59D486000337C8 /* TimerView.swift */; };
 		ACF16DA91E59C08E008199BE /* MainSceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF16DA21E59C08E008199BE /* MainSceneConfigurator.swift */; };
@@ -90,6 +92,8 @@
 		AC235F031E4BAC15004095C2 /* UIColor + FastAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor + FastAdditions.swift"; sourceTree = "<group>"; };
 		AC235F091E4BB3B9004095C2 /* TextModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextModifier.swift; sourceTree = "<group>"; };
 		AC235F0B1E4BB651004095C2 /* UIButton + FastPrimaryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton + FastPrimaryButton.swift"; sourceTree = "<group>"; };
+		ACA161F11E5B67E30080EB5F /* SwipeViewStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewStyleKit.swift; sourceTree = "<group>"; };
+		ACA161F31E5B68C80080EB5F /* SwipeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
 		ACB778821E59D407000337C8 /* TimerViewUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewUtil.swift; sourceTree = "<group>"; };
 		ACB778841E59D486000337C8 /* TimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		ACF16DA21E59C08E008199BE /* MainSceneConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSceneConfigurator.swift; sourceTree = "<group>"; };
@@ -333,6 +337,8 @@
 		ACB778881E5A31E6000337C8 /* SliderView */ = {
 			isa = PBXGroup;
 			children = (
+				ACA161F11E5B67E30080EB5F /* SwipeViewStyleKit.swift */,
+				ACA161F31E5B68C80080EB5F /* SwipeView.swift */,
 			);
 			name = SliderView;
 			sourceTree = "<group>";
@@ -474,7 +480,9 @@
 				ACF16DAD1E59C08E008199BE /* MainSceneRouter.swift in Sources */,
 				8AA940F31E4F8FB2004A2C6D /* FastLabel.swift in Sources */,
 				8AA940F11E4F8439004A2C6D /* String + FastAdditions.swift in Sources */,
+				ACA161F41E5B68C80080EB5F /* SwipeView.swift in Sources */,
 				8AA9410A1E4FA218004A2C6D /* OnboardingViewController.swift in Sources */,
+				ACA161F21E5B67E30080EB5F /* SwipeViewStyleKit.swift in Sources */,
 				AC235F0A1E4BB3B9004095C2 /* TextModifier.swift in Sources */,
 				ACF16DAF1E59C08E008199BE /* MainSceneWorker.swift in Sources */,
 				AC235F041E4BAC15004095C2 /* UIColor + FastAdditions.swift in Sources */,

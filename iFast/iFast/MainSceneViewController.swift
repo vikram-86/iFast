@@ -24,6 +24,14 @@ class MainSceneViewController: UIViewController, MainSceneViewControllerInput
   var output: MainSceneViewControllerOutput!
   var router: MainSceneRouter!
   
+  //MARK: IBOutlets
+  @IBOutlet weak var numberOfCurrentStreakLabel : UILabel!
+  @IBOutlet weak var numberOfLongestStreakLabel : UILabel!
+  @IBOutlet weak var timerView                  : TimerView!
+  @IBOutlet weak var timerViewLabel             : UILabel!
+  @IBOutlet weak var swipeView                  : SwipeView!
+  
+  
   static var viewController: MainSceneViewController? {
     let storyboard = UIStoryboard(name: String.init(describing: self), bundle: nil)
     return storyboard.instantiateInitialViewController() as? MainSceneViewController
@@ -41,6 +49,7 @@ class MainSceneViewController: UIViewController, MainSceneViewControllerInput
   override func viewDidLoad()
   {
     super.viewDidLoad()
+    swipeView.delegate = self
 
   }
 }
@@ -53,4 +62,11 @@ extension MainSceneViewController {
 // MARK: - Event Handler - 
 extension MainSceneViewController {
 
+}
+
+//MARK: - SwipeView Delegate
+extension MainSceneViewController: SwipeViewDelegate{
+  func swipeDidChange(progress: CGFloat) {
+    timerView.currentProgess = progress
+  }
 }
