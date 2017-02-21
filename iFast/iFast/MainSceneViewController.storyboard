@@ -76,6 +76,9 @@ Tap to change</string>
                                     <constraint firstAttribute="height" constant="32" id="qSK-h7-TOa"/>
                                 </constraints>
                                 <state key="normal" image="info"/>
+                                <connections>
+                                    <segue destination="z3W-2u-3b0" kind="show" id="icp-Tc-60t"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Twi-rj-fzO">
                                 <rect key="frame" x="308" y="31" width="32" height="32"/>
@@ -84,6 +87,9 @@ Tap to change</string>
                                     <constraint firstAttribute="width" constant="32" id="g8P-wu-BIY"/>
                                 </constraints>
                                 <state key="normal" image="profile"/>
+                                <connections>
+                                    <segue destination="BWM-fH-Yrs" kind="show" id="UBi-wY-JpX"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZN-2s-VcZ" customClass="SwipeView" customModule="iFast" customModuleProvider="target">
                                 <rect key="frame" x="37.5" y="534" width="300" height="48"/>
@@ -125,6 +131,22 @@ Tap to change</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cb3-ye-FyD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="188" y="182.15892053973016"/>
+        </scene>
+        <!--InfoSceneViewController-->
+        <scene sceneID="y6q-08-4mt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="InfoSceneViewController" id="z3W-2u-3b0" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="glr-SP-ldz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="804" y="-87"/>
+        </scene>
+        <!--ProfileSceneViewController-->
+        <scene sceneID="k6h-hH-ucG">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ProfileSceneViewController" id="BWM-fH-Yrs" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yhb-9A-6QG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="804" y="356"/>
         </scene>
     </scenes>
     <resources>

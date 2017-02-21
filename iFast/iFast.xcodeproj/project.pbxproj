@@ -37,6 +37,8 @@
 		AC235F0C1E4BB651004095C2 /* UIButton + FastPrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC235F0B1E4BB651004095C2 /* UIButton + FastPrimaryButton.swift */; };
 		AC9C49521E5CC6F30071F5F0 /* TimePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC9C49511E5CC6F30071F5F0 /* TimePickerView.xib */; };
 		AC9C49541E5CC9D80071F5F0 /* TimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9C49531E5CC9D80071F5F0 /* TimePickerView.swift */; };
+		AC9C49571E5CFB610071F5F0 /* InfoSceneViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC9C49561E5CFB610071F5F0 /* InfoSceneViewController.storyboard */; };
+		AC9C495A1E5CFBAD0071F5F0 /* ProfileSceneViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC9C49591E5CFBAD0071F5F0 /* ProfileSceneViewController.storyboard */; };
 		ACA161F21E5B67E30080EB5F /* SwipeViewStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA161F11E5B67E30080EB5F /* SwipeViewStyleKit.swift */; };
 		ACA161F41E5B68C80080EB5F /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA161F31E5B68C80080EB5F /* SwipeView.swift */; };
 		ACB778831E59D407000337C8 /* TimerViewUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB778821E59D407000337C8 /* TimerViewUtil.swift */; };
@@ -96,6 +98,8 @@
 		AC235F0B1E4BB651004095C2 /* UIButton + FastPrimaryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton + FastPrimaryButton.swift"; sourceTree = "<group>"; };
 		AC9C49511E5CC6F30071F5F0 /* TimePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimePickerView.xib; sourceTree = "<group>"; };
 		AC9C49531E5CC9D80071F5F0 /* TimePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePickerView.swift; sourceTree = "<group>"; };
+		AC9C49561E5CFB610071F5F0 /* InfoSceneViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InfoSceneViewController.storyboard; sourceTree = "<group>"; };
+		AC9C49591E5CFBAD0071F5F0 /* ProfileSceneViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileSceneViewController.storyboard; sourceTree = "<group>"; };
 		ACA161F11E5B67E30080EB5F /* SwipeViewStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewStyleKit.swift; sourceTree = "<group>"; };
 		ACA161F31E5B68C80080EB5F /* SwipeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
 		ACB778821E59D407000337C8 /* TimerViewUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewUtil.swift; sourceTree = "<group>"; };
@@ -186,6 +190,8 @@
 		8AA940F41E4F9D2F004A2C6D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				AC9C49581E5CFB970071F5F0 /* ProfileScene */,
+				AC9C49551E5CFB420071F5F0 /* InfoScene */,
 				ACF16DA11E59C071008199BE /* MainScene */,
 				8AA940F51E4F9D3B004A2C6D /* OnboardingScenes */,
 			);
@@ -339,6 +345,22 @@
 			name = TimePickerView;
 			sourceTree = "<group>";
 		};
+		AC9C49551E5CFB420071F5F0 /* InfoScene */ = {
+			isa = PBXGroup;
+			children = (
+				AC9C49561E5CFB610071F5F0 /* InfoSceneViewController.storyboard */,
+			);
+			name = InfoScene;
+			sourceTree = "<group>";
+		};
+		AC9C49581E5CFB970071F5F0 /* ProfileScene */ = {
+			isa = PBXGroup;
+			children = (
+				AC9C49591E5CFBAD0071F5F0 /* ProfileSceneViewController.storyboard */,
+			);
+			name = ProfileScene;
+			sourceTree = "<group>";
+		};
 		ACB778811E59D3EF000337C8 /* TimerView */ = {
 			isa = PBXGroup;
 			children = (
@@ -465,6 +487,8 @@
 				8AF7FF801E573CE800691C34 /* Assets.xcassets in Resources */,
 				ACF16DB21E59C0D1008199BE /* MainSceneViewController.storyboard in Resources */,
 				8AA941081E4F9FD5004A2C6D /* OnboardingSceneViewController.storyboard in Resources */,
+				AC9C495A1E5CFBAD0071F5F0 /* ProfileSceneViewController.storyboard in Resources */,
+				AC9C49571E5CFB610071F5F0 /* InfoSceneViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
