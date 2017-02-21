@@ -49,7 +49,7 @@ class MainSceneViewController: UIViewController, MainSceneViewControllerInput
   override func viewDidLoad()
   {
     super.viewDidLoad()
-    
+    setupOnLoad()
   }
   
   private func setupOnLoad(){
@@ -80,6 +80,10 @@ extension MainSceneViewController {
   
   func timerViewTapped(gesture: UITapGestureRecognizer){
     print("Timer View Tapped!")
+    let timerPickerView = TimePickerView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 400))
+    timerPickerView.delegate = self
+    view.addSubview(timerPickerView)
+    timerPickerView.present(in: self.view)
   }
 }
 
@@ -87,5 +91,17 @@ extension MainSceneViewController {
 extension MainSceneViewController: SwipeViewDelegate{
   func swipeDidChange(progress: CGFloat) {
     timerView.currentProgess = progress
+  }
+}
+
+
+//MARK: - TimePickeView delegate 
+extension MainSceneViewController: TimePickerViewDelegate {
+  func timePickerViewDidDismiss(view: TimePickerView) {
+    print("Timer Picker View did dismiss")
+  }
+  
+  func timePickerViewDidSelect(hour: Int, view: TimePickerView) {
+    timerViewLabel.text = "\(hour) hours\nTap to change"
   }
 }

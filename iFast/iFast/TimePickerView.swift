@@ -8,9 +8,15 @@
 
 import UIKit
 
+protocol TimePickerViewDelegate{
+  func timePickerViewDidDismiss(view: TimePickerView)
+  func timePickerViewDidSelect(hour: Int, view: TimePickerView)
+}
+
 class TimePickerView: UIView{
   
-  var view: UIView!
+  var view      : UIView!
+  var delegate  : TimePickerViewDelegate?
   
   var dataSource: [Int]{
     var times = [Int]()
@@ -22,13 +28,24 @@ class TimePickerView: UIView{
   
   var selectedHour = 12
   
-  //MARK: Initialization
   @IBOutlet weak var pickerView: UIPickerView!
+  
+  //MARK: Initialization
+  override init(frame: CGRect) {
+    super.init(frame: frame)
+    setup()
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+    setup()
+  }
   
   private func setup(){
     view = loadFromNib()
     view.frame = bounds
     view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+    view.backgroundColor = UIColor.FastPaleGreyTwo
     setupPickerView()
     alpha = 0
     addSubview(view)
@@ -42,7 +59,13 @@ class TimePickerView: UIView{
   }
   
   @IBAction func buttonPressed() {
-    
+    dimiss()
+    delegate?.timePickerViewDidSelect(hour: selectedHour, view: self)
+  }
+  
+  @IBAction func dismissButtonPressed() {
+    dimiss()
+    delegate?.timePickerViewDidDismiss(view: self)
   }
 }
 
@@ -78,6 +101,18 @@ extension TimePickerView: UIPickerViewDelegate, UIPickerViewDataSource{
 // MARK: Present and dismiss Animation
 extension TimePickerView {
   func present(in view: UIView){
-    
+    frame.origin.y = view.frame.height
+    alpha = 1
+    UIView.animate(withDuration: 0.33) { 
+      self.frame.origin.y -= self.bounds.height
+    }
+  }
+  
+  func dimiss(){
+    UIView.animate(withDuration: 0.33, animations: { 
+      self.frame.origin.y += self.bounds.height
+    }) { (_) in
+      self.removeFromSuperview()
+    }
   }
 }

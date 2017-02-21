@@ -77,5 +77,6 @@ extension SwipeView{
     lastLocation = CGPoint.zero
     delegate?.swipeDidChange(progress: 0)
     gestureFrame.frame.origin.x = xPos
+    setNeedsDisplay()
   }
 }

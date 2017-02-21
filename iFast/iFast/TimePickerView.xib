@@ -37,7 +37,7 @@
                         <action selector="buttonPressed" destination="-1" eventType="touchUpInside" id="GId-xP-7gS"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How long do you want to fast?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ok-yg-F5t" customClass="FastLabel" customModule="iFast" customModuleProvider="target">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many hours do you want to fast?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ok-yg-F5t" customClass="FastLabel" customModule="iFast" customModuleProvider="target">
                     <rect key="frame" x="63" y="43" width="250" height="66"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="250" id="VTj-EU-FGR"/>
@@ -61,6 +61,9 @@
                         <constraint firstAttribute="width" constant="24" id="pqh-Aa-AOy"/>
                     </constraints>
                     <state key="normal" image="Delete_2b4570_100"/>
+                    <connections>
+                        <action selector="dismissButtonPressed" destination="-1" eventType="touchUpInside" id="oyu-uj-2m9"/>
+                    </connections>
                 </button>
                 <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wQX-FG-9Iz">
                     <rect key="frame" x="0.0" y="135" width="375" height="217"/>
@@ -69,7 +72,7 @@
                     </constraints>
                 </pickerView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="iXE-po-HMz" secondAttribute="bottom" id="5vp-ba-BjQ"/>
                 <constraint firstItem="2Ok-yg-F5t" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="43" id="KtD-wb-tvT"/>
