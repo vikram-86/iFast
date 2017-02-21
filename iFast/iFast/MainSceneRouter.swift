@@ -1,22 +1,22 @@
 //
-//  OnboardingSceneRouter.swift
+//  MainSceneRouter.swift
 //  iFast
 //
-//  Created by Suthananth Arulanatham on 11.02.2017.
+//  Created by Suthananth Arulanatham on 19.02.2017.
 //  Copyright (c) 2017 Suthananth Arulanatham. All rights reserved.
 //
 
 
 import UIKit
 
-protocol OnboardingSceneRouterInput
+protocol MainSceneRouterInput
 {
     //func navigateToSomewhere()
 }
 
-class OnboardingSceneRouter: OnboardingSceneRouterInput
+class MainSceneRouter: MainSceneRouterInput
 {
-  weak var viewController: OnboardingSceneViewController!
+  weak var viewController: MainSceneViewController!
   
   // MARK: - Navigation
   
@@ -57,5 +57,4 @@ class OnboardingSceneRouter: OnboardingSceneRouterInput
 //    // let someWhereViewController = segue.destinationViewController as! SomeWhereViewController
 //    // someWhereViewController.output.name = viewController.output.name
 //  }
-  
 }

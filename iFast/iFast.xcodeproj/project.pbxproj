@@ -35,6 +35,20 @@
 		AC235F041E4BAC15004095C2 /* UIColor + FastAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC235F031E4BAC15004095C2 /* UIColor + FastAdditions.swift */; };
 		AC235F0A1E4BB3B9004095C2 /* TextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC235F091E4BB3B9004095C2 /* TextModifier.swift */; };
 		AC235F0C1E4BB651004095C2 /* UIButton + FastPrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC235F0B1E4BB651004095C2 /* UIButton + FastPrimaryButton.swift */; };
+		AC9C49521E5CC6F30071F5F0 /* TimePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC9C49511E5CC6F30071F5F0 /* TimePickerView.xib */; };
+		AC9C49541E5CC9D80071F5F0 /* TimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9C49531E5CC9D80071F5F0 /* TimePickerView.swift */; };
+		ACA161F21E5B67E30080EB5F /* SwipeViewStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA161F11E5B67E30080EB5F /* SwipeViewStyleKit.swift */; };
+		ACA161F41E5B68C80080EB5F /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA161F31E5B68C80080EB5F /* SwipeView.swift */; };
+		ACB778831E59D407000337C8 /* TimerViewUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB778821E59D407000337C8 /* TimerViewUtil.swift */; };
+		ACB778851E59D486000337C8 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB778841E59D486000337C8 /* TimerView.swift */; };
+		ACF16DA91E59C08E008199BE /* MainSceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF16DA21E59C08E008199BE /* MainSceneConfigurator.swift */; };
+		ACF16DAA1E59C08E008199BE /* MainSceneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF16DA31E59C08E008199BE /* MainSceneInteractor.swift */; };
+		ACF16DAB1E59C08E008199BE /* MainSceneModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF16DA41E59C08E008199BE /* MainSceneModels.swift */; };
+		ACF16DAC1E59C08E008199BE /* MainScenePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF16DA51E59C08E008199BE /* MainScenePresenter.swift */; };
+		ACF16DAD1E59C08E008199BE /* MainSceneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF16DA61E59C08E008199BE /* MainSceneRouter.swift */; };
+		ACF16DAE1E59C08E008199BE /* MainSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF16DA71E59C08E008199BE /* MainSceneViewController.swift */; };
+		ACF16DAF1E59C08E008199BE /* MainSceneWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF16DA81E59C08E008199BE /* MainSceneWorker.swift */; };
+		ACF16DB21E59C0D1008199BE /* MainSceneViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF16DB11E59C0D1008199BE /* MainSceneViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +94,20 @@
 		AC235F031E4BAC15004095C2 /* UIColor + FastAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor + FastAdditions.swift"; sourceTree = "<group>"; };
 		AC235F091E4BB3B9004095C2 /* TextModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextModifier.swift; sourceTree = "<group>"; };
 		AC235F0B1E4BB651004095C2 /* UIButton + FastPrimaryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton + FastPrimaryButton.swift"; sourceTree = "<group>"; };
+		AC9C49511E5CC6F30071F5F0 /* TimePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimePickerView.xib; sourceTree = "<group>"; };
+		AC9C49531E5CC9D80071F5F0 /* TimePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePickerView.swift; sourceTree = "<group>"; };
+		ACA161F11E5B67E30080EB5F /* SwipeViewStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewStyleKit.swift; sourceTree = "<group>"; };
+		ACA161F31E5B68C80080EB5F /* SwipeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
+		ACB778821E59D407000337C8 /* TimerViewUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewUtil.swift; sourceTree = "<group>"; };
+		ACB778841E59D486000337C8 /* TimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		ACF16DA21E59C08E008199BE /* MainSceneConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSceneConfigurator.swift; sourceTree = "<group>"; };
+		ACF16DA31E59C08E008199BE /* MainSceneInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSceneInteractor.swift; sourceTree = "<group>"; };
+		ACF16DA41E59C08E008199BE /* MainSceneModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSceneModels.swift; sourceTree = "<group>"; };
+		ACF16DA51E59C08E008199BE /* MainScenePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScenePresenter.swift; sourceTree = "<group>"; };
+		ACF16DA61E59C08E008199BE /* MainSceneRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSceneRouter.swift; sourceTree = "<group>"; };
+		ACF16DA71E59C08E008199BE /* MainSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSceneViewController.swift; sourceTree = "<group>"; };
+		ACF16DA81E59C08E008199BE /* MainSceneWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSceneWorker.swift; sourceTree = "<group>"; };
+		ACF16DB11E59C0D1008199BE /* MainSceneViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainSceneViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +156,9 @@
 		8AA152CE1E523F0000D63156 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AC9C49501E5CC6D70071F5F0 /* TimePickerView */,
+				ACB778881E5A31E6000337C8 /* SliderView */,
+				ACB778811E59D3EF000337C8 /* TimerView */,
 				8AA5F1261E533D61007D8CD5 /* AlertView */,
 				8AA152CF1E52E53F00D63156 /* PushView */,
 			);
@@ -155,6 +186,7 @@
 		8AA940F41E4F9D2F004A2C6D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				ACF16DA11E59C071008199BE /* MainScene */,
 				8AA940F51E4F9D3B004A2C6D /* OnboardingScenes */,
 			);
 			name = Scenes;
@@ -201,7 +233,7 @@
 				8AA940F41E4F9D2F004A2C6D /* Scenes */,
 				AC235F011E4BABF2004095C2 /* Util */,
 				AC235EFE1E4BAB18004095C2 /* SupportingFiles */,
-				AC235EFD1E4BAB0D004095C2 /* Initial_Storyboards */,
+				AC235EFD1E4BAB0D004095C2 /* Storyboards */,
 				AC235EFF1E4BAB2E004095C2 /* Resources */,
 				AC235EFC1E4BAAFE004095C2 /* CoreData_Stack */,
 			);
@@ -225,7 +257,7 @@
 			name = CoreData_Stack;
 			sourceTree = "<group>";
 		};
-		AC235EFD1E4BAB0D004095C2 /* Initial_Storyboards */ = {
+		AC235EFD1E4BAB0D004095C2 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				AC235EDD1E4BAA75004095C2 /* Main.storyboard */,
@@ -234,7 +266,7 @@
 				8AA5F1221E532619007D8CD5 /* TestViewController.swift */,
 				8AA5F1241E5327A3007D8CD5 /* Test2ViewController.swift */,
 			);
-			name = Initial_Storyboards;
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 		AC235EFE1E4BAB18004095C2 /* SupportingFiles */ = {
@@ -296,6 +328,48 @@
 				AC235F091E4BB3B9004095C2 /* TextModifier.swift */,
 			);
 			name = TextModifiers;
+			sourceTree = "<group>";
+		};
+		AC9C49501E5CC6D70071F5F0 /* TimePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				AC9C49511E5CC6F30071F5F0 /* TimePickerView.xib */,
+				AC9C49531E5CC9D80071F5F0 /* TimePickerView.swift */,
+			);
+			name = TimePickerView;
+			sourceTree = "<group>";
+		};
+		ACB778811E59D3EF000337C8 /* TimerView */ = {
+			isa = PBXGroup;
+			children = (
+				ACB778821E59D407000337C8 /* TimerViewUtil.swift */,
+				ACB778841E59D486000337C8 /* TimerView.swift */,
+			);
+			name = TimerView;
+			sourceTree = "<group>";
+		};
+		ACB778881E5A31E6000337C8 /* SliderView */ = {
+			isa = PBXGroup;
+			children = (
+				ACA161F11E5B67E30080EB5F /* SwipeViewStyleKit.swift */,
+				ACA161F31E5B68C80080EB5F /* SwipeView.swift */,
+			);
+			name = SliderView;
+			sourceTree = "<group>";
+		};
+		ACF16DA11E59C071008199BE /* MainScene */ = {
+			isa = PBXGroup;
+			children = (
+				ACF16DA21E59C08E008199BE /* MainSceneConfigurator.swift */,
+				ACF16DA31E59C08E008199BE /* MainSceneInteractor.swift */,
+				ACF16DA41E59C08E008199BE /* MainSceneModels.swift */,
+				ACF16DA51E59C08E008199BE /* MainScenePresenter.swift */,
+				ACF16DA61E59C08E008199BE /* MainSceneRouter.swift */,
+				ACF16DA71E59C08E008199BE /* MainSceneViewController.swift */,
+				ACF16DA81E59C08E008199BE /* MainSceneWorker.swift */,
+				ACF16DB11E59C0D1008199BE /* MainSceneViewController.storyboard */,
+			);
+			name = MainScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,8 +460,10 @@
 				AC235EE71E4BAA75004095C2 /* LaunchScreen.storyboard in Resources */,
 				8AA152D11E52E54F00D63156 /* PushView.xib in Resources */,
 				8AA5F1281E533DBB007D8CD5 /* AlertView.xib in Resources */,
+				AC9C49521E5CC6F30071F5F0 /* TimePickerView.xib in Resources */,
 				AC235EDF1E4BAA75004095C2 /* Main.storyboard in Resources */,
 				8AF7FF801E573CE800691C34 /* Assets.xcassets in Resources */,
+				ACF16DB21E59C0D1008199BE /* MainSceneViewController.storyboard in Resources */,
 				8AA941081E4F9FD5004A2C6D /* OnboardingSceneViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,6 +482,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACB778851E59D486000337C8 /* TimerView.swift in Sources */,
+				ACF16DA91E59C08E008199BE /* MainSceneConfigurator.swift in Sources */,
 				8AA5F1251E5327A3007D8CD5 /* Test2ViewController.swift in Sources */,
 				8AA941011E4F9E3B004A2C6D /* OnboardingSceneRouter.swift in Sources */,
 				8AA940FD1E4F9E3B004A2C6D /* OnboardingSceneConfigurator.swift in Sources */,
@@ -413,20 +491,30 @@
 				8AA941031E4F9E3B004A2C6D /* OnboardingSceneWorker.swift in Sources */,
 				8AA5F12A1E534316007D8CD5 /* AlertView.swift in Sources */,
 				8AA941021E4F9E3B004A2C6D /* OnboardingSceneViewController.swift in Sources */,
+				ACB778831E59D407000337C8 /* TimerViewUtil.swift in Sources */,
+				ACF16DAD1E59C08E008199BE /* MainSceneRouter.swift in Sources */,
 				8AA940F31E4F8FB2004A2C6D /* FastLabel.swift in Sources */,
 				8AA940F11E4F8439004A2C6D /* String + FastAdditions.swift in Sources */,
+				ACA161F41E5B68C80080EB5F /* SwipeView.swift in Sources */,
 				8AA9410A1E4FA218004A2C6D /* OnboardingViewController.swift in Sources */,
+				ACA161F21E5B67E30080EB5F /* SwipeViewStyleKit.swift in Sources */,
 				AC235F0A1E4BB3B9004095C2 /* TextModifier.swift in Sources */,
+				ACF16DAF1E59C08E008199BE /* MainSceneWorker.swift in Sources */,
 				AC235F041E4BAC15004095C2 /* UIColor + FastAdditions.swift in Sources */,
 				AC235F0C1E4BB651004095C2 /* UIButton + FastPrimaryButton.swift in Sources */,
+				ACF16DAC1E59C08E008199BE /* MainScenePresenter.swift in Sources */,
+				ACF16DAA1E59C08E008199BE /* MainSceneInteractor.swift in Sources */,
 				8AA941001E4F9E3B004A2C6D /* OnboardingScenePresenter.swift in Sources */,
 				8AA152D31E52E79900D63156 /* PushView.swift in Sources */,
 				AC235EE21E4BAA75004095C2 /* iFast.xcdatamodeld in Sources */,
+				ACF16DAE1E59C08E008199BE /* MainSceneViewController.swift in Sources */,
 				8A004F011E57242A00476E26 /* AlertService.swift in Sources */,
 				8AA152CD1E52380200D63156 /* PushService.swift in Sources */,
 				AC235EDA1E4BAA75004095C2 /* AppDelegate.swift in Sources */,
 				8AA5F1231E532619007D8CD5 /* TestViewController.swift in Sources */,
 				8AA940FF1E4F9E3B004A2C6D /* OnboardingSceneModels.swift in Sources */,
+				AC9C49541E5CC9D80071F5F0 /* TimePickerView.swift in Sources */,
+				ACF16DAB1E59C08E008199BE /* MainSceneModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
