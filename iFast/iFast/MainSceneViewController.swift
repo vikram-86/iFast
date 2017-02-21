@@ -49,8 +49,16 @@ class MainSceneViewController: UIViewController, MainSceneViewControllerInput
   override func viewDidLoad()
   {
     super.viewDidLoad()
+    
+  }
+  
+  private func setupOnLoad(){
+    
     swipeView.delegate = self
-
+    // Add Tapp Gesture to TimerView
+    let tapGesture = UITapGestureRecognizer(target: self, action: #selector(timerViewTapped(gesture:)))
+    tapGesture.numberOfTapsRequired = 1
+    timerView.addGestureRecognizer(tapGesture)
   }
 }
 
@@ -61,7 +69,18 @@ extension MainSceneViewController {
 
 // MARK: - Event Handler - 
 extension MainSceneViewController {
-
+  
+  @IBAction func infoButtonPressed(){
+    
+  }
+  
+  @IBAction func profileButtonPressed(){
+    
+  }
+  
+  func timerViewTapped(gesture: UITapGestureRecognizer){
+    print("Timer View Tapped!")
+  }
 }
 
 //MARK: - SwipeView Delegate

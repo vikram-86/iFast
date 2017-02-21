@@ -152,6 +152,7 @@
 		8AA152CE1E523F0000D63156 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AC9C494F1E5CC36C0071F5F0 /* FastTimerView */,
 				ACB778881E5A31E6000337C8 /* SliderView */,
 				ACB778811E59D3EF000337C8 /* TimerView */,
 				8AA5F1261E533D61007D8CD5 /* AlertView */,
@@ -323,6 +324,13 @@
 				AC235F091E4BB3B9004095C2 /* TextModifier.swift */,
 			);
 			name = TextModifiers;
+			sourceTree = "<group>";
+		};
+		AC9C494F1E5CC36C0071F5F0 /* FastTimerView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = FastTimerView;
 			sourceTree = "<group>";
 		};
 		ACB778811E59D3EF000337C8 /* TimerView */ = {

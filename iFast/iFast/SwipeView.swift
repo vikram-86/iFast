@@ -60,6 +60,11 @@ extension SwipeView{
     newPos = newPos > (300 - 48) ? (300 - 48) : newPos
     newPos = newPos < 0 ?  0 : newPos
     
+    if gesture.state == .ended{
+      resetSwipe()
+      return
+      
+    }
     xPos = newPos
     gestureFrame.frame.origin.x = newPos
     let progress = newPos / (frame.width - 48)//newPos == 0 ? 0 : ((newPos + 48) / frame.width)
@@ -67,7 +72,10 @@ extension SwipeView{
     setNeedsDisplay()
   }
   
-  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-    lastLocation = CGPoint(x: xPos, y: 0)
+  private func resetSwipe(){
+    xPos = 0
+    lastLocation = CGPoint.zero
+    delegate?.swipeDidChange(progress: 0)
+    gestureFrame.frame.origin.x = xPos
   }
 }
