@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Info Scene View Controller-->
         <scene sceneID="oxY-HI-JAD">
             <objects>
-                <viewController id="hZJ-28-fxZ" sceneMemberID="viewController">
+                <viewController id="hZJ-28-fxZ" customClass="InfoSceneViewController" customModule="iFast" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ibG-TM-syC"/>
                         <viewControllerLayoutGuide type="bottom" id="g5Y-1F-gMl"/>
@@ -26,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="112" width="375" height="555"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="277" id="UuW-cT-eId">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="277" id="UuW-cT-eId" customClass="InfoCell" customModule="iFast" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="277"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UuW-cT-eId" id="ql4-CC-Ek5">
@@ -65,14 +65,22 @@
                                                 <constraint firstAttribute="trailing" secondItem="1ex-5r-xMQ" secondAttribute="trailing" id="ziW-qx-UKo"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="headerImage" destination="1ex-5r-xMQ" id="2uL-9X-ic7"/>
+                                            <outlet property="titleLabel" destination="dRe-kV-fDa" id="xxg-0u-a63"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F98-R3-FLV">
                                 <rect key="frame" x="331" y="48" width="24" height="24"/>
                                 <state key="normal" image="cross_grey"/>
+                                <connections>
+                                    <action selector="closeButtonPressed" destination="hZJ-28-fxZ" eventType="touchUpInside" id="YXE-pY-wTq"/>
+                                </connections>
                             </button>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="xAM-0J-p2z" firstAttribute="leading" secondItem="IKB-gL-n6A" secondAttribute="leading" id="0Sf-gU-xG2"/>
