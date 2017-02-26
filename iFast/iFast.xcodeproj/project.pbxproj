@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		8A004F011E57242A00476E26 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A004F001E57242A00476E26 /* AlertService.swift */; };
+		8A5F5C301E60D5040042AD43 /* InfoSceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F5C291E60D5040042AD43 /* InfoSceneConfigurator.swift */; };
+		8A5F5C311E60D5040042AD43 /* InfoSceneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F5C2A1E60D5040042AD43 /* InfoSceneInteractor.swift */; };
+		8A5F5C321E60D5040042AD43 /* InfoSceneModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F5C2B1E60D5040042AD43 /* InfoSceneModels.swift */; };
+		8A5F5C331E60D5040042AD43 /* InfoScenePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F5C2C1E60D5040042AD43 /* InfoScenePresenter.swift */; };
+		8A5F5C341E60D5040042AD43 /* InfoSceneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F5C2D1E60D5040042AD43 /* InfoSceneRouter.swift */; };
+		8A5F5C351E60D5040042AD43 /* InfoSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F5C2E1E60D5040042AD43 /* InfoSceneViewController.swift */; };
+		8A5F5C361E60D5040042AD43 /* InfoSceneWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F5C2F1E60D5040042AD43 /* InfoSceneWorker.swift */; };
+		8A5F5C3A1E60D9AC0042AD43 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F5C391E60D9AC0042AD43 /* InfoCell.swift */; };
+		8A92D2B11E62D5BF008545DC /* InfoDetailSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A92D2B01E62D5BF008545DC /* InfoDetailSceneViewController.swift */; };
 		8AA152CD1E52380200D63156 /* PushService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA152CC1E52380200D63156 /* PushService.swift */; };
 		8AA152D11E52E54F00D63156 /* PushView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA152D01E52E54F00D63156 /* PushView.xib */; };
 		8AA152D31E52E79900D63156 /* PushView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA152D21E52E79900D63156 /* PushView.swift */; };
@@ -65,6 +74,15 @@
 
 /* Begin PBXFileReference section */
 		8A004F001E57242A00476E26 /* AlertService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		8A5F5C291E60D5040042AD43 /* InfoSceneConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoSceneConfigurator.swift; sourceTree = "<group>"; };
+		8A5F5C2A1E60D5040042AD43 /* InfoSceneInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoSceneInteractor.swift; sourceTree = "<group>"; };
+		8A5F5C2B1E60D5040042AD43 /* InfoSceneModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoSceneModels.swift; sourceTree = "<group>"; };
+		8A5F5C2C1E60D5040042AD43 /* InfoScenePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoScenePresenter.swift; sourceTree = "<group>"; };
+		8A5F5C2D1E60D5040042AD43 /* InfoSceneRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoSceneRouter.swift; sourceTree = "<group>"; };
+		8A5F5C2E1E60D5040042AD43 /* InfoSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoSceneViewController.swift; sourceTree = "<group>"; };
+		8A5F5C2F1E60D5040042AD43 /* InfoSceneWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoSceneWorker.swift; sourceTree = "<group>"; };
+		8A5F5C391E60D9AC0042AD43 /* InfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
+		8A92D2B01E62D5BF008545DC /* InfoDetailSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoDetailSceneViewController.swift; sourceTree = "<group>"; };
 		8AA152CC1E52380200D63156 /* PushService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushService.swift; sourceTree = "<group>"; };
 		8AA152D01E52E54F00D63156 /* PushView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PushView.xib; sourceTree = "<group>"; };
 		8AA152D21E52E79900D63156 /* PushView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushView.swift; sourceTree = "<group>"; };
@@ -138,6 +156,31 @@
 				8A004F001E57242A00476E26 /* AlertService.swift */,
 			);
 			name = AlertService;
+			sourceTree = "<group>";
+		};
+		8A5F5C3B1E61FFD20042AD43 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8A5F5C3C1E61FFDD0042AD43 /* TableCell */,
+				8AA152CE1E523F0000D63156 /* Views */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		8A5F5C3C1E61FFDD0042AD43 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				8A5F5C391E60D9AC0042AD43 /* InfoCell.swift */,
+			);
+			name = TableCell;
+			sourceTree = "<group>";
+		};
+		8A92D2AF1E62D597008545DC /* InfoDetailScene */ = {
+			isa = PBXGroup;
+			children = (
+				8A92D2B01E62D5BF008545DC /* InfoDetailSceneViewController.swift */,
+			);
+			name = InfoDetailScene;
 			sourceTree = "<group>";
 		};
 		8AA152CA1E5237DE00D63156 /* Service */ = {
@@ -234,7 +277,7 @@
 		AC235ED81E4BAA75004095C2 /* iFast */ = {
 			isa = PBXGroup;
 			children = (
-				8AA152CE1E523F0000D63156 /* Views */,
+				8A5F5C3B1E61FFD20042AD43 /* Components */,
 				8AA152CA1E5237DE00D63156 /* Service */,
 				8AA940F41E4F9D2F004A2C6D /* Scenes */,
 				AC235F011E4BABF2004095C2 /* Util */,
@@ -348,7 +391,15 @@
 		AC9C49551E5CFB420071F5F0 /* InfoScene */ = {
 			isa = PBXGroup;
 			children = (
+				8A92D2AF1E62D597008545DC /* InfoDetailScene */,
 				AC9C49561E5CFB610071F5F0 /* InfoSceneViewController.storyboard */,
+				8A5F5C291E60D5040042AD43 /* InfoSceneConfigurator.swift */,
+				8A5F5C2A1E60D5040042AD43 /* InfoSceneInteractor.swift */,
+				8A5F5C2B1E60D5040042AD43 /* InfoSceneModels.swift */,
+				8A5F5C2C1E60D5040042AD43 /* InfoScenePresenter.swift */,
+				8A5F5C2D1E60D5040042AD43 /* InfoSceneRouter.swift */,
+				8A5F5C2E1E60D5040042AD43 /* InfoSceneViewController.swift */,
+				8A5F5C2F1E60D5040042AD43 /* InfoSceneWorker.swift */,
 			);
 			name = InfoScene;
 			sourceTree = "<group>";
@@ -510,32 +561,41 @@
 				ACF16DA91E59C08E008199BE /* MainSceneConfigurator.swift in Sources */,
 				8AA5F1251E5327A3007D8CD5 /* Test2ViewController.swift in Sources */,
 				8AA941011E4F9E3B004A2C6D /* OnboardingSceneRouter.swift in Sources */,
+				8A5F5C331E60D5040042AD43 /* InfoScenePresenter.swift in Sources */,
 				8AA940FD1E4F9E3B004A2C6D /* OnboardingSceneConfigurator.swift in Sources */,
 				8AA940FE1E4F9E3B004A2C6D /* OnboardingSceneInteractor.swift in Sources */,
 				8AA941031E4F9E3B004A2C6D /* OnboardingSceneWorker.swift in Sources */,
 				8AA5F12A1E534316007D8CD5 /* AlertView.swift in Sources */,
 				8AA941021E4F9E3B004A2C6D /* OnboardingSceneViewController.swift in Sources */,
 				ACB778831E59D407000337C8 /* TimerViewUtil.swift in Sources */,
+				8A5F5C321E60D5040042AD43 /* InfoSceneModels.swift in Sources */,
 				ACF16DAD1E59C08E008199BE /* MainSceneRouter.swift in Sources */,
 				8AA940F31E4F8FB2004A2C6D /* FastLabel.swift in Sources */,
 				8AA940F11E4F8439004A2C6D /* String + FastAdditions.swift in Sources */,
+				8A5F5C301E60D5040042AD43 /* InfoSceneConfigurator.swift in Sources */,
 				ACA161F41E5B68C80080EB5F /* SwipeView.swift in Sources */,
 				8AA9410A1E4FA218004A2C6D /* OnboardingViewController.swift in Sources */,
 				ACA161F21E5B67E30080EB5F /* SwipeViewStyleKit.swift in Sources */,
 				AC235F0A1E4BB3B9004095C2 /* TextModifier.swift in Sources */,
+				8A5F5C311E60D5040042AD43 /* InfoSceneInteractor.swift in Sources */,
+				8A5F5C351E60D5040042AD43 /* InfoSceneViewController.swift in Sources */,
 				ACF16DAF1E59C08E008199BE /* MainSceneWorker.swift in Sources */,
 				AC235F041E4BAC15004095C2 /* UIColor + FastAdditions.swift in Sources */,
+				8A5F5C341E60D5040042AD43 /* InfoSceneRouter.swift in Sources */,
 				AC235F0C1E4BB651004095C2 /* UIButton + FastPrimaryButton.swift in Sources */,
 				ACF16DAC1E59C08E008199BE /* MainScenePresenter.swift in Sources */,
+				8A5F5C3A1E60D9AC0042AD43 /* InfoCell.swift in Sources */,
 				ACF16DAA1E59C08E008199BE /* MainSceneInteractor.swift in Sources */,
 				8AA941001E4F9E3B004A2C6D /* OnboardingScenePresenter.swift in Sources */,
 				8AA152D31E52E79900D63156 /* PushView.swift in Sources */,
 				AC235EE21E4BAA75004095C2 /* iFast.xcdatamodeld in Sources */,
 				ACF16DAE1E59C08E008199BE /* MainSceneViewController.swift in Sources */,
 				8A004F011E57242A00476E26 /* AlertService.swift in Sources */,
+				8A92D2B11E62D5BF008545DC /* InfoDetailSceneViewController.swift in Sources */,
 				8AA152CD1E52380200D63156 /* PushService.swift in Sources */,
 				AC235EDA1E4BAA75004095C2 /* AppDelegate.swift in Sources */,
 				8AA5F1231E532619007D8CD5 /* TestViewController.swift in Sources */,
+				8A5F5C361E60D5040042AD43 /* InfoSceneWorker.swift in Sources */,
 				8AA940FF1E4F9E3B004A2C6D /* OnboardingSceneModels.swift in Sources */,
 				AC9C49541E5CC9D80071F5F0 /* TimePickerView.swift in Sources */,
 				ACF16DAB1E59C08E008199BE /* MainSceneModels.swift in Sources */,
