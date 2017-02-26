@@ -16,6 +16,7 @@
 		8A5F5C351E60D5040042AD43 /* InfoSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F5C2E1E60D5040042AD43 /* InfoSceneViewController.swift */; };
 		8A5F5C361E60D5040042AD43 /* InfoSceneWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F5C2F1E60D5040042AD43 /* InfoSceneWorker.swift */; };
 		8A5F5C3A1E60D9AC0042AD43 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F5C391E60D9AC0042AD43 /* InfoCell.swift */; };
+		8A92D2B11E62D5BF008545DC /* InfoDetailSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A92D2B01E62D5BF008545DC /* InfoDetailSceneViewController.swift */; };
 		8AA152CD1E52380200D63156 /* PushService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA152CC1E52380200D63156 /* PushService.swift */; };
 		8AA152D11E52E54F00D63156 /* PushView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA152D01E52E54F00D63156 /* PushView.xib */; };
 		8AA152D31E52E79900D63156 /* PushView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA152D21E52E79900D63156 /* PushView.swift */; };
@@ -81,6 +82,7 @@
 		8A5F5C2E1E60D5040042AD43 /* InfoSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoSceneViewController.swift; sourceTree = "<group>"; };
 		8A5F5C2F1E60D5040042AD43 /* InfoSceneWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoSceneWorker.swift; sourceTree = "<group>"; };
 		8A5F5C391E60D9AC0042AD43 /* InfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
+		8A92D2B01E62D5BF008545DC /* InfoDetailSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoDetailSceneViewController.swift; sourceTree = "<group>"; };
 		8AA152CC1E52380200D63156 /* PushService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushService.swift; sourceTree = "<group>"; };
 		8AA152D01E52E54F00D63156 /* PushView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PushView.xib; sourceTree = "<group>"; };
 		8AA152D21E52E79900D63156 /* PushView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushView.swift; sourceTree = "<group>"; };
@@ -154,6 +156,31 @@
 				8A004F001E57242A00476E26 /* AlertService.swift */,
 			);
 			name = AlertService;
+			sourceTree = "<group>";
+		};
+		8A5F5C3B1E61FFD20042AD43 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8A5F5C3C1E61FFDD0042AD43 /* TableCell */,
+				8AA152CE1E523F0000D63156 /* Views */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		8A5F5C3C1E61FFDD0042AD43 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				8A5F5C391E60D9AC0042AD43 /* InfoCell.swift */,
+			);
+			name = TableCell;
+			sourceTree = "<group>";
+		};
+		8A92D2AF1E62D597008545DC /* InfoDetailScene */ = {
+			isa = PBXGroup;
+			children = (
+				8A92D2B01E62D5BF008545DC /* InfoDetailSceneViewController.swift */,
+			);
+			name = InfoDetailScene;
 			sourceTree = "<group>";
 		};
 		8AA152CA1E5237DE00D63156 /* Service */ = {
@@ -250,7 +277,7 @@
 		AC235ED81E4BAA75004095C2 /* iFast */ = {
 			isa = PBXGroup;
 			children = (
-				8AA152CE1E523F0000D63156 /* Views */,
+				8A5F5C3B1E61FFD20042AD43 /* Components */,
 				8AA152CA1E5237DE00D63156 /* Service */,
 				8AA940F41E4F9D2F004A2C6D /* Scenes */,
 				AC235F011E4BABF2004095C2 /* Util */,
@@ -364,6 +391,7 @@
 		AC9C49551E5CFB420071F5F0 /* InfoScene */ = {
 			isa = PBXGroup;
 			children = (
+				8A92D2AF1E62D597008545DC /* InfoDetailScene */,
 				AC9C49561E5CFB610071F5F0 /* InfoSceneViewController.storyboard */,
 				8A5F5C291E60D5040042AD43 /* InfoSceneConfigurator.swift */,
 				8A5F5C2A1E60D5040042AD43 /* InfoSceneInteractor.swift */,
@@ -372,7 +400,6 @@
 				8A5F5C2D1E60D5040042AD43 /* InfoSceneRouter.swift */,
 				8A5F5C2E1E60D5040042AD43 /* InfoSceneViewController.swift */,
 				8A5F5C2F1E60D5040042AD43 /* InfoSceneWorker.swift */,
-				8A5F5C391E60D9AC0042AD43 /* InfoCell.swift */,
 			);
 			name = InfoScene;
 			sourceTree = "<group>";
@@ -564,6 +591,7 @@
 				AC235EE21E4BAA75004095C2 /* iFast.xcdatamodeld in Sources */,
 				ACF16DAE1E59C08E008199BE /* MainSceneViewController.swift in Sources */,
 				8A004F011E57242A00476E26 /* AlertService.swift in Sources */,
+				8A92D2B11E62D5BF008545DC /* InfoDetailSceneViewController.swift in Sources */,
 				8AA152CD1E52380200D63156 /* PushService.swift in Sources */,
 				AC235EDA1E4BAA75004095C2 /* AppDelegate.swift in Sources */,
 				8AA5F1231E532619007D8CD5 /* TestViewController.swift in Sources */,

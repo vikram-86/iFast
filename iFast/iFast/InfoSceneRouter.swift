@@ -17,6 +17,10 @@ protocol InfoSceneRouterInput
 class InfoSceneRouter: InfoSceneRouterInput
 {
   weak var viewController: InfoSceneViewController!
+
+  enum SegueIdentifiers: String {
+    case infoDetail = "infoDetailSegue"
+  }
   
   // MARK: - Navigation
   
@@ -49,7 +53,7 @@ class InfoSceneRouter: InfoSceneRouterInput
 //      passDataToSomewhereScene(segue: segue)
 //    }
 //  }
-//  
+//
 //  func passDataToSomewhereScene(segue: UIStoryboardSegue)
 //  {
 //    // NOTE: Teach the router how to pass data to the next scene
@@ -57,4 +61,9 @@ class InfoSceneRouter: InfoSceneRouterInput
 //    // let someWhereViewController = segue.destinationViewController as! SomeWhereViewController
 //    // someWhereViewController.output.name = viewController.output.name
 //  }
+
+  func passDataToDetailScene(segue: UIStoryboardSegue, with viewModel: InfoCellViewModel){
+
+    
+  }
 }

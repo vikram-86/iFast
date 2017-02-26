@@ -10,7 +10,7 @@ import UIKit
 
 protocol InfoSceneInteractorInput
 {
-
+  
 }
 
 protocol InfoSceneInteractorOutput
@@ -20,6 +20,7 @@ protocol InfoSceneInteractorOutput
 
 class InfoSceneInteractor: InfoSceneInteractorInput
 {
+
   var output: InfoSceneInteractorOutput!
   var worker: InfoSceneWorker!
   

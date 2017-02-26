@@ -10,13 +10,8 @@ import UIKit
 
 struct InfoScene
 {
-  
+
 }
 
-//MARK: InfoCelViewModel
-struct InfoCellViewModel{
-  
-  let title						: String
-  let image						: UIImage
-  let contentFilePath	: String
-}
+let howToIFVM = InfoCellViewModel(title: "How to IF", image: #imageLiteral(resourceName: "clock"))
+let quickGuideVM = InfoCellViewModel(title: "Quick Guide", image: #imageLiteral(resourceName: "food"))

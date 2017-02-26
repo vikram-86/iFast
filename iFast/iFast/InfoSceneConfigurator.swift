@@ -14,7 +14,8 @@ extension InfoSceneViewController: InfoScenePresenterOutput
 {
   override func prepare(for segue: UIStoryboardSegue, sender: Any?)
   {
-    // router.passDataToNextScene(segue: segue)
+    //    router.passDataToNextScene(segue: segue)
+    router.passDataToDetailScene(segue: segue, with: selectedCell)
   }
 }
 
