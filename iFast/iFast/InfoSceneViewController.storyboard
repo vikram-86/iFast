@@ -30,7 +30,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="277"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UuW-cT-eId" id="ql4-CC-Ek5">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="276.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="276"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="1ex-5r-xMQ">
@@ -104,6 +104,7 @@
         <!--Info Detail Scene View Controller-->
         <scene sceneID="Rrf-sd-zvT">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9EY-U5-ird" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="tg2-8N-Ffm" customClass="InfoDetailSceneViewController" customModule="iFast" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ahg-WH-g3L"/>
@@ -114,7 +115,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZGE-Q2-f1O">
-                                <rect key="frame" x="37" y="300" width="300" height="367"/>
+                                <rect key="frame" x="37" y="299" width="300" height="360"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="hkw-a8-XEq"/>
@@ -131,20 +132,20 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="qEv-io-LZr">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                <rect key="frame" x="-37.5" y="-11" width="450" height="310"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="ISZ-RQ-SnF"/>
+                                    <constraint firstAttribute="height" constant="310" id="ISZ-RQ-SnF"/>
+                                    <constraint firstAttribute="width" constant="450" id="dki-gq-Tp9"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="qEv-io-LZr" firstAttribute="leading" secondItem="d8O-71-Z49" secondAttribute="leading" id="QrT-Nf-j7N"/>
+                            <constraint firstItem="qEv-io-LZr" firstAttribute="centerX" secondItem="d8O-71-Z49" secondAttribute="centerX" id="1YO-6U-x1F"/>
                             <constraint firstItem="ZGE-Q2-f1O" firstAttribute="top" secondItem="qEv-io-LZr" secondAttribute="bottom" id="cp0-Zb-933"/>
-                            <constraint firstItem="qEv-io-LZr" firstAttribute="top" secondItem="d8O-71-Z49" secondAttribute="top" id="fp5-fr-XOz"/>
-                            <constraint firstAttribute="trailing" secondItem="qEv-io-LZr" secondAttribute="trailing" id="oR0-N0-2VP"/>
+                            <constraint firstItem="qEv-io-LZr" firstAttribute="top" secondItem="d8O-71-Z49" secondAttribute="top" constant="-11" id="fp5-fr-XOz"/>
                             <constraint firstItem="ZGE-Q2-f1O" firstAttribute="centerX" secondItem="d8O-71-Z49" secondAttribute="centerX" id="rW5-j5-BEu"/>
-                            <constraint firstItem="Jh0-M4-MLz" firstAttribute="top" secondItem="ZGE-Q2-f1O" secondAttribute="bottom" id="zoH-1N-DaZ"/>
+                            <constraint firstItem="Jh0-M4-MLz" firstAttribute="top" secondItem="ZGE-Q2-f1O" secondAttribute="bottom" constant="8" symbolic="YES" id="zoH-1N-DaZ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -153,9 +154,8 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                         <outlet property="textView" destination="ZGE-Q2-f1O" id="y9Q-RF-c7f"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9EY-U5-ird" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1221.5999999999999" y="262.21889055472263"/>
+            <point key="canvasLocation" x="1330" y="263"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="32g-bi-VK8">

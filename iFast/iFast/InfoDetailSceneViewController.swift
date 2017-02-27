@@ -14,8 +14,9 @@ class InfoDetailSceneViewController: UIViewController {
   @IBOutlet weak var textView													: UITextView!
   @IBOutlet weak var headerImageViewHeightConstraint	: NSLayoutConstraint!
 
-  let maxHeaderHeight	: CGFloat = 300
-  let minHeaderHeight	: CGFloat = 80
+  fileprivate let normalHeaderHeight	: CGFloat = 310
+  fileprivate let minHeaderHeight     : CGFloat = 80
+  fileprivate let maxHeaderHeight     : CGFloat = 380
 
   override var prefersStatusBarHidden: Bool{
     return true
@@ -27,20 +28,47 @@ class InfoDetailSceneViewController: UIViewController {
   }
 }
 
+//MARK: -Event Handling
+extension InfoDetailSceneViewController{
+  fileprivate func updateHeaderView(_ contentOffset: CGPoint){
+    //print("contentOffset: \(contentOffset.y)")
+    let contentY =  normalHeaderHeight + (-contentOffset.y)
+    print(contentY)
+    let heightPercent = (contentY / normalHeaderHeight)
+    if heightPercent > 0.98{
+      UIView.animate(withDuration: 0.1, animations: {
+        self.headerImageView.transform = CGAffineTransform(scaleX: heightPercent, y: heightPercent)
+      })
+      
+    }else if contentY > minHeaderHeight{
+      headerImageViewHeightConstraint.constant = contentY
+      UIView.animate(withDuration: 0.1, animations: {
+        self.view.layoutIfNeeded()
+      })
+      
+    }
+  }
+  
+  fileprivate func resetHeaderView(){
+    if headerImageViewHeightConstraint.constant > normalHeaderHeight - 100{
+      headerImageViewHeightConstraint.constant = normalHeaderHeight
+      UIView.animate(withDuration: 0.33, animations: {
+        self.view.layoutIfNeeded()
+        self.headerImageView.transform = CGAffineTransform.identity
+      })
+    }
+  }
+}
+
+//MARK: - UITextfield Delegate
 extension InfoDetailSceneViewController: UITextViewDelegate{
 
   func scrollViewDidScroll(_ scrollView: UIScrollView) {
-    
-    let newConstraint = maxHeaderHeight - scrollView.contentOffset.y
-    guard newConstraint >= minHeaderHeight else {
-			print(newConstraint)
-      print(headerImageViewHeightConstraint.constant)
-      return }
-    guard newConstraint <= maxHeaderHeight else { return }
-
-    headerImageViewHeightConstraint.constant = newConstraint
-    UIView.animate(withDuration: 0.0) { 
-      self.view.layoutIfNeeded()
-    }
+    updateHeaderView(scrollView.contentOffset)
+  }
+  
+  func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    print("Scrolling Decelerated")
+    resetHeaderView()
   }
 }
