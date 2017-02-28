@@ -14,9 +14,9 @@ class InfoDetailSceneViewController: UIViewController {
   @IBOutlet weak var textView													: UITextView!
   @IBOutlet weak var headerImageViewHeightConstraint	: NSLayoutConstraint!
 
-  fileprivate let normalHeaderHeight	: CGFloat = 310
-  fileprivate let minHeaderHeight     : CGFloat = 80
-  fileprivate let maxHeaderHeight     : CGFloat = 380
+  fileprivate let normalHeaderHeight	: CGFloat = 300
+  fileprivate let minHeaderHeight			: CGFloat = 180
+  fileprivate let actualHeaderHeight	: CGFloat = 400
 
   override var prefersStatusBarHidden: Bool{
     return true
@@ -28,47 +28,51 @@ class InfoDetailSceneViewController: UIViewController {
   }
 }
 
-//MARK: -Event Handling
-extension InfoDetailSceneViewController{
-  fileprivate func updateHeaderView(_ contentOffset: CGPoint){
-    //print("contentOffset: \(contentOffset.y)")
-    let contentY =  normalHeaderHeight + (-contentOffset.y)
-    print(contentY)
-    let heightPercent = (contentY / normalHeaderHeight)
-    if heightPercent > 0.98{
-      UIView.animate(withDuration: 0.1, animations: {
-        self.headerImageView.transform = CGAffineTransform(scaleX: heightPercent, y: heightPercent)
-      })
-      
-    }else if contentY > minHeaderHeight{
-      headerImageViewHeightConstraint.constant = contentY
-      UIView.animate(withDuration: 0.1, animations: {
-        self.view.layoutIfNeeded()
-      })
-      
-    }
-  }
-  
-  fileprivate func resetHeaderView(){
-    if headerImageViewHeightConstraint.constant > normalHeaderHeight - 100{
-      headerImageViewHeightConstraint.constant = normalHeaderHeight
-      UIView.animate(withDuration: 0.33, animations: {
-        self.view.layoutIfNeeded()
-        self.headerImageView.transform = CGAffineTransform.identity
-      })
-    }
-  }
-}
-
-//MARK: - UITextfield Delegate
 extension InfoDetailSceneViewController: UITextViewDelegate{
 
   func scrollViewDidScroll(_ scrollView: UIScrollView) {
-    updateHeaderView(scrollView.contentOffset)
+    updateHeader(contentOffset: scrollView.contentOffset)
   }
-  
+
   func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-    print("Scrolling Decelerated")
-    resetHeaderView()
+    let offset = normalHeaderHeight + (-scrollView.contentOffset.y)
+    resetHeader(offset: offset)
+  }
+}
+
+//MARK: Header Util
+extension InfoDetailSceneViewController{
+
+  fileprivate func  updateHeader(contentOffset: CGPoint){
+    let contentY 			= normalHeaderHeight + (-contentOffset.y)
+    let percent 			= contentY / normalHeaderHeight
+    let currentOffset	= actualHeaderHeight + (-contentOffset.y)
+
+    if percent > 0.95{
+      scaleHeaderView(percent: percent)
+    }else if currentOffset > minHeaderHeight{
+      shrinkHeight(offset: currentOffset)
+    }
+  }
+
+  fileprivate func resetHeader(offset: CGFloat){
+    if offset > normalHeaderHeight - 100 {
+      headerImageViewHeightConstraint.constant = actualHeaderHeight
+      UIView.animate(withDuration: 0.33, delay: 0, options: [.allowUserInteraction], animations: { 
+        self.headerImageView.transform = .identity
+        self.view.layoutIfNeeded()
+      }, completion: nil)
+    }
+  }
+
+  fileprivate func scaleHeaderView(percent: CGFloat){
+    headerImageView.transform = CGAffineTransform(scaleX: percent, y: percent)
+  }
+
+  fileprivate func  shrinkHeight(offset: CGFloat){
+    headerImageViewHeightConstraint.constant = offset
+    UIView.animate(withDuration: 0) {
+      self.view.layoutIfNeeded()
+    }
   }
 }

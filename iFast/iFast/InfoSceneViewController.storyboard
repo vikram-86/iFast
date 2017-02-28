@@ -104,7 +104,6 @@
         <!--Info Detail Scene View Controller-->
         <scene sceneID="Rrf-sd-zvT">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9EY-U5-ird" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="tg2-8N-Ffm" customClass="InfoDetailSceneViewController" customModule="iFast" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ahg-WH-g3L"/>
@@ -115,37 +114,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZGE-Q2-f1O">
-                                <rect key="frame" x="37" y="299" width="300" height="360"/>
+                                <rect key="frame" x="37" y="300" width="300" height="367"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="hkw-a8-XEq"/>
                                 </constraints>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="300" maxX="0.0" maxY="0.0"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.
 
 Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.
 
 Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.
 
-Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="qEv-io-LZr">
-                                <rect key="frame" x="-37.5" y="-11" width="450" height="310"/>
+                                <rect key="frame" x="-112.5" y="-100" width="600" height="400"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="310" id="ISZ-RQ-SnF"/>
-                                    <constraint firstAttribute="width" constant="450" id="dki-gq-Tp9"/>
+                                    <constraint firstAttribute="height" constant="400" id="ISZ-RQ-SnF"/>
+                                    <constraint firstAttribute="width" constant="600" id="pfr-uU-SK5"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="qEv-io-LZr" firstAttribute="centerX" secondItem="d8O-71-Z49" secondAttribute="centerX" id="1YO-6U-x1F"/>
+                            <constraint firstItem="qEv-io-LZr" firstAttribute="centerX" secondItem="d8O-71-Z49" secondAttribute="centerX" id="Zpa-vQ-zrg"/>
                             <constraint firstItem="ZGE-Q2-f1O" firstAttribute="top" secondItem="qEv-io-LZr" secondAttribute="bottom" id="cp0-Zb-933"/>
-                            <constraint firstItem="qEv-io-LZr" firstAttribute="top" secondItem="d8O-71-Z49" secondAttribute="top" constant="-11" id="fp5-fr-XOz"/>
+                            <constraint firstAttribute="top" secondItem="qEv-io-LZr" secondAttribute="top" constant="100" id="fp5-fr-XOz"/>
                             <constraint firstItem="ZGE-Q2-f1O" firstAttribute="centerX" secondItem="d8O-71-Z49" secondAttribute="centerX" id="rW5-j5-BEu"/>
-                            <constraint firstItem="Jh0-M4-MLz" firstAttribute="top" secondItem="ZGE-Q2-f1O" secondAttribute="bottom" constant="8" symbolic="YES" id="zoH-1N-DaZ"/>
+                            <constraint firstItem="Jh0-M4-MLz" firstAttribute="top" secondItem="ZGE-Q2-f1O" secondAttribute="bottom" id="zoH-1N-DaZ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -154,8 +153,9 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                         <outlet property="textView" destination="ZGE-Q2-f1O" id="y9Q-RF-c7f"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9EY-U5-ird" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1330" y="263"/>
+            <point key="canvasLocation" x="1388" y="263"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="32g-bi-VK8">
@@ -177,7 +177,7 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
         </scene>
     </scenes>
     <resources>
-        <image name="clock" width="450" height="300"/>
+        <image name="clock" width="600" height="400"/>
         <image name="cross_grey" width="24" height="24"/>
     </resources>
 </document>
