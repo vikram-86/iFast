@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Profile Scene View Controller-->
         <scene sceneID="hWs-7y-VOw">
             <objects>
-                <viewController id="6gv-xo-6dg" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileSceneViewController" id="6gv-xo-6dg" customClass="ProfileSceneViewController" customModule="iFast" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="m6Y-Fy-k2Z"/>
                         <viewControllerLayoutGuide type="bottom" id="cvp-3a-zVB"/>
@@ -28,19 +28,32 @@
                                     <constraint firstAttribute="height" constant="300" id="hvH-zn-mBO"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ivP-cw-Yrp" userLabel="profileView">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eno-lM-cLR">
+                                <rect key="frame" x="327" y="28" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="820-gW-RXt"/>
+                                    <constraint firstAttribute="width" constant="32" id="Dvb-6S-cwb"/>
+                                </constraints>
+                                <state key="normal" image="cross_darkBlue"/>
+                                <connections>
+                                    <action selector="close" destination="6gv-xo-6dg" eventType="touchUpInside" id="dPB-PO-mqH"/>
+                                </connections>
+                            </button>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ivP-cw-Yrp" userLabel="profileView">
                                 <rect key="frame" x="132" y="245" width="110" height="110"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_img" translatesAutoresizingMaskIntoConstraints="NO" id="tTW-Dj-th4">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_img" translatesAutoresizingMaskIntoConstraints="NO" id="tTW-Dj-th4">
                                         <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="110" id="CPb-Tp-GAy"/>
+                                            <constraint firstAttribute="width" constant="110" id="oeF-uB-sbF"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="tTW-Dj-th4" firstAttribute="top" secondItem="ivP-cw-Yrp" secondAttribute="top" id="JsQ-Lk-JHZ"/>
-                                    <constraint firstItem="tTW-Dj-th4" firstAttribute="leading" secondItem="ivP-cw-Yrp" secondAttribute="leading" id="Lfg-oa-fOP"/>
-                                    <constraint firstAttribute="bottom" secondItem="tTW-Dj-th4" secondAttribute="bottom" id="bvr-JW-t2r"/>
-                                    <constraint firstAttribute="trailing" secondItem="tTW-Dj-th4" secondAttribute="trailing" id="cWm-GV-5za"/>
+                                    <constraint firstItem="tTW-Dj-th4" firstAttribute="centerX" secondItem="ivP-cw-Yrp" secondAttribute="centerX" id="LOf-QX-LBv"/>
+                                    <constraint firstItem="tTW-Dj-th4" firstAttribute="centerY" secondItem="ivP-cw-Yrp" secondAttribute="centerY" id="Ll8-ef-YuU"/>
                                     <constraint firstAttribute="width" constant="110" id="fxZ-Nf-WLU"/>
                                     <constraint firstAttribute="height" constant="110" id="omf-dm-qCm"/>
                                 </constraints>
@@ -65,6 +78,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="38"/>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                                 <state key="normal" image="weight"/>
+                                                <connections>
+                                                    <action selector="addWeight" destination="6gv-xo-6dg" eventType="touchUpInside" id="eb1-0D-hGr"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add weight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRR-EZ-wK2">
                                                 <rect key="frame" x="0.0" y="38" width="109" height="27.5"/>
@@ -106,16 +122,22 @@
                             <constraint firstItem="M8Q-CB-fIR" firstAttribute="leading" secondItem="ESi-SI-T4Z" secondAttribute="leading" id="6c3-YH-vcJ"/>
                             <constraint firstAttribute="trailing" secondItem="M8Q-CB-fIR" secondAttribute="trailing" id="7I4-8U-OmE"/>
                             <constraint firstAttribute="trailing" secondItem="95D-aL-Pjf" secondAttribute="trailing" constant="20" id="94s-S2-edu"/>
+                            <constraint firstItem="Eno-lM-cLR" firstAttribute="top" secondItem="ESi-SI-T4Z" secondAttribute="top" constant="28" id="FnL-Qz-2kW"/>
                             <constraint firstItem="ivP-cw-Yrp" firstAttribute="baseline" secondItem="M8Q-CB-fIR" secondAttribute="baseline" constant="55" id="Ibg-SE-4tS"/>
                             <constraint firstItem="kEO-w3-EHC" firstAttribute="top" secondItem="ivP-cw-Yrp" secondAttribute="bottom" constant="26" id="NAb-Gt-8kW"/>
                             <constraint firstItem="kEO-w3-EHC" firstAttribute="leading" secondItem="ESi-SI-T4Z" secondAttribute="leading" constant="20" id="PLE-UG-Les"/>
                             <constraint firstItem="M8Q-CB-fIR" firstAttribute="top" secondItem="ESi-SI-T4Z" secondAttribute="top" id="WzZ-mV-0d3"/>
+                            <constraint firstAttribute="trailing" secondItem="Eno-lM-cLR" secondAttribute="trailing" constant="16" id="Z3p-6w-2em"/>
                             <constraint firstItem="95D-aL-Pjf" firstAttribute="top" secondItem="kEO-w3-EHC" secondAttribute="bottom" constant="60" id="fhG-e9-2zB"/>
                             <constraint firstItem="ivP-cw-Yrp" firstAttribute="centerX" secondItem="ESi-SI-T4Z" secondAttribute="centerX" id="j2S-I4-BVg"/>
                             <constraint firstAttribute="trailing" secondItem="Dgw-Sg-wrP" secondAttribute="trailing" constant="30" id="jjk-W4-Xgo"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="r8f-dm-PHW"/>
+                    <connections>
+                        <outlet property="profileImageView" destination="tTW-Dj-th4" id="LuF-or-umh"/>
+                        <outlet property="profileView" destination="ivP-cw-Yrp" id="je7-Jw-g0t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZTC-D7-Bnk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -142,6 +164,7 @@
     </scenes>
     <resources>
         <image name="camera" width="50" height="38"/>
+        <image name="cross_darkBlue" width="100" height="100"/>
         <image name="profile_img" width="100" height="100"/>
         <image name="weight" width="46" height="38"/>
     </resources>

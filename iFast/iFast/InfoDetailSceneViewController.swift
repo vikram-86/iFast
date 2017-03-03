@@ -28,6 +28,7 @@ class InfoDetailSceneViewController: UIViewController {
   }
 }
 
+//MARK: -UITextViewDelegate
 extension InfoDetailSceneViewController: UITextViewDelegate{
 
   func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -39,6 +40,16 @@ extension InfoDetailSceneViewController: UITextViewDelegate{
     resetHeader(offset: offset)
   }
 }
+
+
+// MARK: Event Handler
+extension InfoDetailSceneViewController{
+
+    @IBAction func close(){
+        dismiss(animated: true, completion: nil)
+    }
+}
+
 
 //MARK: Header Util
 extension InfoDetailSceneViewController{

@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		8A004F011E57242A00476E26 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A004F001E57242A00476E26 /* AlertService.swift */; };
+		8A39FB5D1E688BE6008B30B7 /* ProfileSceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A39FB561E688BE6008B30B7 /* ProfileSceneConfigurator.swift */; };
+		8A39FB5E1E688BE6008B30B7 /* ProfileSceneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A39FB571E688BE6008B30B7 /* ProfileSceneInteractor.swift */; };
+		8A39FB5F1E688BE6008B30B7 /* ProfileSceneModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A39FB581E688BE6008B30B7 /* ProfileSceneModels.swift */; };
+		8A39FB601E688BE6008B30B7 /* ProfileScenePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A39FB591E688BE6008B30B7 /* ProfileScenePresenter.swift */; };
+		8A39FB611E688BE6008B30B7 /* ProfileSceneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A39FB5A1E688BE6008B30B7 /* ProfileSceneRouter.swift */; };
+		8A39FB621E688BE6008B30B7 /* ProfileSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A39FB5B1E688BE6008B30B7 /* ProfileSceneViewController.swift */; };
+		8A39FB631E688BE6008B30B7 /* ProfileSceneWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A39FB5C1E688BE6008B30B7 /* ProfileSceneWorker.swift */; };
+		8A39FB681E6967A1008B30B7 /* WeightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A39FB671E6967A1008B30B7 /* WeightView.xib */; };
+		8A39FB6A1E6969EF008B30B7 /* WeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A39FB691E6969EF008B30B7 /* WeightView.swift */; };
+		8A39FB6D1E699F4D008B30B7 /* PickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A39FB6C1E699F4D008B30B7 /* PickerManager.swift */; };
 		8A5F5C301E60D5040042AD43 /* InfoSceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F5C291E60D5040042AD43 /* InfoSceneConfigurator.swift */; };
 		8A5F5C311E60D5040042AD43 /* InfoSceneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F5C2A1E60D5040042AD43 /* InfoSceneInteractor.swift */; };
 		8A5F5C321E60D5040042AD43 /* InfoSceneModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F5C2B1E60D5040042AD43 /* InfoSceneModels.swift */; };
@@ -74,6 +84,16 @@
 
 /* Begin PBXFileReference section */
 		8A004F001E57242A00476E26 /* AlertService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		8A39FB561E688BE6008B30B7 /* ProfileSceneConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSceneConfigurator.swift; sourceTree = "<group>"; };
+		8A39FB571E688BE6008B30B7 /* ProfileSceneInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSceneInteractor.swift; sourceTree = "<group>"; };
+		8A39FB581E688BE6008B30B7 /* ProfileSceneModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSceneModels.swift; sourceTree = "<group>"; };
+		8A39FB591E688BE6008B30B7 /* ProfileScenePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileScenePresenter.swift; sourceTree = "<group>"; };
+		8A39FB5A1E688BE6008B30B7 /* ProfileSceneRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSceneRouter.swift; sourceTree = "<group>"; };
+		8A39FB5B1E688BE6008B30B7 /* ProfileSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSceneViewController.swift; sourceTree = "<group>"; };
+		8A39FB5C1E688BE6008B30B7 /* ProfileSceneWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSceneWorker.swift; sourceTree = "<group>"; };
+		8A39FB671E6967A1008B30B7 /* WeightView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeightView.xib; sourceTree = "<group>"; };
+		8A39FB691E6969EF008B30B7 /* WeightView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeightView.swift; sourceTree = "<group>"; };
+		8A39FB6C1E699F4D008B30B7 /* PickerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerManager.swift; sourceTree = "<group>"; };
 		8A5F5C291E60D5040042AD43 /* InfoSceneConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoSceneConfigurator.swift; sourceTree = "<group>"; };
 		8A5F5C2A1E60D5040042AD43 /* InfoSceneInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoSceneInteractor.swift; sourceTree = "<group>"; };
 		8A5F5C2B1E60D5040042AD43 /* InfoSceneModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoSceneModels.swift; sourceTree = "<group>"; };
@@ -158,9 +178,27 @@
 			name = AlertService;
 			sourceTree = "<group>";
 		};
+		8A39FB641E688E73008B30B7 /* WeightView */ = {
+			isa = PBXGroup;
+			children = (
+				8A39FB671E6967A1008B30B7 /* WeightView.xib */,
+				8A39FB691E6969EF008B30B7 /* WeightView.swift */,
+			);
+			name = WeightView;
+			sourceTree = "<group>";
+		};
+		8A39FB6B1E699F31008B30B7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8A39FB6C1E699F4D008B30B7 /* PickerManager.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		8A5F5C3B1E61FFD20042AD43 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				8A39FB6B1E699F31008B30B7 /* Utils */,
 				8A5F5C3C1E61FFDD0042AD43 /* TableCell */,
 				8AA152CE1E523F0000D63156 /* Views */,
 			);
@@ -203,6 +241,7 @@
 		8AA152CE1E523F0000D63156 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8A39FB641E688E73008B30B7 /* WeightView */,
 				AC9C49501E5CC6D70071F5F0 /* TimePickerView */,
 				ACB778881E5A31E6000337C8 /* SliderView */,
 				ACB778811E59D3EF000337C8 /* TimerView */,
@@ -408,6 +447,13 @@
 			isa = PBXGroup;
 			children = (
 				AC9C49591E5CFBAD0071F5F0 /* ProfileSceneViewController.storyboard */,
+				8A39FB561E688BE6008B30B7 /* ProfileSceneConfigurator.swift */,
+				8A39FB571E688BE6008B30B7 /* ProfileSceneInteractor.swift */,
+				8A39FB581E688BE6008B30B7 /* ProfileSceneModels.swift */,
+				8A39FB591E688BE6008B30B7 /* ProfileScenePresenter.swift */,
+				8A39FB5A1E688BE6008B30B7 /* ProfileSceneRouter.swift */,
+				8A39FB5B1E688BE6008B30B7 /* ProfileSceneViewController.swift */,
+				8A39FB5C1E688BE6008B30B7 /* ProfileSceneWorker.swift */,
 			);
 			name = ProfileScene;
 			sourceTree = "<group>";
@@ -535,6 +581,7 @@
 				8AA5F1281E533DBB007D8CD5 /* AlertView.xib in Resources */,
 				AC9C49521E5CC6F30071F5F0 /* TimePickerView.xib in Resources */,
 				AC235EDF1E4BAA75004095C2 /* Main.storyboard in Resources */,
+				8A39FB681E6967A1008B30B7 /* WeightView.xib in Resources */,
 				8AF7FF801E573CE800691C34 /* Assets.xcassets in Resources */,
 				ACF16DB21E59C0D1008199BE /* MainSceneViewController.storyboard in Resources */,
 				8AA941081E4F9FD5004A2C6D /* OnboardingSceneViewController.storyboard in Resources */,
@@ -559,12 +606,14 @@
 			files = (
 				ACB778851E59D486000337C8 /* TimerView.swift in Sources */,
 				ACF16DA91E59C08E008199BE /* MainSceneConfigurator.swift in Sources */,
+				8A39FB621E688BE6008B30B7 /* ProfileSceneViewController.swift in Sources */,
 				8AA5F1251E5327A3007D8CD5 /* Test2ViewController.swift in Sources */,
 				8AA941011E4F9E3B004A2C6D /* OnboardingSceneRouter.swift in Sources */,
 				8A5F5C331E60D5040042AD43 /* InfoScenePresenter.swift in Sources */,
 				8AA940FD1E4F9E3B004A2C6D /* OnboardingSceneConfigurator.swift in Sources */,
 				8AA940FE1E4F9E3B004A2C6D /* OnboardingSceneInteractor.swift in Sources */,
 				8AA941031E4F9E3B004A2C6D /* OnboardingSceneWorker.swift in Sources */,
+				8A39FB5F1E688BE6008B30B7 /* ProfileSceneModels.swift in Sources */,
 				8AA5F12A1E534316007D8CD5 /* AlertView.swift in Sources */,
 				8AA941021E4F9E3B004A2C6D /* OnboardingSceneViewController.swift in Sources */,
 				ACB778831E59D407000337C8 /* TimerViewUtil.swift in Sources */,
@@ -574,6 +623,10 @@
 				8AA940F11E4F8439004A2C6D /* String + FastAdditions.swift in Sources */,
 				8A5F5C301E60D5040042AD43 /* InfoSceneConfigurator.swift in Sources */,
 				ACA161F41E5B68C80080EB5F /* SwipeView.swift in Sources */,
+				8A39FB631E688BE6008B30B7 /* ProfileSceneWorker.swift in Sources */,
+				8A39FB6A1E6969EF008B30B7 /* WeightView.swift in Sources */,
+				8A39FB5E1E688BE6008B30B7 /* ProfileSceneInteractor.swift in Sources */,
+				8A39FB601E688BE6008B30B7 /* ProfileScenePresenter.swift in Sources */,
 				8AA9410A1E4FA218004A2C6D /* OnboardingViewController.swift in Sources */,
 				ACA161F21E5B67E30080EB5F /* SwipeViewStyleKit.swift in Sources */,
 				AC235F0A1E4BB3B9004095C2 /* TextModifier.swift in Sources */,
@@ -586,6 +639,9 @@
 				ACF16DAC1E59C08E008199BE /* MainScenePresenter.swift in Sources */,
 				8A5F5C3A1E60D9AC0042AD43 /* InfoCell.swift in Sources */,
 				ACF16DAA1E59C08E008199BE /* MainSceneInteractor.swift in Sources */,
+				8A39FB6D1E699F4D008B30B7 /* PickerManager.swift in Sources */,
+				8A39FB5D1E688BE6008B30B7 /* ProfileSceneConfigurator.swift in Sources */,
+				8A39FB611E688BE6008B30B7 /* ProfileSceneRouter.swift in Sources */,
 				8AA941001E4F9E3B004A2C6D /* OnboardingScenePresenter.swift in Sources */,
 				8AA152D31E52E79900D63156 /* PushView.swift in Sources */,
 				AC235EE21E4BAA75004095C2 /* iFast.xcdatamodeld in Sources */,
