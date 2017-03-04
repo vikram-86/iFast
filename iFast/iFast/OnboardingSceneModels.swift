@@ -18,7 +18,6 @@ struct OnboardingScene
     struct PushRequest {
       let hour      : Int
       let minutes   : Int
-      let pushView  : PushView
     }
   }
 

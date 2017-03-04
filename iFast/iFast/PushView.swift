@@ -13,7 +13,7 @@ protocol PushViewDelegate{
   func viewWillClose(pushView: PushView)
 }
 
-class PushView: UIView {
+class PushView: FastModalView{
 
   @IBOutlet weak var pickerView: UIPickerView!
   @IBOutlet weak var primaryButton: FastPrimaryButton!
@@ -36,9 +36,7 @@ class PushView: UIView {
 
   var selectedHour		: String = ""
   var selectedMinutes	: String = ""
-
-  var delegate	: PushViewDelegate?
-
+    
   var view: UIView!
   //MARK: Initializers
 
@@ -73,11 +71,13 @@ class PushView: UIView {
 extension PushView {
 
   @IBAction func primaryButtonPressed(){
-    delegate?.view(didSelect: selectedHour, minutes: selectedMinutes, inView: self)
+    // delegate?.view(didSelect: selectedHour, minutes: selectedMinutes, inView: self)
+    delegate?.pickerViewDidSelectPush(hour: selectedHour, minutes: selectedMinutes)
   }
 
   @IBAction func closeButtonPressed(){
-    delegate?.viewWillClose(pushView: self)
+    //delegate?.viewWillClose(pushView: self)
+    delegate?.pickerViewDidCancel()
   }
 }
 

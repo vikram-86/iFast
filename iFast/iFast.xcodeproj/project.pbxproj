@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8A004F011E57242A00476E26 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A004F001E57242A00476E26 /* AlertService.swift */; };
+		8A23CD951E69AE2200C341B8 /* FastPickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A23CD941E69AE2200C341B8 /* FastPickerViewDelegate.swift */; };
 		8A39FB5D1E688BE6008B30B7 /* ProfileSceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A39FB561E688BE6008B30B7 /* ProfileSceneConfigurator.swift */; };
 		8A39FB5E1E688BE6008B30B7 /* ProfileSceneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A39FB571E688BE6008B30B7 /* ProfileSceneInteractor.swift */; };
 		8A39FB5F1E688BE6008B30B7 /* ProfileSceneModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A39FB581E688BE6008B30B7 /* ProfileSceneModels.swift */; };
@@ -26,6 +27,7 @@
 		8A5F5C351E60D5040042AD43 /* InfoSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F5C2E1E60D5040042AD43 /* InfoSceneViewController.swift */; };
 		8A5F5C361E60D5040042AD43 /* InfoSceneWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F5C2F1E60D5040042AD43 /* InfoSceneWorker.swift */; };
 		8A5F5C3A1E60D9AC0042AD43 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F5C391E60D9AC0042AD43 /* InfoCell.swift */; };
+		8A7EA5411E6B1573001F4B40 /* NotificaitonNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7EA5401E6B1573001F4B40 /* NotificaitonNames.swift */; };
 		8A92D2B11E62D5BF008545DC /* InfoDetailSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A92D2B01E62D5BF008545DC /* InfoDetailSceneViewController.swift */; };
 		8AA152CD1E52380200D63156 /* PushService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA152CC1E52380200D63156 /* PushService.swift */; };
 		8AA152D11E52E54F00D63156 /* PushView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA152D01E52E54F00D63156 /* PushView.xib */; };
@@ -84,6 +86,7 @@
 
 /* Begin PBXFileReference section */
 		8A004F001E57242A00476E26 /* AlertService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		8A23CD941E69AE2200C341B8 /* FastPickerViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FastPickerViewDelegate.swift; sourceTree = "<group>"; };
 		8A39FB561E688BE6008B30B7 /* ProfileSceneConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSceneConfigurator.swift; sourceTree = "<group>"; };
 		8A39FB571E688BE6008B30B7 /* ProfileSceneInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSceneInteractor.swift; sourceTree = "<group>"; };
 		8A39FB581E688BE6008B30B7 /* ProfileSceneModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSceneModels.swift; sourceTree = "<group>"; };
@@ -102,6 +105,7 @@
 		8A5F5C2E1E60D5040042AD43 /* InfoSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoSceneViewController.swift; sourceTree = "<group>"; };
 		8A5F5C2F1E60D5040042AD43 /* InfoSceneWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoSceneWorker.swift; sourceTree = "<group>"; };
 		8A5F5C391E60D9AC0042AD43 /* InfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
+		8A7EA5401E6B1573001F4B40 /* NotificaitonNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificaitonNames.swift; sourceTree = "<group>"; };
 		8A92D2B01E62D5BF008545DC /* InfoDetailSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoDetailSceneViewController.swift; sourceTree = "<group>"; };
 		8AA152CC1E52380200D63156 /* PushService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushService.swift; sourceTree = "<group>"; };
 		8AA152D01E52E54F00D63156 /* PushView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PushView.xib; sourceTree = "<group>"; };
@@ -178,6 +182,14 @@
 			name = AlertService;
 			sourceTree = "<group>";
 		};
+		8A23CD931E69ADF800C341B8 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8A23CD941E69AE2200C341B8 /* FastPickerViewDelegate.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
 		8A39FB641E688E73008B30B7 /* WeightView */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +223,14 @@
 				8A5F5C391E60D9AC0042AD43 /* InfoCell.swift */,
 			);
 			name = TableCell;
+			sourceTree = "<group>";
+		};
+		8A7EA53F1E6B1560001F4B40 /* NotificationCenter */ = {
+			isa = PBXGroup;
+			children = (
+				8A7EA5401E6B1573001F4B40 /* NotificaitonNames.swift */,
+			);
+			name = NotificationCenter;
 			sourceTree = "<group>";
 		};
 		8A92D2AF1E62D597008545DC /* InfoDetailScene */ = {
@@ -385,6 +405,8 @@
 		AC235F011E4BABF2004095C2 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				8A7EA53F1E6B1560001F4B40 /* NotificationCenter */,
+				8A23CD931E69ADF800C341B8 /* Protocols */,
 				AC235F071E4BB391004095C2 /* Enums */,
 				AC235F021E4BABF8004095C2 /* Extensions */,
 			);
@@ -626,6 +648,7 @@
 				8A39FB631E688BE6008B30B7 /* ProfileSceneWorker.swift in Sources */,
 				8A39FB6A1E6969EF008B30B7 /* WeightView.swift in Sources */,
 				8A39FB5E1E688BE6008B30B7 /* ProfileSceneInteractor.swift in Sources */,
+				8A7EA5411E6B1573001F4B40 /* NotificaitonNames.swift in Sources */,
 				8A39FB601E688BE6008B30B7 /* ProfileScenePresenter.swift in Sources */,
 				8AA9410A1E4FA218004A2C6D /* OnboardingViewController.swift in Sources */,
 				ACA161F21E5B67E30080EB5F /* SwipeViewStyleKit.swift in Sources */,
@@ -653,6 +676,7 @@
 				8AA5F1231E532619007D8CD5 /* TestViewController.swift in Sources */,
 				8A5F5C361E60D5040042AD43 /* InfoSceneWorker.swift in Sources */,
 				8AA940FF1E4F9E3B004A2C6D /* OnboardingSceneModels.swift in Sources */,
+				8A23CD951E69AE2200C341B8 /* FastPickerViewDelegate.swift in Sources */,
 				AC9C49541E5CC9D80071F5F0 /* TimePickerView.swift in Sources */,
 				ACF16DAB1E59C08E008199BE /* MainSceneModels.swift in Sources */,
 			);

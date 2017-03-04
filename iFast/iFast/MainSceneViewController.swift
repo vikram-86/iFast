@@ -30,6 +30,12 @@ class MainSceneViewController: UIViewController, MainSceneViewControllerInput
   @IBOutlet weak var timerView                  : TimerView!
   @IBOutlet weak var timerViewLabel             : UILabel!
   @IBOutlet weak var swipeView                  : SwipeView!
+
+    var selectedHour: Int = 16 {
+        didSet{
+            self.timerViewLabel.text = "\(selectedHour) hours\nTap to change"
+        }
+    }
   
   
   static var viewController: MainSceneViewController? {
@@ -51,6 +57,12 @@ class MainSceneViewController: UIViewController, MainSceneViewControllerInput
     super.viewDidLoad()
     setupOnLoad()
   }
+
+    deinit {
+        NotificationCenter.default.removeObserver(self,
+                                                  name: FastNotificationName.timerPicked.notificationName,
+                                                  object: nil)
+    }
   
   private func setupOnLoad(){
     
@@ -59,6 +71,7 @@ class MainSceneViewController: UIViewController, MainSceneViewControllerInput
     let tapGesture = UITapGestureRecognizer(target: self, action: #selector(timerViewTapped(gesture:)))
     tapGesture.numberOfTapsRequired = 1
     timerView.addGestureRecognizer(tapGesture)
+    NotificationCenter.default.addObserver(self, selector: #selector(timerChanged(notification:)), name: FastNotificationName.timerPicked.notificationName, object: nil)
   }
 }
 
@@ -77,13 +90,16 @@ extension MainSceneViewController {
   @IBAction func profileButtonPressed(){
     
   }
+
+    func timerChanged(notification: Notification){
+        guard let userDict = notification.object as? [String: Int] else {return}
+        guard let hour = userDict["hour"] else { return }
+
+        selectedHour = hour
+    }
   
   func timerViewTapped(gesture: UITapGestureRecognizer){
-    print("Timer View Tapped!")
-    let timerPickerView = TimePickerView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 400))
-    timerPickerView.delegate = self
-    view.addSubview(timerPickerView)
-    timerPickerView.present(in: self.view)
+    PickerManager.manager.displayAlert(in: self, with: .timer)
   }
 }
 
@@ -91,17 +107,5 @@ extension MainSceneViewController {
 extension MainSceneViewController: SwipeViewDelegate{
   func swipeDidChange(progress: CGFloat) {
     timerView.currentProgess = progress
-  }
-}
-
-
-//MARK: - TimePickeView delegate 
-extension MainSceneViewController: TimePickerViewDelegate {
-  func timePickerViewDidDismiss(view: TimePickerView) {
-    print("Timer Picker View did dismiss")
-  }
-  
-  func timePickerViewDidSelect(hour: Int, view: TimePickerView) {
-    timerViewLabel.text = "\(hour) hours\nTap to change"
   }
 }

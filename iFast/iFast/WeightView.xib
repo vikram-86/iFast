@@ -36,6 +36,9 @@
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="string" keyPath="customTitle" value="OK"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="select" destination="-1" eventType="touchUpInside" id="Em4-Rj-Qyc"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zk0-hu-0hh">
                     <rect key="frame" x="323" y="20" width="32" height="32"/>
@@ -44,6 +47,9 @@
                         <constraint firstAttribute="width" constant="32" id="oph-YO-qbf"/>
                     </constraints>
                     <state key="normal" image="cross_darkBlue"/>
+                    <connections>
+                        <action selector="close" destination="-1" eventType="touchUpInside" id="d7J-wh-mU5"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select your weight" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRA-6F-X64" customClass="FastLabel" customModule="iFast" customModuleProvider="target">
                     <rect key="frame" x="49" y="62" width="276" height="66"/>

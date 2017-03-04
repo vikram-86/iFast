@@ -67,8 +67,23 @@ class OnboardingSceneViewController: UIViewController, OnboardingSceneViewContro
   override func viewDidLoad()
   {
     super.viewDidLoad()
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(pushNotficationReceived(notification:)),
+                                           name: FastNotificationName.pushCreated.notificationName,
+                                           object: nil)
 
   }
+
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: FastNotificationName.pushCreated.notificationName, object: nil)
+    }
+
+    func pushNotficationReceived(notification: Notification){
+        guard let dict = notification.object as? [String: String] else { return }
+        guard let hour = dict["hour"] else { return }
+        guard let minutes = dict["minutes"] else { return }
+        registerPush(hour: hour, minutes: minutes)
+    }
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(true)
@@ -124,49 +139,31 @@ extension OnboardingSceneViewController {
   @IBAction func primaryButtonPressed(){
     //delegate?.controllerDidPressPrimaryButton(controller: self)
     if page == 2 {
-      delegate?.controllerWillShowPushView(controller: self)
-      createPushView()
+        delegate?.controllerWillShowPushView(controller: self)
+        //createPushView()
+        PickerManager.manager.displayAlert(in: self, with: .push)
     }else{
-      delegate?.controllerDidPressPrimaryButton(controller: self)
+         delegate?.controllerDidPressPrimaryButton(controller: self)
     }
   }
 
-  private func createPushView(){
-    let pushView = PushView(frame: CGRect(x: 0, y: view.frame.height, width: view.bounds.width, height: 400))
-    pushView.delegate = self
-    view.addSubview(pushView)
-    UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: {
-      pushView.frame.origin.y -= pushView.bounds.height
-    }, completion: nil)
-  }
-
-  fileprivate func removePushView(pushView: PushView){
-    UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: {
-      pushView.frame.origin.y += pushView.bounds.height
-    }) { (completed) in
-      self.delegate?.controllerWillHidePushView(controller: self)
-      pushView.removeFromSuperview()
-    }
-  }
 }
 
 //MARK: - PushView Delegate
-extension OnboardingSceneViewController: PushViewDelegate{
+extension OnboardingSceneViewController{
 
-  func view(didSelect hour: String, minutes: String, inView pushView: PushView) {
-    let request = OnboardingScene.OnboardingRequest.PushRequest(
-      hour: NSString(string: hour).integerValue,
-      minutes: NSString(string: minutes).integerValue
-      , pushView: pushView)
+    func registerPush(hour: String, minutes: String){
+        let pushHour 	= (NSString(string: hour)).integerValue
+        let pushMinutes	= (NSString(string: minutes)).integerValue
+        let request 	= OnboardingScene.OnboardingRequest.PushRequest(hour: pushHour, minutes: pushMinutes)
+        output.handlePush(request: request)
+    }
     
-    output.handlePush(request: request)
-    removePushView(pushView: pushView)
-  }
-  
   func viewWillClose(pushView: PushView) {
-    removePushView(pushView: pushView)
+    //removePushView(pushView: pushView)
   }
 }
+
 
 //MARK: - AlertView Delegate
 extension OnboardingSceneViewController: AlertServiceDelegate {

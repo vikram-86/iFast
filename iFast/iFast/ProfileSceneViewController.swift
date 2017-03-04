@@ -63,12 +63,8 @@ extension ProfileSceneViewController {
     }
 
     @IBAction func addWeight(){
-        let weightView = WeightView(frame: CGRect(x: 0, y: self.view.frame.height, width: self.view.frame.width, height: 400))
-        view.addSubview(weightView)
 
-        UIView.animate(withDuration: 0.33) { 
-            weightView.transform = CGAffineTransform(translationX: 0, y: -400)
-        }
+        PickerManager.manager.displayAlert(in: self, with: .weight)
     }
 }
 

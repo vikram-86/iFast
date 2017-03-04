@@ -13,10 +13,10 @@ protocol TimePickerViewDelegate{
   func timePickerViewDidSelect(hour: Int, view: TimePickerView)
 }
 
-class TimePickerView: UIView{
+class TimePickerView: FastModalView{
   
   var view      : UIView!
-  var delegate  : TimePickerViewDelegate?
+    //var delegate  : TimePickerViewDelegate?
   
   var dataSource: [Int]{
     var times = [Int]()
@@ -47,7 +47,6 @@ class TimePickerView: UIView{
     view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     view.backgroundColor = UIColor.FastPaleGreyTwo
     setupPickerView()
-    alpha = 0
     addSubview(view)
   }
   
@@ -59,13 +58,12 @@ class TimePickerView: UIView{
   }
   
   @IBAction func buttonPressed() {
-    dimiss()
-    delegate?.timePickerViewDidSelect(hour: selectedHour, view: self)
+    delegate?.pickerViewDidSelect(hour: selectedHour)
+
   }
   
   @IBAction func dismissButtonPressed() {
-    dimiss()
-    delegate?.timePickerViewDidDismiss(view: self)
+    delegate?.pickerViewDidCancel()
   }
 }
 
@@ -95,24 +93,5 @@ extension TimePickerView: UIPickerViewDelegate, UIPickerViewDataSource{
   }
   func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
     selectedHour = dataSource[row]
-  }
-}
-
-// MARK: Present and dismiss Animation
-extension TimePickerView {
-  func present(in view: UIView){
-    frame.origin.y = view.frame.height
-    alpha = 1
-    UIView.animate(withDuration: 0.33) { 
-      self.frame.origin.y -= self.bounds.height
-    }
-  }
-  
-  func dimiss(){
-    UIView.animate(withDuration: 0.33, animations: { 
-      self.frame.origin.y += self.bounds.height
-    }) { (_) in
-      self.removeFromSuperview()
-    }
   }
 }
