@@ -9,5 +9,17 @@
 import UIKit
 
 class PhotoCell: UICollectionViewCell {
-    
+    static let identifier 		= "photoCell"
+    static let cameraIdentifier = "cameraCell"
+
+    @IBOutlet weak var imageView: UIImageView!
+
+    func configureCell(viewModel: PhotoCellViewModel){
+        if viewModel.imageName == "camera"{
+            imageView.contentMode = .center
+        }
+
+        imageView.image = UIImage(named: viewModel.imageName)
+        imageView.contentMode = .scaleAspectFill
+    }
 }

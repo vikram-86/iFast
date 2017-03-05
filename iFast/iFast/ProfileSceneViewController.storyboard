@@ -146,10 +146,10 @@
             </objects>
             <point key="canvasLocation" x="1096.8" y="125.4872563718141"/>
         </scene>
-        <!--View Controller-->
+        <!--Image Collection Scene View Controller-->
         <scene sceneID="2ys-VN-bbh">
             <objects>
-                <viewController id="UeM-b0-hDN" sceneMemberID="viewController">
+                <viewController id="UeM-b0-hDN" customClass="ImageCollectionSceneViewController" customModule="iFast" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ksA-7h-YwM"/>
                         <viewControllerLayoutGuide type="bottom" id="n61-Vb-OZF"/>
@@ -165,32 +165,66 @@
                                     <constraint firstAttribute="width" constant="32" id="WsE-27-3ZZ"/>
                                 </constraints>
                                 <state key="normal" image="cross_grey"/>
+                                <connections>
+                                    <action selector="close" destination="UeM-b0-hDN" eventType="touchUpInside" id="pQQ-hR-ewO"/>
+                                </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="H4F-68-loF">
                                 <rect key="frame" x="0.0" y="100" width="375" height="567"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="5" id="1te-Lf-bn0">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="1te-Lf-bn0">
                                     <size key="itemSize" width="175" height="175"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="10" minY="5" maxX="10" maxY="5"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="fxY-Et-hsG">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCell" id="fxY-Et-hsG" customClass="PhotoCell" customModule="iFast" customModuleProvider="target">
                                         <rect key="frame" x="10" y="5" width="175" height="175"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="175" height="175"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gz5-i8-Lbb">
+                                                    <rect key="frame" x="0.0" y="0.0" width="175" height="175"/>
+                                                </imageView>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="gz5-i8-Lbb" firstAttribute="leading" secondItem="fxY-Et-hsG" secondAttribute="leading" id="4va-hs-BVP"/>
+                                            <constraint firstItem="gz5-i8-Lbb" firstAttribute="top" secondItem="fxY-Et-hsG" secondAttribute="top" id="Jnn-4J-F7V"/>
+                                            <constraint firstAttribute="trailing" secondItem="gz5-i8-Lbb" secondAttribute="trailing" id="LtF-XP-iCq"/>
+                                            <constraint firstAttribute="bottom" secondItem="gz5-i8-Lbb" secondAttribute="bottom" id="uIY-OD-viz"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="gz5-i8-Lbb" id="Xlk-6C-W1N"/>
+                                        </connections>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="jR9-kZ-wBe">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cameraCell" id="Adq-vu-waq" customClass="PhotoCell" customModule="iFast" customModuleProvider="target">
                                         <rect key="frame" x="190" y="5" width="175" height="175"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="175" height="175"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="xUT-MW-YPn">
+                                                    <rect key="frame" x="50" y="50" width="75" height="75"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="75" id="oZ1-Ta-hUp"/>
+                                                        <constraint firstAttribute="height" constant="75" id="oti-CJ-gIv"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
                                         </view>
+                                        <color key="backgroundColor" red="0.96470588239999999" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="xUT-MW-YPn" firstAttribute="centerY" secondItem="Adq-vu-waq" secondAttribute="centerY" id="kAQ-Gd-dhY"/>
+                                            <constraint firstItem="xUT-MW-YPn" firstAttribute="centerX" secondItem="Adq-vu-waq" secondAttribute="centerX" id="lHW-kF-ytK"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="xUT-MW-YPn" id="OCt-sa-R3p"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -205,6 +239,9 @@
                             <constraint firstItem="H4F-68-loF" firstAttribute="top" secondItem="Jic-e9-WvQ" secondAttribute="bottom" constant="40" id="pt0-lV-rzK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="photoCollection" destination="H4F-68-loF" id="bk1-A4-bpL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oqs-D5-R6w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

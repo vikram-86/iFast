@@ -167,11 +167,12 @@ extension OnboardingSceneViewController{
 
 //MARK: - AlertView Delegate
 extension OnboardingSceneViewController: AlertServiceDelegate {
-  func alertDidGetRemoved(with style: AlertStyle) {
-    DispatchQueue.main.async {
-      if style == .success {
-        self.delegate?.controllerDidSkipPage(controller: self)
-      }
+    func alertDidGetRemoved(with style: AlertStyle, view: UIView) {
+        DispatchQueue.main.async {
+            if style == .success {
+                self.delegate?.controllerDidSkipPage(controller: self)
+            }
+            view.removeFromSuperview()
+        }
     }
-  }
 }
