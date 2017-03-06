@@ -16,7 +16,7 @@ enum PickerStyle{
     func getView(frame: CGRect) -> FastModalView {
         switch self {
         case .push:
-            return PushView(frame: frame) as! FastModalView
+            return PushView(frame: frame)
         case .weight:
             return WeightView(frame: frame)
         case .timer:

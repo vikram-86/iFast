@@ -119,29 +119,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WgB-mt-xgg" customClass="TimerView" customModule="iFast" customModuleProvider="target">
-                                <rect key="frame" x="32.5" y="178" width="310" height="310"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="310" id="Tw3-Px-c1N"/>
-                                    <constraint firstAttribute="width" constant="310" id="ibs-jN-n1E"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WgC-GC-NZt">
-                                <rect key="frame" x="164" y="535" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="Fcd-j9-tZM" eventType="touchUpInside" id="IWD-VK-pXy"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="H3m-Ea-sPj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="scO-3n-Pzy" customClass="PhotoView" customModule="iFast" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
+                                        <color key="backgroundColor" red="0.70588235290000001" green="0.92941176469999998" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9H1-NX-zAA" customClass="PhotoView" customModule="iFast" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
+                                        <color key="backgroundColor" red="0.23921568630000001" green="0.95686274510000002" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="WgB-mt-xgg" firstAttribute="centerY" secondItem="hM9-e8-CUS" secondAttribute="centerY" id="eD1-g6-Dje"/>
-                            <constraint firstItem="WgB-mt-xgg" firstAttribute="centerX" secondItem="hM9-e8-CUS" secondAttribute="centerX" id="pWw-pw-JNI"/>
+                            <constraint firstAttribute="trailing" secondItem="H3m-Ea-sPj" secondAttribute="trailing" id="L7F-Ia-sLf"/>
+                            <constraint firstItem="H3m-Ea-sPj" firstAttribute="leading" secondItem="hM9-e8-CUS" secondAttribute="leading" id="LBY-4q-pwk"/>
+                            <constraint firstItem="Cep-Le-rL6" firstAttribute="top" secondItem="H3m-Ea-sPj" secondAttribute="bottom" id="gtb-aM-Kmm"/>
+                            <constraint firstItem="H3m-Ea-sPj" firstAttribute="top" secondItem="hM9-e8-CUS" secondAttribute="top" id="lUe-X6-Te4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="photoViewLower" destination="9H1-NX-zAA" id="sq9-1k-oVM"/>
+                        <outlet property="photoViewUpper" destination="scO-3n-Pzy" id="p64-Nz-Ngu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5zG-VD-ctn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

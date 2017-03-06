@@ -10,18 +10,18 @@ import UIKit
 
 class TestViewController: UIViewController {
 
+    @IBOutlet weak var photoViewUpper: PhotoView!
+    @IBOutlet weak var photoViewLower: PhotoView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        photoViewUpper.imageView.image = UIImage(named: "1")
+        photoViewLower.imageView.image = UIImage(named: "2")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-  @IBAction func buttonPressed(_ sender: Any) {
-    print("buttonPressed")
-    AlertService().createAlert(title: "This is an test for alert views", style: .error, in: self)
-  }
 }

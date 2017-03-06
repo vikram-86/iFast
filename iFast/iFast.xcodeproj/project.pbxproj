@@ -50,6 +50,8 @@
 		8AA941031E4F9E3B004A2C6D /* OnboardingSceneWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA940FC1E4F9E3B004A2C6D /* OnboardingSceneWorker.swift */; };
 		8AA941081E4F9FD5004A2C6D /* OnboardingSceneViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AA941071E4F9FD5004A2C6D /* OnboardingSceneViewController.storyboard */; };
 		8AA9410A1E4FA218004A2C6D /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA941091E4FA218004A2C6D /* OnboardingViewController.swift */; };
+		8AAA724C1E6D61B500C3555F /* PhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AAA724B1E6D61B500C3555F /* PhotoView.xib */; };
+		8AAA724E1E6D634B00C3555F /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAA724D1E6D634B00C3555F /* PhotoView.swift */; };
 		8AF7FF801E573CE800691C34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AF7FF7F1E573CE800691C34 /* Assets.xcassets */; };
 		AC235EDA1E4BAA75004095C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC235ED91E4BAA75004095C2 /* AppDelegate.swift */; };
 		AC235EDF1E4BAA75004095C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC235EDD1E4BAA75004095C2 /* Main.storyboard */; };
@@ -131,6 +133,8 @@
 		8AA940FC1E4F9E3B004A2C6D /* OnboardingSceneWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingSceneWorker.swift; sourceTree = "<group>"; };
 		8AA941071E4F9FD5004A2C6D /* OnboardingSceneViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OnboardingSceneViewController.storyboard; sourceTree = "<group>"; };
 		8AA941091E4FA218004A2C6D /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		8AAA724B1E6D61B500C3555F /* PhotoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoView.xib; sourceTree = "<group>"; };
+		8AAA724D1E6D634B00C3555F /* PhotoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		8AF7FF7F1E573CE800691C34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC235ED61E4BAA75004095C2 /* iFast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iFast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC235ED91E4BAA75004095C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -306,6 +310,7 @@
 		8AA152CE1E523F0000D63156 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8AAA724A1E6D619D00C3555F /* PhotoView */,
 				8A39FB641E688E73008B30B7 /* WeightView */,
 				AC9C49501E5CC6D70071F5F0 /* TimePickerView */,
 				ACB778881E5A31E6000337C8 /* SliderView */,
@@ -358,6 +363,15 @@
 				8AA941071E4F9FD5004A2C6D /* OnboardingSceneViewController.storyboard */,
 			);
 			name = OnboardingScenes;
+			sourceTree = "<group>";
+		};
+		8AAA724A1E6D619D00C3555F /* PhotoView */ = {
+			isa = PBXGroup;
+			children = (
+				8AAA724B1E6D61B500C3555F /* PhotoView.xib */,
+				8AAA724D1E6D634B00C3555F /* PhotoView.swift */,
+			);
+			name = PhotoView;
 			sourceTree = "<group>";
 		};
 		AC235ECD1E4BAA75004095C2 = {
@@ -650,6 +664,7 @@
 				8AA941081E4F9FD5004A2C6D /* OnboardingSceneViewController.storyboard in Resources */,
 				AC9C495A1E5CFBAD0071F5F0 /* ProfileSceneViewController.storyboard in Resources */,
 				AC9C49571E5CFB610071F5F0 /* InfoSceneViewController.storyboard in Resources */,
+				8AAA724C1E6D61B500C3555F /* PhotoView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -712,6 +727,7 @@
 				8AA941001E4F9E3B004A2C6D /* OnboardingScenePresenter.swift in Sources */,
 				8AA152D31E52E79900D63156 /* PushView.swift in Sources */,
 				AC235EE21E4BAA75004095C2 /* iFast.xcdatamodeld in Sources */,
+				8AAA724E1E6D634B00C3555F /* PhotoView.swift in Sources */,
 				ACF16DAE1E59C08E008199BE /* MainSceneViewController.swift in Sources */,
 				8A004F011E57242A00476E26 /* AlertService.swift in Sources */,
 				8A92D2B11E62D5BF008545DC /* InfoDetailSceneViewController.swift in Sources */,
