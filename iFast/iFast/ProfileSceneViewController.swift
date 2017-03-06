@@ -21,33 +21,36 @@ protocol ProfileSceneViewControllerOutput
 
 class ProfileSceneViewController: UIViewController, ProfileSceneViewControllerInput
 {
-  var output: ProfileSceneViewControllerOutput!
-  var router: ProfileSceneRouter!
+  	var output: ProfileSceneViewControllerOutput!
+  	var router: ProfileSceneRouter!
 
     var viewController: ProfileSceneViewController? {
         let storyboard = UIStoryboard(name: String.init(describing: self), bundle: nil)
         return storyboard.instantiateViewController(withIdentifier: String.init(describing: self)) as? ProfileSceneViewController
     }
 
+
     @IBOutlet weak var profileView		: UIView!
     @IBOutlet weak var profileImageView	: UIImageView!
+
+    let picker = UIImagePickerController()
   
   // MARK: - Object lifecycle
   
-  override func awakeFromNib()
-  {
-    super.awakeFromNib()
-    ProfileSceneConfigurator.sharedInstance.configure(viewController: self)
-  }
+  	override func awakeFromNib()
+ 	 {
+    	super.awakeFromNib()
+        ProfileSceneConfigurator.sharedInstance.configure(viewController: self)
+ 	 }
   
   // MARK: - View lifecycle
   
-  override func viewDidLoad()
-  {
-    super.viewDidLoad()
-    setupViewOnLoad()
-
-  }
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        setupViewOnLoad()
+        
+    }
 }
 
 //MARK: - Display Logic -
@@ -71,14 +74,12 @@ extension ProfileSceneViewController {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
 
         let cameraAction = UIAlertAction(title: "Take Photo", style: .default) { (_) in
-
+            self.getPhoto(from: .camera)
         }
         let libraryAction = UIAlertAction(title: "Select Photo", style: .default) { (_) in
-
+            self.getPhoto(from: .photoLibrary)
         }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in
-
-        }
+		let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
 
         actionSheet.addAction(cameraAction)
         actionSheet.addAction(libraryAction)
@@ -88,11 +89,33 @@ extension ProfileSceneViewController {
     }
 }
 
+extension ProfileSceneViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate{
+    func getPhoto(from source: UIImagePickerControllerSourceType){
+        DispatchQueue.main.async {
+            self.picker.delegate = self
+            self.picker.sourceType = source
+            self.present(self.picker, animated: true, completion: nil)
+        }
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        guard let chosenImage = info[UIImagePickerControllerOriginalImage] as? UIImage else { return }
+        profileImageView.image = chosenImage
+        profileImageView.contentMode = .scaleAspectFill
+        dismiss(animated: true, completion: nil)
+    }
+
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+}
+
 // MARK: - Util
 extension ProfileSceneViewController {
 
     func setupViewOnLoad(){
-        profileView.layer.cornerRadius = profileView.bounds.height * 0.5
+        profileView.layer.cornerRadius 	= profileView.bounds.height * 0.5
+        profileView.layer.borderWidth 	= 2
+        profileView.layer.borderColor	= UIColor.FastFadedBlue.cgColor
         addGesture()
     }
 
