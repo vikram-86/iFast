@@ -59,10 +59,11 @@ class WeightView: FastModalView{
     }
 
     private func setupView(){
-        view = loadFromNib()
-        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-		picker.dataSource = self
-        picker.delegate = self
+        view 					= loadFromNib()
+        view.frame 				= bounds
+        view.autoresizingMask	= [.flexibleWidth, .flexibleHeight]
+		picker.dataSource 		= self
+        picker.delegate 		= self
 		addSubview(view)
 
         selectedWeight		= Double(weight[0])

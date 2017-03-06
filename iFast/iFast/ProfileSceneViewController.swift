@@ -66,6 +66,26 @@ extension ProfileSceneViewController {
 
         PickerManager.manager.displayAlert(in: self, with: .weight)
     }
+
+    func changeProfileImage(gesture: UITapGestureRecognizer){
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+
+        let cameraAction = UIAlertAction(title: "Take Photo", style: .default) { (_) in
+
+        }
+        let libraryAction = UIAlertAction(title: "Select Photo", style: .default) { (_) in
+
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in
+
+        }
+
+        actionSheet.addAction(cameraAction)
+        actionSheet.addAction(libraryAction)
+        actionSheet.addAction(cancelAction)
+
+        present(actionSheet, animated: true, completion: nil)
+    }
 }
 
 // MARK: - Util
@@ -73,5 +93,11 @@ extension ProfileSceneViewController {
 
     func setupViewOnLoad(){
         profileView.layer.cornerRadius = profileView.bounds.height * 0.5
+        addGesture()
+    }
+
+    fileprivate func addGesture(){
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(changeProfileImage(gesture:)))
+        profileView.addGestureRecognizer(tapGesture)
     }
 }

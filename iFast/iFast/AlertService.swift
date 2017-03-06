@@ -33,7 +33,7 @@ enum AlertStyle {
 
 }
 protocol AlertServiceDelegate {
-  func alertDidGetRemoved(with style: AlertStyle)
+    func alertDidGetRemoved(with style: AlertStyle, view: UIView)
 }
 class AlertService {
   //static let current = AlertService()
@@ -81,7 +81,7 @@ extension AlertService: AlertViewDelegate {
       self.bgView.alpha = 0
     }) { (_) in
       self.bgView.removeFromSuperview()
-      self.delegate?.alertDidGetRemoved(with: self.currentStyle)
+      self.delegate?.alertDidGetRemoved(with: self.currentStyle, view: self.bgView)
     }
   }
 }

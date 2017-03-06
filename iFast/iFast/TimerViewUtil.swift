@@ -16,7 +16,7 @@ public class TimerViewUtil: NSObject {
     func fastFloor(_ x: CGFloat) -> CGFloat { return floor(x) }
     
     //// Color Declarations
-    let bgColor = UIColor(red: 0.588, green: 0.569, blue: 0.584, alpha: 0.400)
+    let bgColor = UIColor(red: 0.588, green: 0.569, blue: 0.584, alpha: 0.200)
     let fillColor = UIColor(red: 0.506, green: 0.890, blue: 0.843, alpha: 1.000)
     
     //// Variable Declarations
