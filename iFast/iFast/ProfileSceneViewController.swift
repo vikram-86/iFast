@@ -93,7 +93,7 @@ extension ProfileSceneViewController {
 
 extension ProfileSceneViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate{
     func getPhoto(from source: UIImagePickerControllerSourceType){
-        let isAllowed = source == .camera ? checkAuthForCamera() : checkAuthForPhotos()
+        let isAllowed = source == .camera ? FastCameraService.isCameraAuthorized : FastCameraService.isPhotoLibraryAuthorized
         if isAllowed{
             DispatchQueue.main.async {
                 self.picker.delegate = self
@@ -104,26 +104,6 @@ extension ProfileSceneViewController: UINavigationControllerDelegate, UIImagePic
             DispatchQueue.main.async {
                 AlertService().createAlert(title: "Camera/Photos access denied! Please change it in settings", style: .error, in: self)
             }
-        }
-    }
-
-    private func checkAuthForCamera()->Bool{
-        let authStatus = AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo)
-        switch authStatus{
-        case .authorized, .notDetermined:
-            return true
-        default:
-            return false
-        }
-    }
-
-    private func checkAuthForPhotos()->Bool{
-        let authStatus = PHPhotoLibrary.authorizationStatus()
-        switch authStatus {
-        case .authorized, .notDetermined:
-            return true
-        default:
-            return false
         }
     }
 

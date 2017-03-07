@@ -8,7 +8,7 @@
 
 import UIKit
 import AVFoundation
-
+import Photos
 
 protocol FastCameraServiceDelegate{
 
@@ -22,6 +22,26 @@ class FastCameraService: NSObject{
     var videoPreviewLayer 	: AVCaptureVideoPreviewLayer?
 
     var delegate	: FastCameraServiceDelegate?
+
+    static var isCameraAuthorized: Bool{
+        let authStatus = AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo)
+        switch authStatus{
+        case .authorized, .notDetermined:
+            return true
+        default:
+            return false
+        }
+    }
+
+    static var isPhotoLibraryAuthorized: Bool {
+		let authStatus = PHPhotoLibrary.authorizationStatus()
+        switch authStatus{
+        case .authorized, .notDetermined:
+            return true
+        default:
+            return false
+        }
+    }
 
     func setupSession(in view: UIView){
         // Setup session

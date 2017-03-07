@@ -55,6 +55,8 @@
 		8AAA72511E6D701300C3555F /* CameraView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AAA72501E6D701300C3555F /* CameraView.xib */; };
 		8AAA72531E6D84B300C3555F /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAA72521E6D84B300C3555F /* CameraView.swift */; };
 		8AAA72561E6D897300C3555F /* FastCameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAA72551E6D897300C3555F /* FastCameraService.swift */; };
+		8AAA72581E6EE1D800C3555F /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAA72571E6EE1D800C3555F /* CameraViewController.swift */; };
+		8AAA725C1E6EE66A00C3555F /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAA725B1E6EE66A00C3555F /* PhotoDetailViewController.swift */; };
 		8AF7FF801E573CE800691C34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AF7FF7F1E573CE800691C34 /* Assets.xcassets */; };
 		AC235EDA1E4BAA75004095C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC235ED91E4BAA75004095C2 /* AppDelegate.swift */; };
 		AC235EDF1E4BAA75004095C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC235EDD1E4BAA75004095C2 /* Main.storyboard */; };
@@ -141,6 +143,8 @@
 		8AAA72501E6D701300C3555F /* CameraView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraView.xib; sourceTree = "<group>"; };
 		8AAA72521E6D84B300C3555F /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		8AAA72551E6D897300C3555F /* FastCameraService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FastCameraService.swift; sourceTree = "<group>"; };
+		8AAA72571E6EE1D800C3555F /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		8AAA725B1E6EE66A00C3555F /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		8AF7FF7F1E573CE800691C34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC235ED61E4BAA75004095C2 /* iFast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iFast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC235ED91E4BAA75004095C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -399,6 +403,22 @@
 			name = FastCameraService;
 			sourceTree = "<group>";
 		};
+		8AAA72591E6EE1DF00C3555F /* CameraViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8AAA72571E6EE1D800C3555F /* CameraViewController.swift */,
+			);
+			name = CameraViewController;
+			sourceTree = "<group>";
+		};
+		8AAA725A1E6EE64500C3555F /* PhotoDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8AAA725B1E6EE66A00C3555F /* PhotoDetailViewController.swift */,
+			);
+			name = PhotoDetailViewController;
+			sourceTree = "<group>";
+		};
 		AC235ECD1E4BAA75004095C2 = {
 			isa = PBXGroup;
 			children = (
@@ -553,9 +573,11 @@
 		AC9C49581E5CFB970071F5F0 /* ProfileScene */ = {
 			isa = PBXGroup;
 			children = (
+				8AAA725A1E6EE64500C3555F /* PhotoDetailViewController */,
 				AC9C49591E5CFBAD0071F5F0 /* ProfileSceneViewController.storyboard */,
 				8A7EA5431E6C9B1F001F4B40 /* ImageCollectionScene */,
 				8A7EA54D1E6C9F34001F4B40 /* ProfileScene */,
+				8AAA72591E6EE1DF00C3555F /* CameraViewController */,
 			);
 			name = ProfileScene;
 			sourceTree = "<group>";
@@ -745,10 +767,12 @@
 				8A7EA5481E6C9C78001F4B40 /* PhotoCell.swift in Sources */,
 				AC235F041E4BAC15004095C2 /* UIColor + FastAdditions.swift in Sources */,
 				8A5F5C341E60D5040042AD43 /* InfoSceneRouter.swift in Sources */,
+				8AAA725C1E6EE66A00C3555F /* PhotoDetailViewController.swift in Sources */,
 				AC235F0C1E4BB651004095C2 /* UIButton + FastPrimaryButton.swift in Sources */,
 				ACF16DAC1E59C08E008199BE /* MainScenePresenter.swift in Sources */,
 				8A5F5C3A1E60D9AC0042AD43 /* InfoCell.swift in Sources */,
 				ACF16DAA1E59C08E008199BE /* MainSceneInteractor.swift in Sources */,
+				8AAA72581E6EE1D800C3555F /* CameraViewController.swift in Sources */,
 				8A39FB6D1E699F4D008B30B7 /* PickerManager.swift in Sources */,
 				8A39FB5D1E688BE6008B30B7 /* ProfileSceneConfigurator.swift in Sources */,
 				8A39FB611E688BE6008B30B7 /* ProfileSceneRouter.swift in Sources */,

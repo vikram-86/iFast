@@ -64,9 +64,14 @@ extension ImageCollectionSceneViewController: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let cell = collectionView.cellForItem(at: indexPath) as? PhotoCell else { return }
         if cell.reuseIdentifier == PhotoCell.cameraIdentifier{
-            if UIImagePickerController.isSourceTypeAvailable(.camera){
+            if UIImagePickerController.isSourceTypeAvailable(.camera)
+                && FastCameraService.isCameraAuthorized{
                 performSegue(withIdentifier: cameraSegueIdentifier, sender: nil)
+            }else {
+                AlertService().createAlert(title: "Access to camera is not granted", style: .error, in: self)
             }
+        }else{
+            performSegue(withIdentifier: imagePreviewSegueIdentifier, sender: nil)
         }
     }
 }
