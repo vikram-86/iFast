@@ -140,6 +140,7 @@
                     <connections>
                         <outlet property="profileImageView" destination="tTW-Dj-th4" id="LuF-or-umh"/>
                         <outlet property="profileView" destination="ivP-cw-Yrp" id="je7-Jw-g0t"/>
+                        <segue destination="7kF-qK-y9r" kind="presentation" identifier="adjustWeight" id="CeW-hL-yqM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZTC-D7-Bnk" userLabel="First Responder" sceneMemberID="firstResponder"/>

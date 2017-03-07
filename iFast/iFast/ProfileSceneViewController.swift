@@ -26,6 +26,8 @@ class ProfileSceneViewController: UIViewController, ProfileSceneViewControllerIn
   	var output: ProfileSceneViewControllerOutput!
   	var router: ProfileSceneRouter!
 
+    let weightIdentifier = "adjustWeight"
+
     var viewController: ProfileSceneViewController? {
         let storyboard = UIStoryboard(name: String.init(describing: self), bundle: nil)
         return storyboard.instantiateViewController(withIdentifier: String.init(describing: self)) as? ProfileSceneViewController
@@ -68,8 +70,7 @@ extension ProfileSceneViewController {
     }
 
     @IBAction func addWeight(){
-
-        PickerManager.manager.displayAlert(in: self, with: .weight)
+        performSegue(withIdentifier: weightIdentifier, sender: nil)
     }
 
     func changeProfileImage(gesture: UITapGestureRecognizer){
