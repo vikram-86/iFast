@@ -10,6 +10,8 @@ import UIKit
 
 class ImageCollectionSceneViewController: UIViewController {
 
+    let imagePreviewSegueIdentifier = "imagePreview"
+    let cameraSegueIdentifier		= "cameraSegue"
     
     @IBOutlet weak var photoCollection: UICollectionView!
     override func viewDidLoad() {
@@ -19,6 +21,7 @@ class ImageCollectionSceneViewController: UIViewController {
 
     private func setupOnLoad(){
         photoCollection.dataSource  = self
+        photoCollection.delegate	= self
     }
 }
 
@@ -50,6 +53,20 @@ extension ImageCollectionSceneViewController: UICollectionViewDataSource{
             let viewModel = PhotoCellViewModel(imageName: imageName)
             cell.configureCell(viewModel: viewModel)
             return cell
+        }
+    }
+}
+
+//MARK: - UICollectionView Delegate
+
+extension ImageCollectionSceneViewController: UICollectionViewDelegate{
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? PhotoCell else { return }
+        if cell.reuseIdentifier == PhotoCell.cameraIdentifier{
+            if UIImagePickerController.isSourceTypeAvailable(.camera){
+                performSegue(withIdentifier: cameraSegueIdentifier, sender: nil)
+            }
         }
     }
 }

@@ -23,7 +23,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M8Q-CB-fIR" userLabel="graphView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
-                                <color key="backgroundColor" red="0.42745098040000001" green="0.44705882349999998" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="hvH-zn-mBO"/>
                                 </constraints>
@@ -241,6 +241,8 @@
                     </view>
                     <connections>
                         <outlet property="photoCollection" destination="H4F-68-loF" id="bk1-A4-bpL"/>
+                        <segue destination="5jJ-aI-w6B" kind="presentation" identifier="imagePreview" id="REU-0N-Qbx"/>
+                        <segue destination="fxe-al-Gdi" kind="presentation" identifier="cameraSegue" id="8OR-En-Nl1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oqs-D5-R6w" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -274,7 +276,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ldk-6s-vV2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2942" y="121"/>
+            <point key="canvasLocation" x="3390" y="-359"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qtQ-pd-eWe">
+            <objects>
+                <viewController id="fxe-al-Gdi" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="93f-cm-kMf"/>
+                        <viewControllerLayoutGuide type="bottom" id="WQm-lO-2Ge"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0MM-dx-By8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cXl-3Y-d7O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3405" y="443"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2jo-Gz-ckN">
