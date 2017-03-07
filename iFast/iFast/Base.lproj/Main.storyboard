@@ -107,10 +107,10 @@
             </objects>
             <point key="canvasLocation" x="-23.199999999999999" y="117.39130434782609"/>
         </scene>
-        <!--Test View Controller-->
+        <!--View Controller-->
         <scene sceneID="2PI-8q-SzY">
             <objects>
-                <viewController id="Fcd-j9-tZM" customClass="TestViewController" customModule="iFast" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Fcd-j9-tZM" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wn1-Ui-M8j"/>
                         <viewControllerLayoutGuide type="bottom" id="Cep-Le-rL6"/>
@@ -119,27 +119,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WgB-mt-xgg" customClass="TimerView" customModule="iFast" customModuleProvider="target">
-                                <rect key="frame" x="32.5" y="178" width="310" height="310"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yDu-xA-qSo" customClass="CameraView" customModule="iFast" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="310" id="Tw3-Px-c1N"/>
-                                    <constraint firstAttribute="width" constant="310" id="ibs-jN-n1E"/>
-                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WgC-GC-NZt">
-                                <rect key="frame" x="164" y="535" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="Fcd-j9-tZM" eventType="touchUpInside" id="IWD-VK-pXy"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="WgB-mt-xgg" firstAttribute="centerY" secondItem="hM9-e8-CUS" secondAttribute="centerY" id="eD1-g6-Dje"/>
-                            <constraint firstItem="WgB-mt-xgg" firstAttribute="centerX" secondItem="hM9-e8-CUS" secondAttribute="centerX" id="pWw-pw-JNI"/>
+                            <constraint firstItem="yDu-xA-qSo" firstAttribute="top" secondItem="hM9-e8-CUS" secondAttribute="top" id="RV4-qh-9n4"/>
+                            <constraint firstItem="Cep-Le-rL6" firstAttribute="top" secondItem="yDu-xA-qSo" secondAttribute="bottom" id="UKy-sJ-zRA"/>
+                            <constraint firstAttribute="trailing" secondItem="yDu-xA-qSo" secondAttribute="trailing" id="p8l-ru-SIH"/>
+                            <constraint firstItem="yDu-xA-qSo" firstAttribute="leading" secondItem="hM9-e8-CUS" secondAttribute="leading" id="saY-Xq-AXO"/>
                         </constraints>
                     </view>
                 </viewController>

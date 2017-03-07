@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CameraView">
+            <connections>
+                <outlet property="buttonContainerHeightConstraint" destination="6nF-U3-6Sf" id="GYc-rh-k9A"/>
+                <outlet property="buttonContainerView" destination="gON-qB-eBN" id="FyS-Os-Dku"/>
+                <outlet property="previewImageView" destination="32K-a8-mbz" id="tz9-Pk-ioS"/>
+                <outlet property="previewView" destination="SpS-gG-zdW" id="4nD-UP-CJW"/>
+                <outlet property="retakeButton" destination="z0c-jc-hRK" id="R9x-xz-Nhq"/>
+                <outlet property="saveButton" destination="Xk7-cF-pn6" id="l4x-oB-gND"/>
+                <outlet property="shutterButton" destination="2wP-D3-5tZ" id="VNO-Rq-x0b"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SpS-gG-zdW" userLabel="cameraView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.8980392157" green="0.83137254900000002" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2wP-D3-5tZ">
+                    <rect key="frame" x="137" y="527" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="3dh-kb-8y2"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="7yS-Bc-KES"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Ria-xc-sSQ"/>
+                        <constraint firstAttribute="width" constant="100" id="iai-4I-Teb"/>
+                    </constraints>
+                    <state key="normal" image="shot"/>
+                    <connections>
+                        <action selector="shutterButtonPressed" destination="-1" eventType="touchUpInside" id="DXu-44-smL"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="32K-a8-mbz">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="619"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWc-D9-zBH">
+                    <rect key="frame" x="327" y="16" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="32" id="4Kh-2d-XOM"/>
+                        <constraint firstAttribute="height" constant="32" id="lwk-fH-rfz"/>
+                    </constraints>
+                    <state key="normal" image="cross_white"/>
+                    <connections>
+                        <action selector="close" destination="-1" eventType="touchUpInside" id="3Zj-Pu-DwC"/>
+                    </connections>
+                </button>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gON-qB-eBN">
+                    <rect key="frame" x="0.0" y="619" width="375" height="48"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="R8U-zC-gdr">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z0c-jc-hRK" userLabel="retakeButton">
+                                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="48"/>
+                                    <color key="backgroundColor" red="0.77647058820000003" green="0.52941176469999995" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
+                                    <state key="normal" title="Retake">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="retakePicture" destination="-1" eventType="touchUpInside" id="u9C-nY-o3A"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xk7-cF-pn6" userLabel="saveButton">
+                                    <rect key="frame" x="187.5" y="0.0" width="187.5" height="48"/>
+                                    <color key="backgroundColor" red="0.62745098039215685" green="0.81568627450980391" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
+                                    <state key="normal" title="Use This">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="saveImage" destination="-1" eventType="touchUpInside" id="lHc-Bl-r6K"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.96470588239999999" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="6nF-U3-6Sf"/>
+                        <constraint firstItem="R8U-zC-gdr" firstAttribute="top" secondItem="gON-qB-eBN" secondAttribute="top" id="bV8-IC-zud"/>
+                        <constraint firstAttribute="bottom" secondItem="R8U-zC-gdr" secondAttribute="bottom" id="oOQ-dV-wwX"/>
+                        <constraint firstItem="R8U-zC-gdr" firstAttribute="leading" secondItem="gON-qB-eBN" secondAttribute="leading" id="obQ-aJ-D8G"/>
+                        <constraint firstAttribute="trailing" secondItem="R8U-zC-gdr" secondAttribute="trailing" id="tv4-Ik-g0w"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="SpS-gG-zdW" secondAttribute="bottom" id="1Kd-UI-FL8"/>
+                <constraint firstItem="EWc-D9-zBH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="7tS-6T-Dyd"/>
+                <constraint firstItem="32K-a8-mbz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="G5B-ld-RRm"/>
+                <constraint firstAttribute="bottom" secondItem="gON-qB-eBN" secondAttribute="bottom" id="KFS-jE-8nu"/>
+                <constraint firstItem="32K-a8-mbz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="KYz-GH-bOZ"/>
+                <constraint firstAttribute="trailing" secondItem="gON-qB-eBN" secondAttribute="trailing" id="Kue-zG-AWy"/>
+                <constraint firstItem="SpS-gG-zdW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="LBL-CS-O3t"/>
+                <constraint firstItem="gON-qB-eBN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="RQw-Nf-xR7"/>
+                <constraint firstAttribute="bottom" secondItem="2wP-D3-5tZ" secondAttribute="bottom" constant="40" id="U2t-XG-SPc"/>
+                <constraint firstAttribute="trailing" secondItem="SpS-gG-zdW" secondAttribute="trailing" id="VA3-Md-mrJ"/>
+                <constraint firstAttribute="trailing" secondItem="EWc-D9-zBH" secondAttribute="trailing" constant="16" id="WJH-IN-TKA"/>
+                <constraint firstItem="gON-qB-eBN" firstAttribute="top" secondItem="32K-a8-mbz" secondAttribute="bottom" id="dNB-aI-D5C"/>
+                <constraint firstItem="SpS-gG-zdW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="u9c-5X-dKU"/>
+                <constraint firstItem="2wP-D3-5tZ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="wRB-MZ-wGd"/>
+                <constraint firstAttribute="trailing" secondItem="32K-a8-mbz" secondAttribute="trailing" id="weq-0i-J2D"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cross_white" width="100" height="100"/>
+        <image name="shot" width="100" height="100"/>
+    </resources>
+</document>

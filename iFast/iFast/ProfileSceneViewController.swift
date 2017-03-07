@@ -8,6 +8,8 @@
 
 
 import UIKit
+import AVFoundation
+import Photos
 
 protocol ProfileSceneViewControllerInput
 {
@@ -91,12 +93,20 @@ extension ProfileSceneViewController {
 
 extension ProfileSceneViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate{
     func getPhoto(from source: UIImagePickerControllerSourceType){
-        DispatchQueue.main.async {
-            self.picker.delegate = self
-            self.picker.sourceType = source
-            self.present(self.picker, animated: true, completion: nil)
+        let isAllowed = source == .camera ? FastCameraService.isCameraAuthorized : FastCameraService.isPhotoLibraryAuthorized
+        if isAllowed{
+            DispatchQueue.main.async {
+                self.picker.delegate = self
+                self.picker.sourceType = source
+                self.present(self.picker, animated: true, completion: nil)
+            }
+        }else{
+            DispatchQueue.main.async {
+                AlertService().createAlert(title: "Camera/Photos access denied! Please change it in settings", style: .error, in: self)
+            }
         }
     }
+
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         guard let chosenImage = info[UIImagePickerControllerOriginalImage] as? UIImage else { return }
         profileImageView.image = chosenImage
