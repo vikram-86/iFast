@@ -52,6 +52,9 @@
 		8AA9410A1E4FA218004A2C6D /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA941091E4FA218004A2C6D /* OnboardingViewController.swift */; };
 		8AAA724C1E6D61B500C3555F /* PhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AAA724B1E6D61B500C3555F /* PhotoView.xib */; };
 		8AAA724E1E6D634B00C3555F /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAA724D1E6D634B00C3555F /* PhotoView.swift */; };
+		8AAA72511E6D701300C3555F /* CameraView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AAA72501E6D701300C3555F /* CameraView.xib */; };
+		8AAA72531E6D84B300C3555F /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAA72521E6D84B300C3555F /* CameraView.swift */; };
+		8AAA72561E6D897300C3555F /* FastCameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAA72551E6D897300C3555F /* FastCameraService.swift */; };
 		8AF7FF801E573CE800691C34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AF7FF7F1E573CE800691C34 /* Assets.xcassets */; };
 		AC235EDA1E4BAA75004095C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC235ED91E4BAA75004095C2 /* AppDelegate.swift */; };
 		AC235EDF1E4BAA75004095C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC235EDD1E4BAA75004095C2 /* Main.storyboard */; };
@@ -135,6 +138,9 @@
 		8AA941091E4FA218004A2C6D /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		8AAA724B1E6D61B500C3555F /* PhotoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoView.xib; sourceTree = "<group>"; };
 		8AAA724D1E6D634B00C3555F /* PhotoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
+		8AAA72501E6D701300C3555F /* CameraView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraView.xib; sourceTree = "<group>"; };
+		8AAA72521E6D84B300C3555F /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		8AAA72551E6D897300C3555F /* FastCameraService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FastCameraService.swift; sourceTree = "<group>"; };
 		8AF7FF7F1E573CE800691C34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC235ED61E4BAA75004095C2 /* iFast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iFast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC235ED91E4BAA75004095C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -293,6 +299,7 @@
 		8AA152CA1E5237DE00D63156 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				8AAA72541E6D895F00C3555F /* FastCameraService */,
 				8A004EFF1E57241800476E26 /* AlertService */,
 				8AA152CB1E5237E800D63156 /* PushService */,
 			);
@@ -310,6 +317,7 @@
 		8AA152CE1E523F0000D63156 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8AAA724F1E6D700200C3555F /* CameraView */,
 				8AAA724A1E6D619D00C3555F /* PhotoView */,
 				8A39FB641E688E73008B30B7 /* WeightView */,
 				AC9C49501E5CC6D70071F5F0 /* TimePickerView */,
@@ -372,6 +380,23 @@
 				8AAA724D1E6D634B00C3555F /* PhotoView.swift */,
 			);
 			name = PhotoView;
+			sourceTree = "<group>";
+		};
+		8AAA724F1E6D700200C3555F /* CameraView */ = {
+			isa = PBXGroup;
+			children = (
+				8AAA72501E6D701300C3555F /* CameraView.xib */,
+				8AAA72521E6D84B300C3555F /* CameraView.swift */,
+			);
+			name = CameraView;
+			sourceTree = "<group>";
+		};
+		8AAA72541E6D895F00C3555F /* FastCameraService */ = {
+			isa = PBXGroup;
+			children = (
+				8AAA72551E6D897300C3555F /* FastCameraService.swift */,
+			);
+			name = FastCameraService;
 			sourceTree = "<group>";
 		};
 		AC235ECD1E4BAA75004095C2 = {
@@ -658,6 +683,7 @@
 				8AA5F1281E533DBB007D8CD5 /* AlertView.xib in Resources */,
 				AC9C49521E5CC6F30071F5F0 /* TimePickerView.xib in Resources */,
 				AC235EDF1E4BAA75004095C2 /* Main.storyboard in Resources */,
+				8AAA72511E6D701300C3555F /* CameraView.xib in Resources */,
 				8A39FB681E6967A1008B30B7 /* WeightView.xib in Resources */,
 				8AF7FF801E573CE800691C34 /* Assets.xcassets in Resources */,
 				ACF16DB21E59C0D1008199BE /* MainSceneViewController.storyboard in Resources */,
@@ -695,6 +721,7 @@
 				8A39FB5F1E688BE6008B30B7 /* ProfileSceneModels.swift in Sources */,
 				8AA5F12A1E534316007D8CD5 /* AlertView.swift in Sources */,
 				8AA941021E4F9E3B004A2C6D /* OnboardingSceneViewController.swift in Sources */,
+				8AAA72531E6D84B300C3555F /* CameraView.swift in Sources */,
 				ACB778831E59D407000337C8 /* TimerViewUtil.swift in Sources */,
 				8A5F5C321E60D5040042AD43 /* InfoSceneModels.swift in Sources */,
 				ACF16DAD1E59C08E008199BE /* MainSceneRouter.swift in Sources */,
@@ -708,6 +735,7 @@
 				8A39FB5E1E688BE6008B30B7 /* ProfileSceneInteractor.swift in Sources */,
 				8A7EA5411E6B1573001F4B40 /* NotificaitonNames.swift in Sources */,
 				8A39FB601E688BE6008B30B7 /* ProfileScenePresenter.swift in Sources */,
+				8AAA72561E6D897300C3555F /* FastCameraService.swift in Sources */,
 				8AA9410A1E4FA218004A2C6D /* OnboardingViewController.swift in Sources */,
 				ACA161F21E5B67E30080EB5F /* SwipeViewStyleKit.swift in Sources */,
 				AC235F0A1E4BB3B9004095C2 /* TextModifier.swift in Sources */,

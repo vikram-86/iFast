@@ -107,10 +107,10 @@
             </objects>
             <point key="canvasLocation" x="-23.199999999999999" y="117.39130434782609"/>
         </scene>
-        <!--Test View Controller-->
+        <!--View Controller-->
         <scene sceneID="2PI-8q-SzY">
             <objects>
-                <viewController id="Fcd-j9-tZM" customClass="TestViewController" customModule="iFast" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Fcd-j9-tZM" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wn1-Ui-M8j"/>
                         <viewControllerLayoutGuide type="bottom" id="Cep-Le-rL6"/>
@@ -119,32 +119,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="H3m-Ea-sPj">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yDu-xA-qSo" customClass="CameraView" customModule="iFast" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="scO-3n-Pzy" customClass="PhotoView" customModule="iFast" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
-                                        <color key="backgroundColor" red="0.70588235290000001" green="0.92941176469999998" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9H1-NX-zAA" customClass="PhotoView" customModule="iFast" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
-                                        <color key="backgroundColor" red="0.23921568630000001" green="0.95686274510000002" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
-                                </subviews>
-                            </stackView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="H3m-Ea-sPj" secondAttribute="trailing" id="L7F-Ia-sLf"/>
-                            <constraint firstItem="H3m-Ea-sPj" firstAttribute="leading" secondItem="hM9-e8-CUS" secondAttribute="leading" id="LBY-4q-pwk"/>
-                            <constraint firstItem="Cep-Le-rL6" firstAttribute="top" secondItem="H3m-Ea-sPj" secondAttribute="bottom" id="gtb-aM-Kmm"/>
-                            <constraint firstItem="H3m-Ea-sPj" firstAttribute="top" secondItem="hM9-e8-CUS" secondAttribute="top" id="lUe-X6-Te4"/>
+                            <constraint firstItem="yDu-xA-qSo" firstAttribute="top" secondItem="hM9-e8-CUS" secondAttribute="top" id="RV4-qh-9n4"/>
+                            <constraint firstItem="Cep-Le-rL6" firstAttribute="top" secondItem="yDu-xA-qSo" secondAttribute="bottom" id="UKy-sJ-zRA"/>
+                            <constraint firstAttribute="trailing" secondItem="yDu-xA-qSo" secondAttribute="trailing" id="p8l-ru-SIH"/>
+                            <constraint firstItem="yDu-xA-qSo" firstAttribute="leading" secondItem="hM9-e8-CUS" secondAttribute="leading" id="saY-Xq-AXO"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="photoViewLower" destination="9H1-NX-zAA" id="sq9-1k-oVM"/>
-                        <outlet property="photoViewUpper" destination="scO-3n-Pzy" id="p64-Nz-Ngu"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5zG-VD-ctn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
